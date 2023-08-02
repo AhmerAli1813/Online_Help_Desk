@@ -1,0 +1,12 @@
+F:\project\OHD\Online_Help_Desk\Services\bin\Debug\net6.0\Services.deps.json
+F:\project\OHD\Online_Help_Desk\Services\bin\Debug\net6.0\Services.dll
+F:\project\OHD\Online_Help_Desk\Services\bin\Debug\net6.0\Services.pdb
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\Services.dll
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\refint\Services.dll
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\Services.pdb
+F:\project\OHD\Online_Help_Desk\Services\obj\Debug\net6.0\ref\Services.dll
