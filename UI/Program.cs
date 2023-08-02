@@ -1,12 +1,15 @@
 
 using DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
+using Services.Infrastructure.IRepository;
+using Services.Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationDbContext>(option =>
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddDbContext<OHDDbContext>(option =>
 
         option.UseSqlServer(builder.Configuration.GetConnectionString("DefualtConnection"),
             b => b.MigrationsAssembly("DataAccessLayer"))
@@ -26,6 +29,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=Admin}/{controller=Roles}/{action=Index}/{id?}");
 
 app.Run();

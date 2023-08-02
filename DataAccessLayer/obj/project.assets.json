@@ -3533,11 +3533,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\project\\OHD\\Online_Help_Desk\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectUniqueName": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\DataAccessLayer.csproj",
       "projectName": "DataAccessLayer",
-      "projectPath": "F:\\project\\OHD\\Online_Help_Desk\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\DataAccessLayer.csproj",
       "packagesPath": "C:\\Users\\Ahmer_Ali\\.nuget\\packages\\",
-      "outputPath": "F:\\project\\OHD\\Online_Help_Desk\\DataAccessLayer\\obj\\",
+      "outputPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3558,8 +3558,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\project\\OHD\\Online_Help_Desk\\Models\\Models.csproj": {
-              "projectPath": "F:\\project\\OHD\\Online_Help_Desk\\Models\\Models.csproj"
+            "F:\\project\\Online_Help_Desk\\Models\\Models.csproj": {
+              "projectPath": "F:\\project\\Online_Help_Desk\\Models\\Models.csproj"
             }
           }
         }

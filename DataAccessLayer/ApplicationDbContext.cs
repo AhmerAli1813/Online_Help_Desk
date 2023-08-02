@@ -1,17 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Models;
 
 namespace DataAccessLayer
 {
-    public class ApplicationDbContext : DbContext
+
+    public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<OHDDbContext>
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
+        public OHDDbContext CreateDbContext(string[] args)
         {
+            var optionsBuilder = new DbContextOptionsBuilder<OHDDbContext>();
+            optionsBuilder.UseSqlServer("Server=DESKTOP-3OKF36U\\MSSQLSERVER01; Database=OHD; Integrated Security=true; MultipleActiveResultSets=true; Trusted_Connection=True");
+
+            return new OHDDbContext(optionsBuilder.Options);
         }
-        public DbSet<Role> Roles { get; set; }
-        public  DbSet<Facility> Facilities { get; set; }
-        public DbSet<Register> Registers { get; set; }
-        public DbSet<Requests> Requests { get; set; }
-        
-     }
+    }
 }

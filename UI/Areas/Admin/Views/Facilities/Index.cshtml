@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Models.Facility>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FacilityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FacilityDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FacilityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FacilityDescription)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FacilityId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FacilityId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FacilityId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
