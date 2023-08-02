@@ -9,6 +9,8 @@ namespace Services.Infrastructure.IRepository
     public interface IUnitOfWork
     {
         IRolesRespository RolesIU { get; }
+        IFacilityRespository FacilityIU { get; }
+        IRegisterRespository RegisterIU { get; }
         void save();
     }
 }

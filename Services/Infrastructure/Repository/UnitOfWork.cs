@@ -16,10 +16,15 @@ namespace Services.Infrastructure.Repository
         {
             _dbContext = dbContext;
             RolesIU = new RolesRespository(dbContext);
+            FacilityIU = new FacilityRespository(dbContext);
+            RegisterIU = new RegisterRespository(dbContext);
 
         }
 
         public IRolesRespository RolesIU { get; private set; }
+
+        public IFacilityRespository FacilityIU { get; private set; }
+      public IRegisterRespository RegisterIU { get; private set; }
 
         public void save()
         {

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,158 +7,133 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DataAccessLayer;
 using Models;
+using Services.Infrastructure.IRepository;
 
 namespace UI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class FacilitiesController : Controller
     {
-        private readonly OHDDbContext _context;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public FacilitiesController(OHDDbContext context)
+        public FacilitiesController(IUnitOfWork unitOfWorkt)
         {
-            _context = context;
+            _unitOfWork = unitOfWorkt;
         }
 
-        // GET: Admin/Facilities
-        public async Task<IActionResult> Index()
+        // GET: Admin/Facilitys
+        public IActionResult Index()
         {
-              return _context.Facilities != null ? 
-                          View(await _context.Facilities.ToListAsync()) :
-                          Problem("Entity set 'OHDDbContext.Facilities'  is null.");
+            IEnumerable<Facility> Facilitys = _unitOfWork.FacilityIU.GetAll();
+            return View(Facilitys);
         }
 
-        // GET: Admin/Facilities/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: Admin/Facilitys/Details/5
+        public IActionResult Details(int? id)
         {
-            if (id == null || _context.Facilities == null)
+            if (id == null )
             {
                 return NotFound();
             }
 
-            var facility = await _context.Facilities
-                .FirstOrDefaultAsync(m => m.FacilityId == id);
-            if (facility == null)
+            var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
+            if (Facility == null)
             {
                 return NotFound();
             }
 
-            return View(facility);
+            return View(Facility);
         }
 
-        // GET: Admin/Facilities/Create
+        // GET: Admin/Facilitys/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Facilities/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Admin/Facilitys/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FacilityId,FacilityName,FacilityDescription")] Facility facility)
+        public IActionResult Create(Facility Facility)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(facility);
-                await _context.SaveChangesAsync();
+                _unitOfWork.FacilityIU.Add(Facility);
+                _unitOfWork.save();
                 return RedirectToAction(nameof(Index));
             }
-            return View(facility);
+            return View(Facility);
         }
 
-        // GET: Admin/Facilities/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Admin/Facilitys/Edit/5
+        public IActionResult Edit(int? id)
         {
-            if (id == null || _context.Facilities == null)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
-
-            var facility = await _context.Facilities.FindAsync(id);
-            if (facility == null)
-            {
-                return NotFound();
-            }
-            return View(facility);
+            var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
+            return View(Facility);
         }
 
-        // POST: Admin/Facilities/Edit/5
+        // POST: Admin/Facilitys/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("FacilityId,FacilityName,FacilityDescription")] Facility facility)
+        public IActionResult Edit( Facility Facility)
         {
-            if (id != facility.FacilityId)
-            {
-                return NotFound();
-            }
+            
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(facility);
-                    await _context.SaveChangesAsync();
+                    _unitOfWork.FacilityIU.update(Facility);
+                    _unitOfWork.save();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!FacilityExists(facility.FacilityId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(facility);
+            return View(Facility);
         }
 
-        // GET: Admin/Facilities/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: Admin/Facilitys/Delete/5
+        public IActionResult Delete(int? id)
         {
-            if (id == null || _context.Facilities == null)
+            if (id == null )
             {
                 return NotFound();
             }
 
-            var facility = await _context.Facilities
-                .FirstOrDefaultAsync(m => m.FacilityId == id);
-            if (facility == null)
+            var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
+            if (Facility == null)
             {
                 return NotFound();
             }
-
-            return View(facility);
+                
+            return View(Facility);
         }
 
-        // POST: Admin/Facilities/Delete/5
+        // POST: Admin/Facilitys/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
-            if (_context.Facilities == null)
-            {
-                return Problem("Entity set 'OHDDbContext.Facilities'  is null.");
-            }
-            var facility = await _context.Facilities.FindAsync(id);
-            if (facility != null)
-            {
-                _context.Facilities.Remove(facility);
-            }
             
-            await _context.SaveChangesAsync();
+            var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id); ;
+            if (Facility != null)
+            {
+                _unitOfWork.FacilityIU.Delete(Facility);
+            }
+
+            _unitOfWork.save();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool FacilityExists(int id)
-        {
-          return (_context.Facilities?.Any(e => e.FacilityId == id)).GetValueOrDefault();
-        }
+        
     }
 }

@@ -29,22 +29,21 @@ namespace UI.Areas.Admin.Controllers
         }
 
         // GET: Admin/Roles/Details/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (id == null || _context.Roles == null)
-        //    {
-        //        return NotFound();
-        //    }
+        public IActionResult Details(int? id)
+        {
+            if (id == null )
+            {
+                return NotFound();
+            }
 
-        //    var role = await _context.Roles
-        //        .FirstOrDefaultAsync(m => m.RoleId == id);
-        //    if (role == null)
-        //    {
-        //        return NotFound();
-        //    }
+            var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
+            if (role == null)
+            {
+                return NotFound();
+            }
 
-        //    return View(role);
-        //}
+            return View(role);
+        }
 
         // GET: Admin/Roles/Create
         public IActionResult Create()

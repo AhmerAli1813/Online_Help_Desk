@@ -1,6 +1,7 @@
 ﻿
 using DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Services.Infrastructure.IRepository;
 using System;
 using System.Collections.Generic;
@@ -37,9 +38,35 @@ namespace Services.Infrastructure.Repository
             _dbset.RemoveRange(entity);
         }
 
-        public IEnumerable<T> GetAll()
+
+        public IEnumerable<T> GetAll(
+            Expression<Func<T, bool>> filter = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
+            Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null,
+            bool disabledTranking = true
+            )
         {
-            return _dbset.ToList();
+            IQueryable<T> query = _dbset;
+            if (disabledTranking)
+            {
+                query = query.AsNoTracking();
+            }
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+            if (include != null)
+            {
+                query = include(query);
+            }
+            if (orderby != null)
+            {
+                return orderby(query).ToList();
+            }
+            else
+            {
+                return query.ToList();
+            }
         }
 
         public T GetT(Expression<Func<T, bool>> predicate)
@@ -47,5 +74,6 @@ namespace Services.Infrastructure.Repository
             return _dbset.Where(predicate).FirstOrDefault();
 
         }
+
     }
 }

@@ -170,7 +170,6 @@ F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\staticwebassets\msbuild.buildTra
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\staticwebassets.pack.json
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\staticwebassets.build.json
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\staticwebassets.development.json
-F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\scopedcss\bundle\UI.styles.css
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\scopedcss\projectbundle\UI.bundle.scp.css
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\UI.csproj.CopyComplete
