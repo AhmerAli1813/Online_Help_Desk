@@ -364,3 +364,13 @@ F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.D
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\ModelsViews.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\ModelsViews.pdb
+F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\UI.MvcApplicationPartsAssemblyInfo.cs

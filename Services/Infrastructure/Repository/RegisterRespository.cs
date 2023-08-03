@@ -11,9 +11,9 @@ namespace Services.Infrastructure.Repository
 {
     public class RegisterRespository : Repository<Register>, IRegisterRespository
     {
-        private readonly OHDDbContext  _dbContext;
+        private readonly ApplicationDbContext  _dbContext;
 
-        public RegisterRespository(OHDDbContext dbContext) : base(dbContext)
+        public RegisterRespository(ApplicationDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
         }

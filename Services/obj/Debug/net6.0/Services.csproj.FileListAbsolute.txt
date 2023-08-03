@@ -27,3 +27,5 @@ F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\Services.dll
 F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\refint\Services.dll
 F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\Services.pdb
 F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\ref\Services.dll
+F:\project\Online_Help_Desk\Services\bin\Debug\net6.0\ModelsViews.dll
+F:\project\Online_Help_Desk\Services\bin\Debug\net6.0\ModelsViews.pdb

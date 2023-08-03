@@ -1,18 +1,23 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-
-    public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<OHDDbContext>
+    public class ApplicationDbContext : IdentityDbContext
     {
-        public OHDDbContext CreateDbContext(string[] args)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<OHDDbContext>();
-            optionsBuilder.UseSqlServer("Server=DESKTOP-3OKF36U\\MSSQLSERVER01;Database=OHD;Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true");
-
-            return new OHDDbContext(optionsBuilder.Options);
         }
-    }
+
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Facility> Facilities { get; set; }
+        public DbSet<Register> Registers { get; set; }
+        public DbSet<Requests> Requests { get; set; }
+    } 
 }
