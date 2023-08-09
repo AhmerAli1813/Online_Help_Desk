@@ -11,9 +11,9 @@ namespace Services.Infrastructure.Repository
 {
     public class RolesRespository : Repository<Role>, IRolesRespository
     {
-        private readonly ApplicationDbContext  _dbContext;
+        private readonly OHDDbContext  _dbContext;
 
-        public RolesRespository(ApplicationDbContext dbContext) : base(dbContext)
+        public RolesRespository(OHDDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
         }

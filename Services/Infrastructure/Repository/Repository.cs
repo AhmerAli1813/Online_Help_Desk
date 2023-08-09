@@ -14,10 +14,10 @@ namespace Services.Infrastructure.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly ApplicationDbContext _context;
+        private readonly OHDDbContext _context;
         private readonly DbSet<T> _dbset;
 
-        public Repository(ApplicationDbContext context)
+        public Repository(OHDDbContext context)
         {
             _context = context;
             _dbset = _context.Set<T>();

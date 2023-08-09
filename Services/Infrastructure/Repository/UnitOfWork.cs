@@ -10,9 +10,9 @@ namespace Services.Infrastructure.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly OHDDbContext _dbContext;
 
-        public UnitOfWork(ApplicationDbContext dbContext)
+        public UnitOfWork(OHDDbContext dbContext)
         {
             _dbContext = dbContext;
             RolesIU = new RolesRespository(dbContext);

@@ -11,9 +11,9 @@ namespace Services.Infrastructure.Repository
 {
     public class FacilityRespository : Repository<Facility>, IFacilityRespository
     {
-        private readonly ApplicationDbContext  _dbContext;
+        private readonly OHDDbContext  _dbContext;
 
-        public FacilityRespository(ApplicationDbContext dbContext) : base(dbContext)
+        public FacilityRespository(OHDDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
         }
