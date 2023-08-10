@@ -1,8 +1,8 @@
 
-using DataAccessLayer;
+using OHD.DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
-using Services.Infrastructure.IRepository;
-using Services.Infrastructure.Repository;
+using OHD.DataAccessLayer.Infrastructure.IRepository;
+using OHD.DataAccessLayer.Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 

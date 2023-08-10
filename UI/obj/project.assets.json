@@ -3932,43 +3932,39 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "DataAccessLayer/1.0.0": {
+      "OHD.DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9",
-          "Models": "1.0.0"
+          "OHD.Models": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/DataAccessLayer.dll": {}
+          "bin/placeholder/OHD.DataAccessLayer.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DataAccessLayer.dll": {}
+          "bin/placeholder/OHD.DataAccessLayer.dll": {}
         }
       },
-      "Models/1.0.0": {
+      "OHD.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Models.dll": {}
+          "bin/placeholder/OHD.Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Models.dll": {}
+          "bin/placeholder/OHD.Models.dll": {}
         }
       },
-      "Services/1.0.0": {
+      "OHD.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "DataAccessLayer": "1.0.0",
-          "Models": "1.0.0"
-        },
         "compile": {
-          "bin/placeholder/Services.dll": {}
+          "bin/placeholder/OHD.Services.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Services.dll": {}
+          "bin/placeholder/OHD.Services.dll": {}
         }
       }
     }
@@ -11266,32 +11262,32 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "DataAccessLayer/1.0.0": {
+    "OHD.DataAccessLayer/1.0.0": {
       "type": "project",
-      "path": "../DataAccessLayer/DataAccessLayer.csproj",
-      "msbuildProject": "../DataAccessLayer/DataAccessLayer.csproj"
+      "path": "../DataAccessLayer/OHD.DataAccessLayer.csproj",
+      "msbuildProject": "../DataAccessLayer/OHD.DataAccessLayer.csproj"
     },
-    "Models/1.0.0": {
+    "OHD.Models/1.0.0": {
       "type": "project",
-      "path": "../Models/Models.csproj",
-      "msbuildProject": "../Models/Models.csproj"
+      "path": "../Models/OHD.Models.csproj",
+      "msbuildProject": "../Models/OHD.Models.csproj"
     },
-    "Services/1.0.0": {
+    "OHD.Services/1.0.0": {
       "type": "project",
-      "path": "../Services/Services.csproj",
-      "msbuildProject": "../Services/Services.csproj"
+      "path": "../Services/OHD.Services.csproj",
+      "msbuildProject": "../Services/OHD.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DataAccessLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.9",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15",
-      "Models >= 1.0.0",
-      "Services >= 1.0.0"
+      "OHD.DataAccessLayer >= 1.0.0",
+      "OHD.Models >= 1.0.0",
+      "OHD.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11300,9 +11296,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\project\\Online_Help_Desk\\UI\\UI.csproj",
-      "projectName": "UI",
-      "projectPath": "F:\\project\\Online_Help_Desk\\UI\\UI.csproj",
+      "projectUniqueName": "F:\\project\\Online_Help_Desk\\UI\\OHD.UI.csproj",
+      "projectName": "OHD.UI",
+      "projectPath": "F:\\project\\Online_Help_Desk\\UI\\OHD.UI.csproj",
       "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
       "outputPath": "F:\\project\\Online_Help_Desk\\UI\\obj\\",
       "projectStyle": "PackageReference",
@@ -11322,14 +11318,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\project\\Online_Help_Desk\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\DataAccessLayer.csproj"
+            "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
+              "projectPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj"
             },
-            "F:\\project\\Online_Help_Desk\\Models\\Models.csproj": {
-              "projectPath": "F:\\project\\Online_Help_Desk\\Models\\Models.csproj"
+            "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
+              "projectPath": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj"
             },
-            "F:\\project\\Online_Help_Desk\\Services\\Services.csproj": {
-              "projectPath": "F:\\project\\Online_Help_Desk\\Services\\Services.csproj"
+            "F:\\project\\Online_Help_Desk\\Services\\OHD.Services.csproj": {
+              "projectPath": "F:\\project\\Online_Help_Desk\\Services\\OHD.Services.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "F:\\project\\Online_Help_Desk\\UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\UI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\UI.bundle.scp.css"
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\OHD.UI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\OHD.UI.bundle.scp.css"
     },
     {
       "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\favicon.ico",
@@ -2321,20 +2321,20 @@
       "PackagePath": "staticwebassets\\vendors\\styles\\style.min.css"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.UI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.OHD.UI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.UI.props",
-      "PackagePath": "build\\UI.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.OHD.UI.props",
+      "PackagePath": "build\\OHD.UI.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.UI.props",
-      "PackagePath": "buildMultiTargeting\\UI.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.OHD.UI.props",
+      "PackagePath": "buildMultiTargeting\\OHD.UI.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.UI.props",
-      "PackagePath": "buildTransitive\\UI.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.OHD.UI.props",
+      "PackagePath": "buildTransitive\\OHD.UI.props"
     }
   ],
   "ElementsToRemove": []

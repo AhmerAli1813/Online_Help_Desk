@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{8CEA5BE0-4FFE-4D6E-87B0-E14E886BED80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OHD.UI", "UI\OHD.UI.csproj", "{8CEA5BE0-4FFE-4D6E-87B0-E14E886BED80}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{64CE14D0-3C07-4049-95EC-EB85793949B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OHD.DataAccessLayer", "DataAccessLayer\OHD.DataAccessLayer.csproj", "{64CE14D0-3C07-4049-95EC-EB85793949B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{C250697B-15DB-4679-89A7-3BBB03C3DCE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OHD.Models", "Models\OHD.Models.csproj", "{C250697B-15DB-4679-89A7-3BBB03C3DCE1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{01363E16-096C-493E-A6B8-FC9AC9F14208}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OHD.Services", "Services\OHD.Services.csproj", "{01363E16-096C-493E-A6B8-FC9AC9F14208}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{ADA906E2-9051-4860-8894-FB7DE9CBEE7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OHD.ModelsViews", "ViewModels\OHD.ModelsViews.csproj", "{ADA906E2-9051-4860-8894-FB7DE9CBEE7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

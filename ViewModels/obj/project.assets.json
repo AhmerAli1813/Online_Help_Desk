@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\project\\Online_Help_Desk\\ViewModels\\ViewModels.csproj",
-      "projectName": "ViewModels",
-      "projectPath": "F:\\project\\Online_Help_Desk\\ViewModels\\ViewModels.csproj",
+      "projectUniqueName": "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj",
+      "projectName": "OHD.ModelsViews",
+      "projectPath": "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj",
       "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
       "outputPath": "F:\\project\\Online_Help_Desk\\ViewModels\\obj\\",
       "projectStyle": "PackageReference",

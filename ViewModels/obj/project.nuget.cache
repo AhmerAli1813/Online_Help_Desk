@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5li1jbtY11/mDAqDukOzNNJRUP3GuP/ObcR7CSjSwAiGSKM5n3hJAe5ScWhkPeupZbMwZN8q80k5saTbmNmJnQ==",
+  "dgSpecHash": "peYFUD7r3RvWcClvpysyXtFyx7rcyG3aiPYNXG3NafPiWgpZ/3yvm7YolmhSAY/Bt4ERl78HyDpHhacWz+xmYw==",
   "success": true,
-  "projectFilePath": "F:\\project\\Online_Help_Desk\\ViewModels\\ViewModels.csproj",
+  "projectFilePath": "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

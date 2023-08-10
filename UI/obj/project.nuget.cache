@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9H5fJ7HQjyUgeIb2q/xnz+QqY23aHHZCGq8D4bj5uKd3S978sDA6mDBQ/EDVZRXi8nsMGX1VGHUQxzWyFKggsQ==",
+  "dgSpecHash": "v5RVOjtPUoie+RI+fcQ5Ma2OtYwuufj0vRsFpVEY7TAK8nmpXmYxlTWUo3bJ4rDHPvxV2KslywRCCdDRgYG4zA==",
   "success": true,
-  "projectFilePath": "F:\\project\\Online_Help_Desk\\UI\\UI.csproj",
+  "projectFilePath": "F:\\project\\Online_Help_Desk\\UI\\OHD.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

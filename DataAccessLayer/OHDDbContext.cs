@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Models;
+using OHD.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer
+namespace OHD.DataAccessLayer
 {
     public class OHDDbContext : DbContext
     {

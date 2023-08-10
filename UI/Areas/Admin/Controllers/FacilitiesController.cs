@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DataAccessLayer;
-using Models;
-using Services.Infrastructure.IRepository;
+using OHD.DataAccessLayer;
+using OHD.Models;
+using OHD.DataAccessLayer.Infrastructure.IRepository;
 
 namespace UI.Areas.Admin.Controllers
 {

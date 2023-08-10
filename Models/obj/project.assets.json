@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\project\\Online_Help_Desk\\Models\\Models.csproj",
-      "projectName": "Models",
-      "projectPath": "F:\\project\\Online_Help_Desk\\Models\\Models.csproj",
+      "projectUniqueName": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj",
+      "projectName": "OHD.Models",
+      "projectPath": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj",
       "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
       "outputPath": "F:\\project\\Online_Help_Desk\\Models\\obj\\",
       "projectStyle": "PackageReference",

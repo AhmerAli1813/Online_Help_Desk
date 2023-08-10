@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Models;
+using OHD.Models;
 
-namespace DataAccessLayer
+namespace OHD.DataAccessLayer
 {
 
     public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<OHDDbContext>

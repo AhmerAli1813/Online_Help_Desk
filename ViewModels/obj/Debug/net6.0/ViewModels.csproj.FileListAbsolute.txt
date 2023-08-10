@@ -1,0 +1,12 @@
+F:\project\Online_Help_Desk\ViewModels\bin\Debug\net6.0\ViewModels.deps.json
+F:\project\Online_Help_Desk\ViewModels\bin\Debug\net6.0\ViewModels.dll
+F:\project\Online_Help_Desk\ViewModels\bin\Debug\net6.0\ViewModels.pdb
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\ViewModels.csproj.AssemblyReference.cache
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\ViewModels.AssemblyInfoInputs.cache
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\ViewModels.AssemblyInfo.cs
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\ViewModels.csproj.CoreCompileInputs.cache
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\ViewModels.dll
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\refint\ViewModels.dll
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\ViewModels.pdb
+F:\project\Online_Help_Desk\ViewModels\obj\Debug\net6.0\ref\ViewModels.dll
