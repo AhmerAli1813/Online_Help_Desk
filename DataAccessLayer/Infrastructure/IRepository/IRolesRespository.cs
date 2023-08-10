@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace OHD.DataAccessLayer.Infrastructure.IRepository
 {
-    public interface IRolesRespository : IRepository<Role>
+    public interface IRolesRespository : IRepository<Roles>
     {
-        void update(Role role);
+        void update(Roles role);
     }
 }

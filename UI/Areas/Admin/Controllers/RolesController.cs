@@ -24,7 +24,7 @@ namespace UI.Areas.Admin.Controllers
         // GET: Admin/Roles
         public IActionResult Index()
         {
-            IEnumerable<Role> roles = _unitOfWork.RolesIU.GetAll();
+            IEnumerable<Roles> roles = _unitOfWork.RolesIU.GetAll();
             return View(roles);
         }
 
@@ -54,7 +54,7 @@ namespace UI.Areas.Admin.Controllers
         // POST: Admin/Roles/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Role role)
+        public IActionResult Create(Roles role)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace UI.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit( Role role)
+        public IActionResult Edit( Roles role)
         {
             
 

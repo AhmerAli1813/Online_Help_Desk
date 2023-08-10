@@ -271,3 +271,7 @@ F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\refint\OHD.UI.dll
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\OHD.UI.pdb
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\OHD.UI.genruntimeconfig.cache
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\ref\OHD.UI.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\OHD.ModelsViews.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\OHD.ModelsViews.pdb
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OHD.DataAccessLayer.Infrastructure.Repository
 {
-    public class RolesRespository : Repository<Role>, IRolesRespository
+    public class RolesRespository : Repository<Roles>, IRolesRespository
     {
         private readonly OHDDbContext  _dbContext;
 
@@ -18,7 +18,7 @@ namespace OHD.DataAccessLayer.Infrastructure.Repository
             _dbContext = dbContext;
         }
 
-        public void update(Role role)
+        public void update(Roles role)
         {
             _dbContext.Roles.Update(role);
         }

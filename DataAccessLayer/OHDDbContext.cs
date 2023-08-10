@@ -13,7 +13,7 @@ namespace OHD.DataAccessLayer
         public OHDDbContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Role> Roles { get; set; }
+        public DbSet<Roles> Roles { get; set; }
         public DbSet<Facility> Facilities { get; set; }
         public DbSet<Register> Registers { get; set; }
         public DbSet<Requests> Requests { get; set; }

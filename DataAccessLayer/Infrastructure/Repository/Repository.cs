@@ -42,22 +42,19 @@ namespace OHD.DataAccessLayer.Infrastructure.Repository
         public IEnumerable<T> GetAll(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
-            Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null,
-            bool disabledTranking = true
+            string IncludeProperties = ""
             )
         {
             IQueryable<T> query = _dbset;
-            if (disabledTranking)
-            {
-                query = query.AsNoTracking();
-            }
+            
             if (filter != null)
             {
                 query = query.Where(filter);
             }
-            if (include != null)
+            foreach (var Include in
+                IncludeProperties.Split(new char[] {','},StringSplitOptions.RemoveEmptyEntries))
             {
-                query = include(query);
+                query = query.Include(Include);
             }
             if (orderby != null)
             {
@@ -69,9 +66,30 @@ namespace OHD.DataAccessLayer.Infrastructure.Repository
             }
         }
 
-        public T GetT(Expression<Func<T, bool>> predicate)
+
+        public T GetT(Expression<Func<T, bool>> filter = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
+            string IncludeProperties = "")
         {
-            return _dbset.Where(predicate).FirstOrDefault();
+            IQueryable<T> query = _dbset;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+            foreach (var Include in
+                IncludeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(Include);
+            }
+            if (orderby != null)
+            {
+                return orderby(query).FirstOrDefault();
+            }
+            else
+            {
+                return query.FirstOrDefault();
+            }
 
         }
 

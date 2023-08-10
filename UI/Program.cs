@@ -3,12 +3,15 @@ using OHD.DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
 using OHD.DataAccessLayer.Infrastructure.IRepository;
 using OHD.DataAccessLayer.Infrastructure.Repository;
+using Microsoft.EntityFrameworkCore.Internal;
+using OHD.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddTransient<IRegisterServices, RegisterServices>();
 builder.Services.AddDbContext<OHDDbContext>(option =>
 
         option.UseSqlServer(builder.Configuration.GetConnectionString("DefualtConnection"),

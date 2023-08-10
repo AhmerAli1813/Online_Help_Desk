@@ -28,7 +28,7 @@ namespace OHD.Models
         public status Status { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime ROD { get; set; }   = DateTime.Now;
-        public Role? Role { get; set; }
+        public Roles? Role { get; set; }
         public int RoleId { get; set; }
         public Facility? Facility { get; set; }
         public int  FacilityId { get; set; }

@@ -14,10 +14,12 @@ namespace OHD.DataAccessLayer.Infrastructure.IRepository
         IEnumerable<T> GetAll(
             Expression<Func<T,bool>> filter = null,
             Func<IQueryable<T> , IOrderedQueryable<T>> orderby = null,
-            Func<IQueryable<T> , IIncludableQueryable<T , object>> include = null,
-            bool disabledTranking = true
+            string IncludeProperties = ""
+            
             );
-        T GetT(Expression<Func<T, bool>> predicate);
+        T GetT(Expression<Func<T, bool>> filter = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
+            string IncludeProperties = "");
         void Add(T entity);
         void Delete(T entity);
         void DeleteRange(T entity);
