@@ -156,7 +156,7 @@
 						<span class="user-icon">
 							<img src="~/vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">Ross C. Lopez</span>
+						<span class="user-name">Welcome Admin</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
@@ -276,11 +276,9 @@
 							<span class="micon dw dw-edit2"></span><span class="mtext">Forms</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="form-basic.html">Form Basic</a></li>
-							<li><a href="advanced-components.html">Advanced Components</a></li>
-							<li><a href="form-wizard.html">Form Wizard</a></li>
-							<li><a href="html5-editor.html">HTML5 Editor</a></li>
-							<li><a href="form-pickers.html">Form Pickers</a></li>
+							<li><a asp-area="ITDep" asp-controller="Home" asp-action="Index">IT department</a></li>
+							<li><a asp-area="Students" asp-controller="Home" asp-action="Index">Students</a></li>
+							<li><a asp-area="admin" asp-controller="Home" asp-action="Index">Register</a></li>
 							<li><a href="image-cropper.html">Image Cropper</a></li>
 							<li><a href="image-dropzone.html">Image Dropzone</a></li>
 						</ul>
@@ -362,7 +360,7 @@
 							<li><a href="400.html">400</a></li>
 							<li><a href="403.html">403</a></li>
 							<li><a href="404.html">404</a></li>
-							<li><a href="500.html">500</a></li>
+							<li><a asp-controller="Home" asp-action="NotFound">500</a></li>
 							<li><a href="503.html">503</a></li>
 						</ul>
 					</li>

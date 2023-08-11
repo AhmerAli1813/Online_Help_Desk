@@ -54,8 +54,11 @@ namespace OHD.Services
         public RegisterView GetRegisterByExprission(int id)
         {
             var registervm = _unitOfWork.RegisterIU.GetT(x => x.RegisterId == id,IncludeProperties: "Facility,Role");
-            var vm = new RegisterView(registervm);
-            return vm;
+            	var vm = new RegisterView(registervm);
+
+				return vm;
+            
+            
         }
 
         public void InsertRegister(RegisterView registerView)

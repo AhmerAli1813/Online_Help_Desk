@@ -33,16 +33,20 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null )
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
 
             var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
             if (role == null)
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
+            else
+            {
+				return View(role);
+			}
 
-            return View(role);
+            
         }
 
         // GET: Admin/Roles/Create
@@ -70,10 +74,11 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null || id == 0)
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
             var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
-            return View(role);
+            if (role == null || role.RoleId == 0) { return RedirectToAction("NotFound", "Home"); }
+            else { return View(role); }
         }
 
         // POST: Admin/Roles/Edit/5
@@ -106,13 +111,13 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null )
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
 
             var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
             if (role == null)
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
                 
             return View(role);

@@ -1,6 +1,7 @@
 ﻿using OHD.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,28 +23,35 @@ namespace OHD.ModelsViews
         public string Password { get; set; }
         public gender Gender { get; set; }
         public status Status { get; set; }
-        public DateTime ROD { get; set; } = DateTime.Now;
+        public DateTime ROD { get; set; } 
         public Roles roles { get; set; }
+        [Required]
         public int RoleId { get; set; }
         
         public Facility Facilities { get; set; }
+        [Required]
         public int FacilityId { get; set; }
         
 
         public RegisterView( Register model)
         {
-            Id = model.RegisterId;
-            Name = model.Name;
-            Username = model.Username;
-            Email = model.Email;
-            Address = model.Address;
-            Password = model.Password;
-            Gender = model.Gender;
-            Status = model.Status;
-            roles = model.Role;
-            RoleId = model.RoleId;
-            Facilities = model.Facility;
-            FacilityId = model.FacilityId;
+            if(model!=null)
+            {
+
+
+                Id = model.RegisterId;
+                Name = model.Name;
+                Username = model.Username;
+                Email = model.Email;
+                Address = model.Address;
+                Password = model.Password;
+                Gender = model.Gender;
+                Status = model.Status;
+                roles = model.Role;
+                RoleId = model.RoleId;
+                Facilities = model.Facility;
+                FacilityId = model.FacilityId;
+            }
             
         }
         public Register ConvertModel(RegisterView model)

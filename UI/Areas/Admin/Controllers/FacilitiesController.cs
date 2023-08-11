@@ -33,13 +33,13 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null )
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
 
             var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
             if (Facility == null)
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
 
             return View(Facility);
@@ -70,7 +70,7 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null || id == 0)
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
             var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
             return View(Facility);
@@ -106,13 +106,13 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null )
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
 
             var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
             if (Facility == null)
             {
-                return NotFound();
+                return RedirectToAction("NotFound","Home");
             }
                 
             return View(Facility);

@@ -38,10 +38,26 @@ namespace OHD.UI.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            ViewBag.AllRoles = new SelectList(_RegisteredServices.GetALLRoles(), "RoleId", "RoleName");
-            ViewBag.AllFacility = new SelectList(_RegisteredServices.GetALLFacility(), "FacilityId", "FacilityName");
-            var Vm = _RegisteredServices.GetRegisterByExprission(id);
-            return View(Vm);
+            if (id == null || id==0)
+            {
+                return RedirectToAction("NotFound","Home");
+            }
+            else
+            {
+
+				ViewBag.AllRoles = new SelectList(_RegisteredServices.GetALLRoles(), "RoleId", "RoleName");
+				ViewBag.AllFacility = new SelectList(_RegisteredServices.GetALLFacility(), "FacilityId", "FacilityName");
+				var Vm = _RegisteredServices.GetRegisterByExprission(id);
+                if (Vm == null || Vm.Id==0)
+                {
+					return RedirectToAction("NotFound", "Home");
+                }
+                else
+                {
+					return View(Vm);
+				}
+				
+			}
         }
         [HttpPost]
         public IActionResult Edit(RegisterView model)
@@ -57,12 +73,19 @@ namespace OHD.UI.Areas.Admin.Controllers
         }
         public IActionResult Details(int id)
         {
-            
 
-            var  model= _RegisteredServices.GetRegisterByExprission(id);
-            
+            if (id == null || id == 0)
+            {
+                return RedirectToAction("NotFound", "Home");
+            }
+            else
+            {
+                var model = _RegisteredServices.GetRegisterByExprission(id);
+                if (model == null||model.Id==0) {return RedirectToAction("NotFound" , "Home"); } else {return View(model); }
 
-            return View(model);
+			}
+
+            
         }
 
     }

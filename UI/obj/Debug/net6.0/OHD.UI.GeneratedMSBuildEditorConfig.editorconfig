@@ -36,6 +36,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Registers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVnaXN0ZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -96,6 +104,66 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Shared/500.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcU2hhcmVkXDUwMC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Shared/500.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcU2hhcmVkXDUwMC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/project/Online_Help_Desk/UI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -103,3 +171,11 @@ build_metadata.AdditionalFiles.CssScope =
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-t0e0zjfzfi
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2tww7g6oud
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5qqct1enig
