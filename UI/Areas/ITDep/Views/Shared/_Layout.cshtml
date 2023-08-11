@@ -16,9 +16,12 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="~/vendors/styles/core.css">
-	<link rel="stylesheet" type="text/css" href="~/vendors/styles/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="~/vendors/styles/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/styles/style.css">
 
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -156,7 +159,7 @@
 						<span class="user-icon">
 							<img src="~/vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">Welcome IT Officer </span>
+						<span class="user-name">Welcome IT Officers</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
@@ -265,6 +268,9 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Forms</span>
 						</a>
 						<ul class="submenu">
+							<li><a asp-area="admin" asp-controller="Roles" asp-action="Index">Roles</a></li>
+							<li><a asp-area="admin" asp-controller="Facilities" asp-action="Index">Facilities</a></li>
+							<li><a asp-area="admin" asp-controller="Registers" asp-action="Index">Register</a></li>
 							<li><a href="index2.html">Dashboard style 2</a></li>
 						</ul>
 					</li>
@@ -273,9 +279,9 @@
 							<span class="micon dw dw-edit2"></span><span class="mtext">Forms</span>
 						</a>
 						<ul class="submenu">
-							<li><a asp-area="admin" asp-controller="Roles" asp-action="Index">Roles</a></li>
-							<li><a asp-area="admin" asp-controller="Facilities" asp-action="Index">Facilities</a></li>
-							<li><a asp-area="admin" asp-controller="Registers" asp-action="Index">Register</a></li>
+							<li><a asp-area="ITDep" asp-controller="Home" asp-action="Index">IT department</a></li>
+							<li><a asp-area="Students" asp-controller="Home" asp-action="Index">Students</a></li>
+							<li><a asp-area="admin" asp-controller="Home" asp-action="Index">Register</a></li>
 							<li><a href="image-cropper.html">Image Cropper</a></li>
 							<li><a href="image-dropzone.html">Image Dropzone</a></li>
 						</ul>
@@ -446,20 +452,22 @@
 	<div class="mobile-menu-overlay"></div>
 
 	<div class="main-container">
+		
+			
             @RenderBody()
 	
 	</div>
 	<!-- js -->
-	<script src="~/vendors/scripts/core.js"></script>
-	<script src="~/vendors/scripts/script.min.js"></script>
-	<script src="~/vendors/scripts/process.js"></script>
-	<script src="~/vendors/scripts/layout-settings.js"></script>
-	<script src="~/src/plugins/apexcharts/apexcharts.min.js"></script>
-	<script src="~/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="~/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-	<script src="~/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-	<script src="~/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<script src="~/vendors/scripts/dashboard.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/scripts/core.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/scripts/script.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/scripts/process.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/scripts/layout-settings.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/apexcharts/apexcharts.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/scripts/dashboard.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
