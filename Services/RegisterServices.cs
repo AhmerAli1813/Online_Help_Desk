@@ -66,6 +66,7 @@ namespace OHD.Services
             var model = new RegisterView().ConvertModel(registerView);
             _unitOfWork.RegisterIU.Add(model);
             _unitOfWork.save();
+
         }
 
         public void UpdateRegister(RegisterView registerView)

@@ -64,7 +64,8 @@ namespace UI.Areas.Admin.Controllers
             {
                 _unitOfWork.RolesIU.Add(role);
                 _unitOfWork.save();
-                return RedirectToAction(nameof(Index));
+				TempData["Success"] = "Create Successfuly";
+				return RedirectToAction(nameof(Index));
             }
             return View(role);
         }
@@ -96,7 +97,8 @@ namespace UI.Areas.Admin.Controllers
                 {
                     _unitOfWork.RolesIU.update(role);
                     _unitOfWork.save();
-                }
+					TempData["Success"] = "Update Successfuly";
+				}
                 catch (DbUpdateConcurrencyException)
                 {
                     
@@ -133,7 +135,8 @@ namespace UI.Areas.Admin.Controllers
             if (role != null)
             {
                 _unitOfWork.RolesIU.Delete(role);
-            }
+				TempData["Success"] = "Delete Successfuly";
+			}
 
             _unitOfWork.save();
             return RedirectToAction(nameof(Index));

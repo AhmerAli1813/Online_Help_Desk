@@ -60,6 +60,7 @@ namespace UI.Areas.Admin.Controllers
             {
                 _unitOfWork.FacilityIU.Add(Facility);
                 _unitOfWork.save();
+                TempData["Success"] = "Create Successfuly";
                 return RedirectToAction(nameof(Index));
             }
             return View(Facility);
@@ -91,7 +92,8 @@ namespace UI.Areas.Admin.Controllers
                 {
                     _unitOfWork.FacilityIU.update(Facility);
                     _unitOfWork.save();
-                }
+					TempData["Success"] = "Update Successfuly";
+				}
                 catch (DbUpdateConcurrencyException)
                 {
                     
@@ -128,7 +130,8 @@ namespace UI.Areas.Admin.Controllers
             if (Facility != null)
             {
                 _unitOfWork.FacilityIU.Delete(Facility);
-            }
+				TempData["Success"] = "Delete Successfuly";
+			}
 
             _unitOfWork.save();
             return RedirectToAction(nameof(Index));

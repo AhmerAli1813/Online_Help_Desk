@@ -32,8 +32,8 @@ namespace OHD.UI.Areas.Admin.Controllers
         public IActionResult Create(RegisterView model)
         {
             _RegisteredServices.InsertRegister(model);
-
-            return RedirectToAction("Index");
+			TempData["Success"] = "Create Successfuly";
+			return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Edit(int id)
@@ -63,13 +63,15 @@ namespace OHD.UI.Areas.Admin.Controllers
         public IActionResult Edit(RegisterView model)
         {
             _RegisteredServices.UpdateRegister(model);
-            return RedirectToAction("Index");
+			TempData["Success"] = "Update Successfuly";
+			return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Delete(int id)
         {
              _RegisteredServices.DeleteRegister(id);
-            return RedirectToAction("Index");
+			TempData["Success"] = "Delete Successfuly";
+			return RedirectToAction("Index");
         }
         public IActionResult Details(int id)
         {

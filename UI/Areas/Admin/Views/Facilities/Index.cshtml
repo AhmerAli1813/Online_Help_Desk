@@ -5,11 +5,14 @@
 }
 
 <h1>Index</h1>
-
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success float-right">@TempData["Success"]</div>
+}
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="badge badge-info" asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table bg-light">
     <thead>
         <tr>
             <th>
@@ -18,7 +21,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.FacilityDescription)
             </th>
-            <th></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -31,9 +34,9 @@
                 @Html.DisplayFor(modelItem => item.FacilityDescription)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.FacilityId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.FacilityId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.FacilityId">Delete</a>
+                    <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.FacilityId">Edit</a> |
+                    <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.FacilityId">Details</a> |
+                    <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.FacilityId">Delete</a>
             </td>
         </tr>
 }
