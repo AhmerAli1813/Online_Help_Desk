@@ -1,0 +1,16 @@
+﻿@{
+	ViewData["Title"] = @ViewBag.HttpError;
+}
+
+<div class="error-page d-flex align-items-center flex-wrap justify-content-center pd-20">
+	<div class="pd-10">
+		<div class="error-page-wrap text-center">
+			<h1>@ViewBag.HttpError</h1>
+			<h3>Error: @ViewBag.HttpError Unexpected Error</h3>
+			<p>@ViewBag.HttpMessage</p>
+			<div class="pt-20 mx-auto max-width-200">
+				<a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-block btn-lg">Back To Home</a>
+			</div>
+		</div>
+	</div>
+</div>

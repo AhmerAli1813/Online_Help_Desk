@@ -6,7 +6,26 @@ namespace OHD.UI.Areas.Admin.Controllers
 
     public class HomeController : Controller
     {
-		public IActionResult NotFound() => View();
-		public IActionResult Index() => View();
+
+		public IActionResult Index()
+		{
+			if (HttpContext.Session.GetInt32("Role") != null)
+			{
+				if (HttpContext.Session.GetInt32("Role") == 2000)
+				{
+					ViewBag.Name = HttpContext.Session.GetString("Name");
+				}
+				else
+				{
+					return RedirectToAction("badRequest", "Home", new { area = "Home" });
+				}
+
+			}
+			else
+			{
+				return RedirectToAction("Index", "Aurth", new { area = "Home" });
+			}
+			return View();
+		}
 	}
 }

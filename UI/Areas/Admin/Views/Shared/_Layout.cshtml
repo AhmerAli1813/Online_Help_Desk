@@ -159,13 +159,13 @@
 						<span class="user-icon">
 							<img src="~/vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">Welcome Admin</span>
+						<span class="user-name">Welcome @ViewBag.Name</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
 						<a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
 						<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
-						<a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> Log Out</a>
+						<a class="dropdown-item" asp-area="Home" asp-controller="Aurth" asp-action="logout"><i class="dw dw-logout"></i> Log Out</a>
 					</div>
 				</div>
 			</div>
@@ -271,7 +271,7 @@
 							<li><a asp-area="admin" asp-controller="Roles" asp-action="Index">Roles</a></li>
 							<li><a asp-area="admin" asp-controller="Facilities" asp-action="Index">Facilities</a></li>
 							<li><a asp-area="admin" asp-controller="Registers" asp-action="Index">Register</a></li>
-							<li><a href="index2.html">Dashboard style 2</a></li>
+							<li><a asp-area="login" asp-controller="Aurth" asp-action="Index">Dashboard style 2</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">

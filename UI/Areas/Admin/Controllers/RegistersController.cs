@@ -40,7 +40,8 @@ namespace OHD.UI.Areas.Admin.Controllers
         {
             if (id == null || id==0)
             {
-                return RedirectToAction("NotFound","Home");
+
+                return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
             else
             {
@@ -50,8 +51,8 @@ namespace OHD.UI.Areas.Admin.Controllers
 				var Vm = _RegisteredServices.GetRegisterByExprission(id);
                 if (Vm == null || Vm.Id==0)
                 {
-					return RedirectToAction("NotFound", "Home");
-                }
+					return RedirectToAction("badRequest", "Home", new { area = "Home" });
+				}
                 else
                 {
 					return View(Vm);
@@ -78,12 +79,12 @@ namespace OHD.UI.Areas.Admin.Controllers
 
             if (id == null || id == 0)
             {
-                return RedirectToAction("NotFound", "Home");
-            }
+				return RedirectToAction("badRequest", "Home", new { area = "Home" });
+			}
             else
             {
                 var model = _RegisteredServices.GetRegisterByExprission(id);
-                if (model == null||model.Id==0) {return RedirectToAction("NotFound" , "Home"); } else {return View(model); }
+                if (model == null||model.Id==0) { return RedirectToAction("badRequest", "Home", new { area = "Home" }); } else {return View(model); }
 
 			}
 

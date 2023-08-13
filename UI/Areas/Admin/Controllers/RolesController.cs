@@ -33,13 +33,13 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null )
             {
-                return RedirectToAction("NotFound","Home");
+                return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
 
             var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
             if (role == null)
             {
-                return RedirectToAction("NotFound","Home");
+                return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
             else
             {
@@ -75,7 +75,7 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null || id == 0)
             {
-                return RedirectToAction("NotFound","Home");
+                return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
             var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
             if (role == null || role.RoleId == 0) { return RedirectToAction("NotFound", "Home"); }
@@ -113,13 +113,13 @@ namespace UI.Areas.Admin.Controllers
         {
             if (id == null )
             {
-                return RedirectToAction("NotFound","Home");
+                return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
 
             var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
             if (role == null)
             {
-                return RedirectToAction("NotFound","Home");
+                return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
                 
             return View(role);
