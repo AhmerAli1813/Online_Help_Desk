@@ -8,9 +8,9 @@ namespace OHD.DataAccessLayer.Infrastructure.IRepository
 {
     public interface IUnitOfWork
     {
-        IRolesRespository RolesIU { get; }
-        IFacilityRespository FacilityIU { get; }
-        IRegisterRespository RegisterIU { get; }
-        void save();
+        IRepository<T> GenericRepository<T>()  where T : class;
+        
+        void Save();
+         Task SaveAsync();
     }
 }

@@ -24,7 +24,7 @@ namespace UI.Areas.Admin.Controllers
         // GET: Admin/Roles
         public IActionResult Index()
         {
-            IEnumerable<Roles> roles = _unitOfWork.RolesIU.GetAll();
+            IEnumerable<Roles> roles = _unitOfWork.GenericRepository<Roles>().GetAll();
             return View(roles);
         }
 
@@ -36,7 +36,7 @@ namespace UI.Areas.Admin.Controllers
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
 
-            var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
+            var role = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id);
             if (role == null)
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -62,8 +62,8 @@ namespace UI.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.RolesIU.Add(role);
-                _unitOfWork.save();
+                _unitOfWork.GenericRepository<Roles>().Add(role);
+                _unitOfWork.Save();
 				TempData["Success"] = "Create Successfuly";
 				return RedirectToAction(nameof(Index));
             }
@@ -77,7 +77,7 @@ namespace UI.Areas.Admin.Controllers
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
-            var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
+            var role = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id);
             if (role == null || role.RoleId == 0) { return RedirectToAction("NotFound", "Home"); }
             else { return View(role); }
         }
@@ -95,8 +95,8 @@ namespace UI.Areas.Admin.Controllers
             {
                 try
                 {
-                    _unitOfWork.RolesIU.update(role);
-                    _unitOfWork.save();
+                    _unitOfWork.GenericRepository<Roles>().Update(role);
+                    _unitOfWork.Save();
 					TempData["Success"] = "Update Successfuly";
 				}
                 catch (DbUpdateConcurrencyException)
@@ -116,7 +116,7 @@ namespace UI.Areas.Admin.Controllers
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
 
-            var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id);
+            var role = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id);
             if (role == null)
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -131,14 +131,14 @@ namespace UI.Areas.Admin.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             
-            var role = _unitOfWork.RolesIU.GetT(x => x.RoleId == id); ;
+            var role = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id); ;
             if (role != null)
             {
-                _unitOfWork.RolesIU.Delete(role);
+                _unitOfWork.GenericRepository<Roles>().Delete(role);
 				TempData["Success"] = "Delete Successfuly";
 			}
 
-            _unitOfWork.save();
+            _unitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
 

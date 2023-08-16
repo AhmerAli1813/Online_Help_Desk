@@ -1,4 +1,5 @@
-﻿using OHD.DataAccessLayer;
+﻿using Microsoft.EntityFrameworkCore;
+using OHD.DataAccessLayer;
 using OHD.DataAccessLayer.Infrastructure.IRepository;
 using System;
 using System.Collections.Generic;
@@ -8,27 +9,50 @@ using System.Threading.Tasks;
 
 namespace OHD.DataAccessLayer.Infrastructure.Repository
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork , IDisposable
     {
         private readonly OHDDbContext _dbContext;
 
         public UnitOfWork(OHDDbContext dbContext)
         {
             _dbContext = dbContext;
-            RolesIU = new RolesRespository(dbContext);
-            FacilityIU = new FacilityRespository(dbContext);
-            RegisterIU = new RegisterRespository(dbContext);
 
         }
 
-        public IRolesRespository RolesIU { get; private set; }
+		private bool _disposed;
+		public void Dispose()
+		{
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
 
-        public IFacilityRespository FacilityIU { get; private set; }
-      public IRegisterRespository RegisterIU { get; private set; }
+		private void Dispose(bool disposing)
+		{
+			if (!this._disposed)
+			{
+				if (disposing)
+				{
+					_dbContext.Dispose();
+				}
+			}
+			this._disposed = true;
+		}
 
-        public void save()
+		public IRepository<T> GenericRepository<T>() where T : class
+		{
+            IRepository<T> repo = new Repository<T>(_dbContext);
+            return repo;
+		}
+
+		public void Save()
         {
             _dbContext.SaveChanges();   
         }
-    }
+
+
+		public async Task SaveAsync()
+		{
+			await _dbContext.SaveChangesAsync();	
+		}
+	}
 }

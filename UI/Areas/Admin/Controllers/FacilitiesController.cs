@@ -24,7 +24,7 @@ namespace UI.Areas.Admin.Controllers
         // GET: Admin/Facilitys
         public IActionResult Index()
         {
-            IEnumerable<Facility> Facilitys = _unitOfWork.FacilityIU.GetAll();
+            IEnumerable<Facility> Facilitys = _unitOfWork.GenericRepository<Facility>().GetAll();
             return View(Facilitys);
         }
 
@@ -36,7 +36,7 @@ namespace UI.Areas.Admin.Controllers
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
 			}
 
-            var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
+            var Facility = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id);
             if (Facility == null)
             {
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -58,8 +58,8 @@ namespace UI.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.FacilityIU.Add(Facility);
-                _unitOfWork.save();
+                _unitOfWork.GenericRepository<Facility>().Add(Facility);
+                _unitOfWork.Save();
                 TempData["Success"] = "Create Successfuly";
                 return RedirectToAction(nameof(Index));
             }
@@ -73,7 +73,7 @@ namespace UI.Areas.Admin.Controllers
             {
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
 			}
-            var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
+            var Facility = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id);
             return View(Facility);
         }
 
@@ -90,8 +90,8 @@ namespace UI.Areas.Admin.Controllers
             {
                 try
                 {
-                    _unitOfWork.FacilityIU.update(Facility);
-                    _unitOfWork.save();
+                    _unitOfWork.GenericRepository<Facility>().Update(Facility);
+                    _unitOfWork.Save();
 					TempData["Success"] = "Update Successfuly";
 				}
                 catch (DbUpdateConcurrencyException)
@@ -111,7 +111,7 @@ namespace UI.Areas.Admin.Controllers
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
 			}
 
-            var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id);
+            var Facility = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id);
             if (Facility == null)
             {
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -126,14 +126,14 @@ namespace UI.Areas.Admin.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             
-            var Facility = _unitOfWork.FacilityIU.GetT(x => x.FacilityId == id); ;
+            var Facility = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id); ;
             if (Facility != null)
             {
-                _unitOfWork.FacilityIU.Delete(Facility);
+                _unitOfWork.GenericRepository<Facility>().Delete(Facility);
 				TempData["Success"] = "Delete Successfuly";
 			}
 
-            _unitOfWork.save();
+            _unitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
 

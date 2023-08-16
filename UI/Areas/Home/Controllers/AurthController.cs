@@ -27,7 +27,9 @@ namespace OHD.UI.Areas.Home.Controllers
             {
                 HttpContext.Session.SetString("Name", list.Name);
                 HttpContext.Session.SetInt32("Role", list.RoleId);
-                if (list.RoleId == 2000)
+                HttpContext.Session.SetString("Email", list.Email);
+				HttpContext.Session.SetInt32("Id", list.Id);
+					if (list.RoleId == 2000)
                 {
                     return RedirectToAction("Index", "Home", new { area = "admin" });
                 }

@@ -11,8 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddTransient<IRegisterServices, RegisterServices>();
-builder.Services.AddTransient<IAurtrizationServices, AurtrizationServices>();
+builder.Services.AddScoped<IRegisterServices, RegisterServices>();
+builder.Services.AddScoped<IAurtrizationServices, AurtrizationServices>();
 builder.Services.AddDbContext<OHDDbContext>(option =>
 
         option.UseSqlServer(builder.Configuration.GetConnectionString("DefualtConnection"),

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OHD.DataAccessLayer.Infrastructure.IRepository
 {
-    public interface IRepository<T>  where T : class
+    public interface IRepository<T>  : IDisposable
     {
         IEnumerable<T> GetAll(
             Expression<Func<T,bool>> filter = null,
@@ -20,10 +20,17 @@ namespace OHD.DataAccessLayer.Infrastructure.IRepository
         T GetT(Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
             string IncludeProperties = "");
+        Task<T> GetTAsync(Expression<Func<T, bool>> filter = null,
+			Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
+			string IncludeProperties = "");
         void Add(T entity);
-        void Delete(T entity);
-        void DeleteRange(T entity);
+        Task<T> AddAsync(T entity);
+		void Update(T entity);
+        Task<T> UpdateAsync(T entity);  
+		void Delete(T entity);
+        Task<T> DeleteAsync(T entity);
         
         
+  
     }
 }

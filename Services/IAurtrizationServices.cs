@@ -10,5 +10,7 @@ namespace OHD.Services
 	public interface IAurtrizationServices
 	{
 		RegisterView Aurthrization(AurthrizationView view);
+		ProfileUpdateView GetProfileUser(int id);
+		bool UpdateProfile(ProfileUpdateView profile);
 	}
 }

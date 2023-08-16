@@ -25,35 +25,35 @@ namespace OHD.Services
 
         public void DeleteRegister(int id)
         {
-            var registervm = _unitOfWork.RegisterIU.GetT(x => x.RegisterId == id);
-            _unitOfWork.RegisterIU.Delete(registervm);
-            _unitOfWork.save();
+            var registervm = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == id);
+            _unitOfWork.GenericRepository<Register>().Delete(registervm);
+            _unitOfWork.Save();
         }
 
         public IEnumerable<Facility> GetALLFacility()
         {
-            var list = _unitOfWork.FacilityIU.GetAll().ToList();
+            var list = _unitOfWork.GenericRepository<Facility>().GetAll().ToList();
             return list;
         }
 
         public IEnumerable<RegisterView> GetALLRegisters()
         {
             List<RegisterView> vmList = new List<RegisterView>(); 
-            var RegisterModel = _unitOfWork.RegisterIU.GetAll(IncludeProperties: "Facility,Role");
+            var RegisterModel = _unitOfWork.GenericRepository<Register>().GetAll(IncludeProperties: "Facility,Role");
             vmList = ConvertModelToViewModel(RegisterModel);
                 return vmList;
         }
 
         public IEnumerable<Roles> GetALLRoles()
         {
-            var list = _unitOfWork.RolesIU.GetAll().ToList();
+            var list = _unitOfWork.GenericRepository<Roles>().GetAll().ToList();
             return list;
         }
 
 
         public RegisterView GetRegisterByExprission(int id)
         {
-            var registervm = _unitOfWork.RegisterIU.GetT(x => x.RegisterId == id,IncludeProperties: "Facility,Role");
+            var registervm = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == id,IncludeProperties: "Facility,Role");
             	var vm = new RegisterView(registervm);
 
 				return vm;
@@ -64,16 +64,16 @@ namespace OHD.Services
         public void InsertRegister(RegisterView registerView)
         {
             var model = new RegisterView().ConvertModel(registerView);
-            _unitOfWork.RegisterIU.Add(model);
-            _unitOfWork.save();
+            _unitOfWork.GenericRepository<Register>().Add(model);
+            _unitOfWork.Save();
 
         }
 
         public void UpdateRegister(RegisterView registerView)
         {
             var model = new RegisterView().ConvertModel(registerView);
-            _unitOfWork.RegisterIU.update(model);
-            _unitOfWork.save();
+            _unitOfWork.GenericRepository<Register>().Update(model);
+            _unitOfWork.Save();
         }
 
         private List<RegisterView> ConvertModelToViewModel(IEnumerable<Register> registerModel)

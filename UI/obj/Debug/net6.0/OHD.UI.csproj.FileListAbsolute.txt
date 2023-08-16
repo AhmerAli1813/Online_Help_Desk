@@ -278,3 +278,4 @@ F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\scopedcss\Areas\ITDep\Views\Shared\_Layout.cshtml.rz.scp.css
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\scopedcss\Areas\Students\Views\Shared\_Layout.cshtml.rz.scp.css
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\scopedcss\Areas\Home\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\OHD.UI.MvcApplicationPartsAssemblyInfo.cs
