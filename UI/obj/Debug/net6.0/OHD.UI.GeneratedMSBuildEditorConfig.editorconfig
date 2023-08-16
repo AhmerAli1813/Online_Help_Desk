@@ -100,12 +100,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/Online_Help_Desk/UI/Areas/Home/Views/Aurth/ForgetPassword.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSG9tZVxWaWV3c1xBdXJ0aFxGb3JnZXRQYXNzd29yZC5jc2h0bWw=
+[F:/project/Online_Help_Desk/UI/Areas/Home/Views/Auth/ForgetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSG9tZVxWaWV3c1xBdXRoXEZvcmdldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/Online_Help_Desk/UI/Areas/Home/Views/Aurth/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSG9tZVxWaWV3c1xBdXJ0aFxJbmRleC5jc2h0bWw=
+[F:/project/Online_Help_Desk/UI/Areas/Home/Views/Auth/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSG9tZVxWaWV3c1xBdXRoXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/Home/Views/Home/badRequest.cshtml]
@@ -144,6 +144,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Home/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -166,6 +170,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/project/Online_Help_Desk/UI/Areas/Students/Views/Home/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Home/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/Students/Views/Shared/Error.cshtml]

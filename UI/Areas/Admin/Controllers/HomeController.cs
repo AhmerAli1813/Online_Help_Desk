@@ -43,6 +43,7 @@ namespace OHD.UI.Areas.Admin.Controllers
 			if(HttpContext.Session.GetInt32("Id") !=null) {
 				int Id = (int)HttpContext.Session.GetInt32("Id");
 				var data = _aurtrizationServices.GetProfileUser(Id);
+				ViewBag.Name = HttpContext.Session.GetString("Name");
 				return View(data);
 			}
 			return RedirectToAction("Aurth", "Home", new { area = "Home" });
@@ -57,7 +58,7 @@ namespace OHD.UI.Areas.Admin.Controllers
 				}
 				else { TempData["error"] = "old password is not match"; }
 					
-			return View();
+			return View(vm);
 		}
 	}
 }

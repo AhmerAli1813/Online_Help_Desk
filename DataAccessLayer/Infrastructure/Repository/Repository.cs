@@ -86,20 +86,20 @@ namespace OHD.DataAccessLayer.Infrastructure.Repository
             
             if (filter != null)
             {
-                query = query.Where(filter);
+                query = query.AsNoTracking().Where(filter);
             }
             foreach (var Include in
                 IncludeProperties.Split(new char[] {','},StringSplitOptions.RemoveEmptyEntries))
             {
-                query = query.Include(Include);
+                query = query.AsNoTracking().Include(Include);
             }
             if (orderby != null)
             {
-                return orderby(query).ToList();
+                return orderby(query).AsNoTracking().ToList();
             }
             else
             {
-                return query.ToList();
+                return query.AsNoTracking().ToList();
             }
         }
 
@@ -112,20 +112,20 @@ namespace OHD.DataAccessLayer.Infrastructure.Repository
 
             if (filter != null)
             {
-                query = query.Where(filter);
+                query = query.AsNoTracking().Where(filter);
             }
             foreach (var Include in
                 IncludeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
-                query = query.Include(Include);
+                query = query.AsNoTracking().Include(Include);
             }
             if (orderby != null)
             {
-                return orderby(query).FirstOrDefault();
+                return orderby(query).AsNoTracking().FirstOrDefault();
             }
             else
             {
-                return query.FirstOrDefault();
+                return query.AsNoTracking().FirstOrDefault();
             }
 
         }
@@ -136,26 +136,26 @@ namespace OHD.DataAccessLayer.Infrastructure.Repository
 
 			if (filter != null)
 			{
-				query = query.Where(filter);
+				query = query.AsNoTracking().Where(filter);
 			}
 			foreach (var Include in
 				IncludeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
 			{
-				query = query.Include(Include);
+				query = query.AsNoTracking().Include(Include);
 			}
 			if (orderby != null)
 			{
-				return  await orderby(query).FirstOrDefaultAsync();
+				return  await orderby(query).AsNoTracking().FirstOrDefaultAsync();
 			}
 			else
 			{
-				return await query.FirstOrDefaultAsync();
+				return await query.AsNoTracking().FirstOrDefaultAsync();
 			}
 		}
 
 		public void Update(T entity)
 		{
-
+            
 			_dbset.Attach(entity);
 			_context.Entry(entity).State = EntityState.Modified;
 		}

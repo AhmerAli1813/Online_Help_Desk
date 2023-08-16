@@ -1845,6 +1845,142 @@
       "PackagePath": "staticwebassets\\src\\styles\\theme.css"
     },
     {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\bootstrap\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\bootstrap\\bootstrap-icons.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\bootstrap\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\bootstrap\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\bootstrap\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\bootstrap\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\dropways.css",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\dropways.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\dropways.eot",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\dropways.eot"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\dropways.svg",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\dropways.svg"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\dropways.ttf",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\dropways.ttf"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\dropways.woff",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\dropways.woff"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\foundation-icons.css",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\foundation-icons.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\foundation-icons.eot",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\foundation-icons.eot"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\foundation-icons.svg",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\foundation-icons.svg"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\foundation-icons.ttf",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\foundation-icons.ttf"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\foundation-icons.woff",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\foundation-icons.woff"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\ionicons-master\\css\\ionicons.css",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\ionicons-master\\css\\ionicons.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\ionicons-master\\css\\ionicons.min.css",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\ionicons-master\\css\\ionicons.min.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\ionicons.eot",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\ionicons.eot"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\ionicons.svg",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\ionicons.svg"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\ionicons.ttf",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\ionicons.ttf"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\ionicons.woff",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\ionicons.woff"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\themify-icons\\themify-icons.css",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\themify-icons\\themify-icons.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\themify.eot"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\themify.svg"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\vendors\\fonts\\themify.woff"
+    },
+    {
       "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\images\\apple-touch-icon.png",
       "PackagePath": "staticwebassets\\vendors\\images\\apple-touch-icon.png"
     },
@@ -2143,6 +2279,106 @@
     {
       "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\images\\wave.png",
       "PackagePath": "staticwebassets\\vendors\\images\\wave.png"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\advanced-components.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\advanced-components.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\apexcharts-setting.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\apexcharts-setting.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\calendar-setting.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\calendar-setting.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\colorpicker.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\colorpicker.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\core.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\core.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\core.min.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\core.min.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\dashboard.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\dashboard.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\dashboard2.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\dashboard2.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\dashboard3.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\dashboard3.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\datatable-setting.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\datatable-setting.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\highchart-setting.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\highchart-setting.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\jvectormap-setting.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\jvectormap-setting.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\knob-chart-setting.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\knob-chart-setting.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\layout-settings.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\layout-settings.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\process.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\process.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\range-slider-setting.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\range-slider-setting.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\script.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\script.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\script.min.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\script.min.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\scripts\\steps-setting.js",
+      "PackagePath": "staticwebassets\\vendors\\scripts\\steps-setting.js"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\styles\\core.css",
+      "PackagePath": "staticwebassets\\vendors\\styles\\core.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\styles\\core.min.css",
+      "PackagePath": "staticwebassets\\vendors\\styles\\core.min.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\styles\\icon-font.css",
+      "PackagePath": "staticwebassets\\vendors\\styles\\icon-font.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\styles\\icon-font.min.css",
+      "PackagePath": "staticwebassets\\vendors\\styles\\icon-font.min.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\styles\\style.css",
+      "PackagePath": "staticwebassets\\vendors\\styles\\style.css"
+    },
+    {
+      "Id": "F:\\project\\Online_Help_Desk\\UI\\wwwroot\\vendors\\styles\\style.min.css",
+      "PackagePath": "staticwebassets\\vendors\\styles\\style.min.css"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.OHD.UI.Microsoft.AspNetCore.StaticWebAssets.props",
