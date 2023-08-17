@@ -16,24 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\project\Online_Help_Desk\UI
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facilities/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xDcmVhdGUuY3NodG1s
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facility/CreateUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdHlcQ3JlYXRlVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facilities/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xEZWxldGUuY3NodG1s
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facility/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdHlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facilities/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xEZXRhaWxzLmNzaHRtbA==
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facility/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdHlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facilities/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facilities/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xJbmRleC5jc2h0bWw=
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Facility/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdHlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Home/Index.cshtml]

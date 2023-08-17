@@ -24,7 +24,7 @@ namespace OHD.Services
 			try
 			{
 				var Facilityvm = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id);
-				_unitOfWork.GenericRepository<Facility>().Delete(Facilityvm);
+				_unitOfWork.GenericRepository<Facility>().DeleteAsync(Facilityvm);
 				_unitOfWork.Save();
 
 			}

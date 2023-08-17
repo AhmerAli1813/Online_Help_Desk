@@ -1,0 +1,52 @@
+﻿﻿
+@model FacilityView
+
+@{
+    string action;
+    if (Model == null || Model.Id == 0)
+    {
+        action = "Create";
+    }
+    else
+    {
+        action = "Update";
+    }
+    ViewData["Title"] = action;
+}
+
+<h1>@action</h1>
+
+<h4>Employees</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateUpdate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Facility" class="control-label"></label>
+                <input asp-for="Facility" class="form-control" />
+                <span asp-validation-for="Facility" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="@action" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
