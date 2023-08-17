@@ -5,38 +5,37 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OHD.DataAccessLayer;
-using OHD.Models;
-using OHD.DataAccessLayer.Infrastructure.IRepository;
+using OHD.ModelsViews;
+using OHD.Services;
 
 namespace UI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class RolesController : Controller
     {
-        private IUnitOfWork _unitOfWork;
+		private readonly IRolesServices RolesServices;
 
-        public RolesController(IUnitOfWork unitOfWorkt)
-        {
-            _unitOfWork = unitOfWorkt;
-        }
+		public RolesController(IRolesServices rolesServices)
+		{
+			RolesServices = rolesServices;
+		}
 
-        // GET: Admin/Roles
-        public IActionResult Index()
+		// GET: Admin/Roles
+		public IActionResult Index()
         {
-            IEnumerable<Roles> roles = _unitOfWork.GenericRepository<Roles>().GetAll();
+            var roles = RolesServices.GetALLRoles();
             return View(roles);
         }
 
         // GET: Admin/Roles/Details/5
-        public IActionResult Details(int? id)
+        public IActionResult Details(int id)
         {
-            if (id == null )
+            if (id ==0 )
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
 
-            var role = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id);
+            var role = RolesServices.GetRoleById(id);
             if (role == null)
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -58,27 +57,26 @@ namespace UI.Areas.Admin.Controllers
         // POST: Admin/Roles/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Roles role)
+        public IActionResult Create(RolesView vm)
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.GenericRepository<Roles>().Add(role);
-                _unitOfWork.Save();
-				TempData["Success"] = "Create Successfuly";
+                RolesServices.InsertRoles(vm);
+                TempData["Success"] = "Create Successfuly";
 				return RedirectToAction(nameof(Index));
             }
-            return View(role);
+            return View(vm);
         }
 
         // GET: Admin/Roles/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null || id == 0)
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
-            var role = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id);
-            if (role == null || role.RoleId == 0) { return RedirectToAction("NotFound", "Home"); }
+            var role =RolesServices.GetRoleById(id);
+            if (role == null || role.Id == 0) { return RedirectToAction("NotFound", "Home"); }
             else { return View(role); }
         }
 
@@ -87,7 +85,7 @@ namespace UI.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit( Roles role)
+        public IActionResult Edit( RolesView vm)
         {
             
 
@@ -95,8 +93,7 @@ namespace UI.Areas.Admin.Controllers
             {
                 try
                 {
-                    _unitOfWork.GenericRepository<Roles>().Update(role);
-                    _unitOfWork.Save();
+                    RolesServices.UpdateRoles(vm);
 					TempData["Success"] = "Update Successfuly";
 				}
                 catch (DbUpdateConcurrencyException)
@@ -105,19 +102,19 @@ namespace UI.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(role);
+            return View(vm);
         }
 
         // GET: Admin/Roles/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null )
+            if (id == 0 )
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
 
-            var role = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id);
-            if (role == null)
+            var role =RolesServices.GetRoleById(id);
+            if (role == null || role.Id==0)
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
@@ -131,14 +128,14 @@ namespace UI.Areas.Admin.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             
-            var role = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id); ;
+            var role =RolesServices.GetRoleById(id); ;
             if (role != null)
             {
-                _unitOfWork.GenericRepository<Roles>().Delete(role);
+                RolesServices.DeleteRoles(id);
 				TempData["Success"] = "Delete Successfuly";
 			}
 
-            _unitOfWork.Save();
+            
             return RedirectToAction(nameof(Index));
         }
 

@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccessLayer\OHD.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\OHD.Infrstructure\OHD.Infrastructure.csproj" />
     <ProjectReference Include="..\ViewModels\OHD.ModelsViews.csproj" />
   </ItemGroup>
 

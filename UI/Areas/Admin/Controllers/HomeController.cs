@@ -37,28 +37,28 @@ namespace OHD.UI.Areas.Admin.Controllers
 			}
 			return View();
 		}
-		[HttpGet]
-		public  IActionResult Profile()
-		{
-			if(HttpContext.Session.GetInt32("Id") !=null) {
-				int Id = (int)HttpContext.Session.GetInt32("Id");
-				var data = _aurtrizationServices.GetProfileUser(Id);
-				ViewBag.Name = HttpContext.Session.GetString("Name");
-				return View(data);
-			}
-			return RedirectToAction("Aurth", "Home", new { area = "Home" });
-		}
-		[HttpPost]
-		public IActionResult Profile( ProfileUpdateView vm)
-		{
-			bool c = _aurtrizationServices.UpdateProfile(vm);
-				if (c == true)
-				{
-				TempData["success"] = "Profile Update successfully";
-				}
-				else { TempData["error"] = "old password is not match"; }
+		//[HttpGet]
+		//public  IActionResult Profile()
+		//{
+		//	if(HttpContext.Session.GetInt32("Id") !=null) {
+		//		int Id = (int)HttpContext.Session.GetInt32("Id");
+		//		var data = _aurtrizationServices.GetProfileUser(Id);
+		//		ViewBag.Name = HttpContext.Session.GetString("Name");
+		//		return View(data);
+		//	}
+		//	return RedirectToAction("Aurth", "Home", new { area = "Home" });
+		//}
+		//[HttpPost]
+		//public IActionResult Profile( ProfileUpdateView vm)
+		//{
+		//	bool c = _aurtrizationServices.UpdateProfile(vm);
+		//		if (c == true)
+		//		{
+		//		TempData["success"] = "Profile Update successfully";
+		//		}
+		//		else { TempData["error"] = "old password is not match"; }
 					
-			return View(vm);
-		}
+		//	return View(vm);
+		//}
 	}
 }

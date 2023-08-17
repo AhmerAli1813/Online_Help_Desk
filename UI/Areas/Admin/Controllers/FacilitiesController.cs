@@ -6,37 +6,40 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OHD.DataAccessLayer;
-using OHD.Models;
-using OHD.DataAccessLayer.Infrastructure.IRepository;
+
+using OHD.Infrastructure;
+using OHD.Services;
+using OHD.ModelsViews;
 
 namespace UI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class FacilitiesController : Controller
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IFacilityServices facilityServices;
 
-        public FacilitiesController(IUnitOfWork unitOfWorkt)
-        {
-            _unitOfWork = unitOfWorkt;
-        }
+		public FacilitiesController(IFacilityServices facilityServices)
+		{
+			this.facilityServices = facilityServices;
+		}
 
-        // GET: Admin/Facilitys
-        public IActionResult Index()
+
+		// GET: Admin/Facilitys
+		public IActionResult Index()
         {
-            IEnumerable<Facility> Facilitys = _unitOfWork.GenericRepository<Facility>().GetAll();
+            var Facilitys =facilityServices.GetALLFacility();
             return View(Facilitys);
         }
 
         // GET: Admin/Facilitys/Details/5
-        public IActionResult Details(int? id)
+        public IActionResult Details(int id)
         {
-            if (id == null )
+            if (id == 0 )
             {
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
 			}
 
-            var Facility = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id);
+            var Facility = facilityServices.GetFacilityById(id);
             if (Facility == null)
             {
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -54,12 +57,11 @@ namespace UI.Areas.Admin.Controllers
         // POST: Admin/Facilitys/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Facility Facility)
+        public IActionResult Create(FacilityView Facility)
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.GenericRepository<Facility>().Add(Facility);
-                _unitOfWork.Save();
+                facilityServices.InsertFacility(Facility);
                 TempData["Success"] = "Create Successfuly";
                 return RedirectToAction(nameof(Index));
             }
@@ -67,13 +69,13 @@ namespace UI.Areas.Admin.Controllers
         }
 
         // GET: Admin/Facilitys/Edit/5
-        public IActionResult Edit(int? id)
+        public IActionResult Edit(int id)
         {
-            if (id == null || id == 0)
+            if (id == 0 || id == 0)
             {
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
 			}
-            var Facility = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id);
+            var Facility = facilityServices.GetFacilityById(id);
             return View(Facility);
         }
 
@@ -82,7 +84,7 @@ namespace UI.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit( Facility Facility)
+        public IActionResult Edit( FacilityView Facility)
         {
             
 
@@ -90,8 +92,7 @@ namespace UI.Areas.Admin.Controllers
             {
                 try
                 {
-                    _unitOfWork.GenericRepository<Facility>().Update(Facility);
-                    _unitOfWork.Save();
+                    facilityServices.UpdateFacility(Facility);
 					TempData["Success"] = "Update Successfuly";
 				}
                 catch (DbUpdateConcurrencyException)
@@ -104,14 +105,14 @@ namespace UI.Areas.Admin.Controllers
         }
 
         // GET: Admin/Facilitys/Delete/5
-        public IActionResult Delete(int? id)
+        public IActionResult Delete(int id)
         {
-            if (id == null )
+            if (id == 0 )
             {
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
 			}
 
-            var Facility = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id);
+            var Facility = facilityServices.GetFacilityById(id);
             if (Facility == null)
             {
 				return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -126,14 +127,14 @@ namespace UI.Areas.Admin.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             
-            var Facility = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id); ;
+            var Facility = facilityServices.GetFacilityById(id); ;
             if (Facility != null)
             {
-                _unitOfWork.GenericRepository<Facility>().Delete(Facility);
+                facilityServices.DeleteFacility(id);    
 				TempData["Success"] = "Delete Successfuly";
 			}
 
-            _unitOfWork.Save();
+            
             return RedirectToAction(nameof(Index));
         }
 

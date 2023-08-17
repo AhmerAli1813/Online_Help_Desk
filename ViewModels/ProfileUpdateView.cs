@@ -20,13 +20,7 @@ namespace OHD.ModelsViews
         
         public string Email { get; set; }
         public string Address { get; set; }
-        public string? oldPassword { get; set; }
-		[DataType(DataType.Password)]
-		
-		public string NewPassword { get; set; }
-		[DataType(DataType.Password)]
-		[Compare("NewPassword")]
-		public string? ConfrimPassword { get; set; }
+
 		public ProfileUpdateView(Register model)
         {
             if(model!=null)
@@ -37,7 +31,7 @@ namespace OHD.ModelsViews
                 Name = model.Name;
                 Email = model.Email;
                 Address = model.Address;
-                NewPassword = model.Password;
+                
                     
                 
             }
@@ -53,7 +47,7 @@ namespace OHD.ModelsViews
                 Name = modelvm.Name,
                 Email = modelvm.Email,
                 Address = modelvm.Address,
-                Password = modelvm.NewPassword,
+                Password = model.Password,
                 Username = model.Username,
                 FacilityId = model.FacilityId,
                 RoleId = model.RoleId,

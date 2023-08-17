@@ -17,3 +17,5 @@ F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.dll
 F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\refint\OHD.Services.dll
 F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.pdb
 F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\ref\OHD.Services.dll
+F:\project\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Infrastructure.dll
+F:\project\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Infrastructure.pdb

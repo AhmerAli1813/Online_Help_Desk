@@ -40,10 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Home/Profile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Registers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVnaXN0ZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -100,12 +96,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/project/Online_Help_Desk/UI/Areas/Home/Views/Auth/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSG9tZVxWaWV3c1xBdXRoXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/project/Online_Help_Desk/UI/Areas/Home/Views/Auth/ForgetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSG9tZVxWaWV3c1xBdXRoXEZvcmdldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/Home/Views/Auth/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSG9tZVxWaWV3c1xBdXRoXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Home/Views/Auth/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSG9tZVxWaWV3c1xBdXRoXFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/Home/Views/Home/badRequest.cshtml]
@@ -140,14 +144,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Home/NotFound.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Home/Profile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -168,14 +164,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Home/NotFound.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/project/Online_Help_Desk/UI/Areas/Students/Views/Home/Profile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/project/Online_Help_Desk/UI/Areas/Students/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -190,6 +178,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/project/Online_Help_Desk/UI/Areas/Students/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudHNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Shared/_Layout.cshtml]

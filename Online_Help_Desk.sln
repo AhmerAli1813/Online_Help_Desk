@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OHD.Services", "Services\OH
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OHD.ModelsViews", "ViewModels\OHD.ModelsViews.csproj", "{ADA906E2-9051-4860-8894-FB7DE9CBEE7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OHD.Infrastructure", "OHD.Infrstructure\OHD.Infrastructure.csproj", "{595655CD-07CA-47F7-AAA6-5B823507D9DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{ADA906E2-9051-4860-8894-FB7DE9CBEE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADA906E2-9051-4860-8894-FB7DE9CBEE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADA906E2-9051-4860-8894-FB7DE9CBEE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595655CD-07CA-47F7-AAA6-5B823507D9DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595655CD-07CA-47F7-AAA6-5B823507D9DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595655CD-07CA-47F7-AAA6-5B823507D9DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595655CD-07CA-47F7-AAA6-5B823507D9DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -163,8 +163,8 @@
 						<span class="user-name">Welcome @ViewBag.Name </span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-						<a asp-area="admin" asp-controller="Home" asp-action="Profile" class="dropdown-item"><i class="dw dw-user1"></i> Profile</a>
-						<a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
+						<a asp-area="Home" asp-controller="auth" asp-action="Profile" class="dropdown-item"><i class="dw dw-user1"></i> Profile</a>
+						<a asp-area="Home" asp-controller="auth" asp-action="ChangePassword" class="dropdown-item"><i class="dw dw-settings2"></i> Setting</a>
 						<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
 						<a class="dropdown-item" asp-area="Home" asp-controller="Aurth" asp-action="logout"><i class="dw dw-logout"></i> Log Out</a>
 					</div>

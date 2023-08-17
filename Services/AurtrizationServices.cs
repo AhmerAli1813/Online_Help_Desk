@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Win32;
-using OHD.DataAccessLayer.Infrastructure.IRepository;
+using OHD.Infrastructure;
 using OHD.Models;
 using OHD.ModelsViews;
 using System;
@@ -23,14 +23,26 @@ namespace OHD.Services
 		}
 
 		
-
+		//LOGGIN
 		public RegisterView Aurthrization(AurthrizationView vm)
 		{
+			try 
+			{ 
+					var model = _unitOfWork.GenericRepository<Register>().GetT(x=>x.Username==vm.Username && x.Password==vm.Password );
+				
+					var aurth = new RegisterView(model);
+
+				return aurth;
+			}
+			catch (NullReferenceException N)
+			{
+				Console.WriteLine(N);
+			}catch(Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
+			return new RegisterView();
 			
-			var model = _unitOfWork.GenericRepository<Register>().GetT(x=>x.Username==vm.Username && x.Password==vm.Password );
-			
-			var aurth = new RegisterView(model);
-			return aurth;
 		}
 
 		
@@ -42,19 +54,46 @@ namespace OHD.Services
 
 		}
 
-		public bool UpdateProfile(ProfileUpdateView profile)
+		public bool UpdatePassword(ChangePasswordView view)
 		{
-			var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == profile.Id);
-			if(model.Password == profile.oldPassword)
+			try
 			{
+				var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == view.Id);
+				if (model.Password == view.oldPassword)
+				{
+					var modelVm = new ChangePasswordView().ConvertModel(view, model);
+					_unitOfWork.GenericRepository<Register>().Update(modelVm);
+					_unitOfWork.Save();
+					return true;
+				}
+				
+			}
+			catch(NullReferenceException N)
+			{
+				Console.WriteLine(N);
+			}
+			return false;
+
+
+		}
+
+		public bool UpdateProfile(ProfileUpdateView profile)
+		{		
+			try
+			{
+				var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == profile.Id);
 				var modelVm = new ProfileUpdateView().ConvertModel(profile , model);
-				//var m = new RegisterView().ConvertModel(modelVm);
 				_unitOfWork.GenericRepository<Register>().Update(modelVm);
 				_unitOfWork.Save();
 				return true;
 			}
+			catch(NullReferenceException N)
+			{
+				Console.WriteLine(N);
+			}
 			return false;
-			
+
+
 		}
 	}
 }

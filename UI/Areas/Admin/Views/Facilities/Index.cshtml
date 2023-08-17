@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Facility>
+﻿@model IEnumerable<FacilityView>
 
 @{
     ViewData["Title"] = "Index";
@@ -16,10 +16,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FacilityName)
+                @Html.DisplayNameFor(model => model.Facility)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FacilityDescription)
+                @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>Action</th>
         </tr>
@@ -28,15 +28,15 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FacilityName)
+                @Html.DisplayFor(modelItem => item.Facility)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FacilityDescription)
+                @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                    <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.FacilityId">Edit</a> |
-                    <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.FacilityId">Details</a> |
-                    <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.FacilityId">Delete</a>
+                    <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

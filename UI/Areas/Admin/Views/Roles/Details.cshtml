@@ -1,4 +1,4 @@
-﻿@model Roles
+﻿@model RolesView
 
 @{
     ViewData["Title"] = "Details";
@@ -11,20 +11,20 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RoleName)
+            @Html.DisplayNameFor(model => model.Role)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RoleName)
+            @Html.DisplayFor(model => model.Role)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RoleDescription)
+            @Html.DisplayNameFor(model => model.Description)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RoleDescription)
+            @Html.DisplayFor(model => model.Description)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.RoleId">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index" class="badge badge-secondary">Back to List</a>
 </div>

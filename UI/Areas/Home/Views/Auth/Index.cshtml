@@ -3,16 +3,17 @@
     ViewData["Title"] = "Index";
 	
 }
-@if (TempData["Success"] != null)
-{
-	<div class="alert alert-success float-right ">@TempData["Success"]</div>
-}
 <div class="row align-items-center">
 	<div class="col-md-6 col-lg-7">
 		<img src="~/vendors/images/login-page-img.png" alt="">
 	</div>
 	<div class="col-md-6 col-lg-5">
 		<div class="login-box bg-white box-shadow border-radius-10">
+
+			@if (TempData["Success"] != null)
+			{
+				<div class="alert alert-success float-right ">@TempData["Success"]</div>
+			}
 			<div class="login-title">
 				<h2 class="text-center text-primary">Login To DeskApp</h2>
 			</div>

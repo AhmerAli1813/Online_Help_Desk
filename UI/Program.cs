@@ -1,8 +1,7 @@
 
 using OHD.DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
-using OHD.DataAccessLayer.Infrastructure.IRepository;
-using OHD.DataAccessLayer.Infrastructure.Repository;
+using OHD.Infrastructure;
 using Microsoft.EntityFrameworkCore.Internal;
 using OHD.Services;
 
@@ -13,6 +12,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IRegisterServices, RegisterServices>();
 builder.Services.AddScoped<IAurtrizationServices, AurtrizationServices>();
+builder.Services.AddScoped<IRolesServices, RolesServices>();
+builder.Services.AddScoped<IFacilityServices, FacilityServices>();
 builder.Services.AddDbContext<OHDDbContext>(option =>
 
         option.UseSqlServer(builder.Configuration.GetConnectionString("DefualtConnection"),

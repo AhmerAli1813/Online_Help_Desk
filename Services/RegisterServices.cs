@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using OHD.DataAccessLayer.Infrastructure.IRepository;
+using OHD.Infrastructure;
 using OHD.Models;
 using OHD.ModelsViews;
 using System;
@@ -25,10 +25,22 @@ namespace OHD.Services
 
         public void DeleteRegister(int id)
         {
-            var registervm = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == id);
-            _unitOfWork.GenericRepository<Register>().Delete(registervm);
-            _unitOfWork.Save();
-        }
+            try
+            {
+                var registervm = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == id);
+                _unitOfWork.GenericRepository<Register>().Delete(registervm);
+                _unitOfWork.Save();
+
+            }
+            catch (NullReferenceException N)
+            {
+                Console.WriteLine(N);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+		}
 
         public IEnumerable<Facility> GetALLFacility()
         {
@@ -63,18 +75,41 @@ namespace OHD.Services
 
         public void InsertRegister(RegisterView registerView)
         {
-            var model = new RegisterView().ConvertModel(registerView);
-            _unitOfWork.GenericRepository<Register>().Add(model);
-            _unitOfWork.Save();
+            try 
+            { 
+                var model = new RegisterView().ConvertModel(registerView);
+                _unitOfWork.GenericRepository<Register>().Add(model);
+                _unitOfWork.Save();
 
-        }
+			}
+			catch (NullReferenceException N)
+			{
+				Console.WriteLine(N);
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
+		}
 
         public void UpdateRegister(RegisterView registerView)
         {
-            var model = new RegisterView().ConvertModel(registerView);
-            _unitOfWork.GenericRepository<Register>().Update(model);
-            _unitOfWork.Save();
-        }
+            try 
+            { 
+                var model = new RegisterView().ConvertModel(registerView);
+                _unitOfWork.GenericRepository<Register>().Update(model);
+                _unitOfWork.Save();
+
+			}
+			catch (NullReferenceException N)
+			{
+				Console.WriteLine(N);
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
+		}
 
         private List<RegisterView> ConvertModelToViewModel(IEnumerable<Register> registerModel)
         {

@@ -12,5 +12,6 @@ namespace OHD.Services
 		RegisterView Aurthrization(AurthrizationView view);
 		ProfileUpdateView GetProfileUser(int id);
 		bool UpdateProfile(ProfileUpdateView profile);
+		bool UpdatePassword(ChangePasswordView view);
 	}
 }
