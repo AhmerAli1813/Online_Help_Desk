@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jyo0ncE2FzEblbIwV0zDtuqOtyORbtrkeUPCviuz+hfIQCZja5eTiBUmtvfIbcakRg89G63B2H+zrGffGqGQwg==",
+  "dgSpecHash": "RkuqQ+6H2n1eGRB/CdRpj7L+vCyYTuZYdafw3VC4snSm0p88UHSuQLrwvtGLdaUGwcCwUH7bO2ApRbFQtFnxRw==",
   "success": true,
   "projectFilePath": "F:\\project\\Online_Help_Desk\\OHD.Infrstructure\\OHD.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -13,8 +13,8 @@
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.10\\microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.10\\microsoft.entityframeworkcore.analyzers.7.0.10.nupkg.sha512",
-    "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.9\\microsoft.entityframeworkcore.relational.7.0.9.nupkg.sha512",
-    "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.9\\microsoft.entityframeworkcore.sqlserver.7.0.9.nupkg.sha512",
+    "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.10\\microsoft.entityframeworkcore.relational.7.0.10.nupkg.sha512",
+    "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.10\\microsoft.entityframeworkcore.sqlserver.7.0.10.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

@@ -19,7 +19,6 @@ F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Azure.Identity.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Humanizer.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\MessagePack.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\MessagePack.Annotations.dll
-F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.Build.dll
@@ -35,7 +34,6 @@ F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.CodeAnalysis.Scripting
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
-F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -71,7 +69,6 @@ F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeG
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Newtonsoft.Json.dll
-F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\NuGet.Common.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\NuGet.Configuration.dll
 F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\NuGet.DependencyResolver.Core.dll
@@ -275,3 +272,9 @@ F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\refint\OHD.UI.dll
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\OHD.UI.pdb
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\OHD.UI.genruntimeconfig.cache
 F:\project\Online_Help_Desk\UI\obj\Debug\net6.0\ref\OHD.UI.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\Mono.TextTemplating.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\System.CodeDom.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\System.Text.Json.dll
+F:\project\Online_Help_Desk\UI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

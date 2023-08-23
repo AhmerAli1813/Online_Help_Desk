@@ -14,6 +14,7 @@ builder.Services.AddScoped<IRegisterServices, RegisterServices>();
 builder.Services.AddScoped<IAurtrizationServices, AurtrizationServices>();
 builder.Services.AddScoped<IRolesServices, RolesServices>();
 builder.Services.AddScoped<IFacilityServices, FacilityServices>();
+builder.Services.AddScoped<IRequestServices, RequestServices>();
 builder.Services.AddDbContext<OHDDbContext>(option =>
 
         option.UseSqlServer(builder.Configuration.GetConnectionString("DefualtConnection"),

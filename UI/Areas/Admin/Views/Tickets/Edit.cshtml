@@ -1,0 +1,59 @@
+﻿@using static OHD.Models.Requests;
+@model OHD.ModelsViews.RequstedAssigendView
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>RequstedAssigendView</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FacilityId" class="control-label"></label>
+                <select asp-for="FacilityId" asp-items="@ViewBag.AllFacility" class="form-control">
+                    <option value="-1"> Select Facility</option>
+                </select>
+                <span asp-validation-for="FacilityId" class="text-danger"></span>
+                </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsOpen" /> @Html.DisplayNameFor(model => model.IsOpen)
+                </label>
+            </div>
+                <div class="form-group">
+                    <label asp-for="status" class="control-label"></label>
+                    <select asp-for="status" class="form-control" asp-items="@Html.GetEnumSelectList<Status>()"></select>
+                    <span asp-validation-for="status" class="text-danger"></span>
+                </div>
+            <div class="form-group">
+                <label asp-for="AssignerId" class="control-label"></label>
+                <select asp-for="AssignerId" class="form-control"></select>
+                <span asp-validation-for="AssignerId" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

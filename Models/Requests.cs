@@ -16,24 +16,25 @@ namespace OHD.Models
     {
         public enum Status
         {
-            pedding,accepted,work_in_progress,rejected
+            pedding,accepted,work_in_progress,rejected,cancel,done
         }
         [Key]
         public int RequestsId { get; set; }
         [ForeignKey("RequestorId")]
         public Register? Requestor { get; set; }
+        [Required]
         public int RequestorId { get; set; }
         [ForeignKey("AssigneeHeadId")]
         public Register? AssigneeHead { get; set; }
         
-        public int AssigneeHeadId { get; set; }
+        public int? AssigneeHeadId { get; set; }
         [ForeignKey("AssignerId")]
         public Register? Assigner { get; set; }
-        public int AssignerId { get; set; }
-        
-        
+        public int? AssignerId { get; set; }
+
+        [ForeignKey("FacilityId")]
         public Facility? Facility { get; set; }
-        public int FacilityId { get; set; }
+        public int? FacilityId { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime ReqCreateDate { get; set; } = DateTime.Now;
         public bool IsOpen { get; set; }

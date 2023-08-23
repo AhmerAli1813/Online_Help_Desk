@@ -45,8 +45,13 @@ namespace OHD.Services
 			
 		}
 
-		
-		public ProfileUpdateView GetProfileUser(int id)
+        public int GetAdminID()
+        {
+			var data = _unitOfWork.GenericRepository<Register>().GetT(x => x.RoleId == 2001);
+		return	data.RegisterId;
+        }
+
+        public ProfileUpdateView GetProfileUser(int id)
 		{
 			var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == id);
 			var modelVm = new ProfileUpdateView(model);

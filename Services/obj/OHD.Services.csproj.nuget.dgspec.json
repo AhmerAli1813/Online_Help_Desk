@@ -46,23 +46,88 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
+        "projectName": "OHD.Infrastructure",
+        "projectPath": "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
+        "outputPath": "F:\\project\\Online_Help_Desk\\Infrstructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
+                "projectPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
             }
           },
           "imports": [
@@ -140,71 +205,6 @@
         }
       }
     },
-    "F:\\project\\Online_Help_Desk\\OHD.Infrstructure\\OHD.Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "F:\\project\\Online_Help_Desk\\OHD.Infrstructure\\OHD.Infrastructure.csproj",
-        "projectName": "OHD.Infrastructure",
-        "projectPath": "F:\\project\\Online_Help_Desk\\OHD.Infrstructure\\OHD.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Online_Help_Desk\\OHD.Infrstructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
-                "projectPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.10, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "F:\\project\\Online_Help_Desk\\Services\\OHD.Services.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -229,8 +229,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\project\\Online_Help_Desk\\OHD.Infrstructure\\OHD.Infrastructure.csproj": {
-                "projectPath": "F:\\project\\Online_Help_Desk\\OHD.Infrstructure\\OHD.Infrastructure.csproj"
+              "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj": {
+                "projectPath": "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj"
               },
               "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj": {
                 "projectPath": "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj"
@@ -248,9 +248,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+            "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.2.2, )"
             }
           },
           "imports": [

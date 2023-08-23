@@ -1,0 +1,113 @@
+﻿@using OHD.Models;
+@model IEnumerable<OHD.ModelsViews.RequstedAssigendView>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success float-right">@TempData["Success"]</div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            
+           
+            <th>
+                @Html.DisplayNameFor(model => model.RequestorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignerName)
+            </th>
+            <th>
+                Facility
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsOpen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{int i = 0;}
+@foreach (var item in Model) {
+                
+        <tr>
+            
+                <td>
+                    @Html.DisplayFor(modelItem => item.RequestorName)
+                </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignerName)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.AssigneLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsOpen)
+            </td>
+                <td>
+                    @if (item.status == Requests.Status.rejected)
+                    {
+                        <div class="badge badge-danger">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+                    else if (item.status == Requests.Status.accepted)
+                    {
+                        <div class="badge badge-success">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+                    else if (item.status == Requests.Status.pedding)
+                    {
+                        <div class="badge badge-warning">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+                    else if (item.status == Requests.Status.work_in_progress)
+                    {
+                        <div class="badge badge-info">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+                    else
+                    {
+                        <div class="badge badge-secondary">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+
+                </td>
+
+
+            <td>
+                    <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

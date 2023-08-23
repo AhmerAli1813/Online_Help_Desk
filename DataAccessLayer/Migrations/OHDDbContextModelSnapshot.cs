@@ -17,7 +17,7 @@ namespace OHD.DataAccessLayer.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -101,17 +101,17 @@ namespace OHD.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RequestsId"));
 
-                    b.Property<int>("AssigneeHeadId")
+                    b.Property<int?>("AssigneeHeadId")
                         .HasColumnType("int");
 
-                    b.Property<int>("AssignerId")
+                    b.Property<int?>("AssignerId")
                         .HasColumnType("int");
 
                     b.Property<string>("Descripation")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("FacilityId")
+                    b.Property<int?>("FacilityId")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsOpen")
@@ -189,21 +189,15 @@ namespace OHD.DataAccessLayer.Migrations
                 {
                     b.HasOne("OHD.Models.Register", "AssigneeHead")
                         .WithMany()
-                        .HasForeignKey("AssigneeHeadId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AssigneeHeadId");
 
                     b.HasOne("OHD.Models.Register", "Assigner")
                         .WithMany()
-                        .HasForeignKey("AssignerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AssignerId");
 
                     b.HasOne("OHD.Models.Facility", "Facility")
                         .WithMany()
-                        .HasForeignKey("FacilityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("FacilityId");
 
                     b.HasOne("OHD.Models.Register", "Requestor")
                         .WithMany()

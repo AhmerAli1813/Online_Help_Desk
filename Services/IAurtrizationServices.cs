@@ -13,5 +13,6 @@ namespace OHD.Services
 		ProfileUpdateView GetProfileUser(int id);
 		bool UpdateProfile(ProfileUpdateView profile);
 		bool UpdatePassword(ChangePasswordView view);
-	}
+		int GetAdminID();
+    }
 }

@@ -1,0 +1,96 @@
+﻿@model IEnumerable<CreateRequestView>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success float-right">@TempData["Success"]</div>
+}
+else if (TempData["Error"] != null)
+{
+    <div class="alert alert-success float-right">@TempData["Error"]</div>
+}
+<p>
+    <a asp-action="Create">Create New </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                You
+            </th>
+
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Requestor.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripation)
+            </td>
+            <td>
+                    @if(item.status == Requests.Status.rejected)
+                    {
+                        <div class="badge badge-danger">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+                    else if (item.status == Requests.Status.accepted)
+                    {
+                        <div class="badge badge-success">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+                    else if (item.status == Requests.Status.pedding)
+                    {
+                        <div class="badge badge-warning">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+                    else if (item.status == Requests.Status.work_in_progress)
+                    {
+                        <div class="badge badge-info">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+                    else 
+                    {
+                        <div class="badge badge-secondary">@Html.DisplayFor(modelItem => item.status)</div>
+                    }
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateTime)
+            </td>
+                <td>
+                
+                    <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <None Remove="RequestServices.cs~RFbcd6626.TMP" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OHD.Infrstructure\OHD.Infrastructure.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrstructure\OHD.Infrastructure.csproj" />
     <ProjectReference Include="..\ViewModels\OHD.ModelsViews.csproj" />
   </ItemGroup>
 
