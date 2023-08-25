@@ -23,8 +23,10 @@ namespace OHD.UI.Areas.Admin.Controllers
         public IActionResult CreateUpdate(int id)
         {
             FacilityView model = new FacilityView();
-            if (id == null | id == 0)
+            
+			if (id == null | id == 0)
             {
+
                 return View(model);
             }
             else

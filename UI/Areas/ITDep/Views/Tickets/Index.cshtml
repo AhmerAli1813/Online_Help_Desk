@@ -3,52 +3,165 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 @if (TempData["Success"] != null)
 {
     <div class="alert alert-success float-right">@TempData["Success"]</div>
 }
+<div class="pd-20 card-box mb-30">
+    <div class="clearfix mb-20">
+        <div class="pull-left">
+            <h4 class="text-blue h4">Tickets Table</h4>
+            <p>Here all available <code>Requsted</code></p>
+        </div>
+        <div class="pull-right">
+            <a asp-action="Create" class="btn btn-primary btn-sm scroll-click" rel="content-y" data-toggle="collapse" role="button"><i class=" fa fa-plus-circle"></i> New Tickets</a>
+            <a asp-action="MyTickets" class="btn btn-primary btn-sm scroll-click" rel="content-y" data-toggle="collapse" role="button"><i class=" fa fa-plus-circle"></i> My Tickes</a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.AssignerName)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.RequestorName)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.AssigneeHeadName)
+                </th>
+                <th scope="col">
+                    Facility
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Subject)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Descripation)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.CreateTime)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.status)
+                </th>
+
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 0;
+            }
+            @foreach (var item in Model)
+            {
+
+                <tr>
+
+
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.AssignerName)
+                    </td>
+
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.RequestorName)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(model => item.AssigneeHeadName)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.AssigneLocation)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Subject)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Descripation)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.CreateTime)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Remarks)
+                    </td>
+                    <td scope="row">
+                        @if (item.status == Requests.Status.rejected)
+                        {
+                            <div class="badge badge-danger">@Html.DisplayFor(modelItem => item.status)</div>
+                        }
+                        else if (item.status == Requests.Status.accepted)
+                        {
+                            <div class="badge badge-success">@Html.DisplayFor(modelItem => item.status)</div>
+                        }
+                        else if (item.status == Requests.Status.pedding)
+                        {
+                            <div class="badge badge-warning">@Html.DisplayFor(modelItem => item.status)</div>
+                        }
+                        else if (item.status == Requests.Status.work_in_progress)
+                        {
+                            <div class="badge badge-info">@Html.DisplayFor(modelItem => item.status)</div>
+                        }
+                        else
+                        {
+                            <div class="badge badge-secondary">@Html.DisplayFor(modelItem => item.status)</div>
+                        }
+
+                    </td>
+
+
+                    <td scope="row">
+                        <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
 <table class="table">
     <thead>
         <tr>
             
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.AssignerName)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.RequestorName)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.AssigneeHeadName)
             </th>
-            <th>
+            <th scope="col">
                 Facility
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Subject)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Descripation)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.CreateTime)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Remarks)
             </th>
 
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.status)
             </th>
 
-            <th>Action</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -58,32 +171,32 @@
         <tr>
             
             
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.AssignerName)
             </td>
 
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.RequestorName)
             </td>
-                <td>
+                <td scope="row">
                 @Html.DisplayFor(model => item.AssigneeHeadName)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.AssigneLocation)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.Subject)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.Descripation)
             </td>
-                <td>
+                <td scope="row">
                     @Html.DisplayFor(modelItem => item.CreateTime)
                 </td>
-                <td>
+                <td scope="row">
                     @Html.DisplayFor(modelItem => item.Remarks)
                 </td>
-                <td>
+                <td scope="row">
                     @if (item.status == Requests.Status.rejected)
                     {
                         <div class="badge badge-danger">@Html.DisplayFor(modelItem => item.status)</div>
@@ -108,7 +221,7 @@
                 </td>
 
 
-            <td>
+            <td scope="row">
                     <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> 
                  

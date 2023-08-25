@@ -4,67 +4,79 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+
 @if (TempData["Success"] != null)
 {
     <div class="alert alert-success float-right">@TempData["Success"]</div>
 }
-<p>
-    <a asp-action="Create" class="badge badge-info">Create New</a>
-</p>
-<table class="table bg-light">
-    <thead>
-        <tr>
-            <th>
-                ID
-            </th>
-            <th>
-                Username
-            </th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Gender</th>
-            <th>Status</th>
-            <th>Role</th>
-            <th>Facility</th>
-            <th>Action</th>
 
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="pd-20 card-box mb-30">
+    <div class="clearfix mb-20">
+        <div class="pull-left">
+            <h4 class="text-blue h4">Registration Table</h4>
+            <p>Here all available <code>Register</code></p>
+        </div>
+        <div class="pull-right">
+            <a asp-action="Create" class="btn btn-primary btn-sm scroll-click" rel="content-y" data-toggle="collapse" role="button"><i class=" fa fa-plus-circle"></i> New Tickets</a>
+            <a asp-action="MyTickets" class="btn btn-primary btn-sm scroll-click" rel="content-y" data-toggle="collapse" role="button"><i class=" fa fa-plus-circle"></i> My Tickes</a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Username)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Address)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Gender)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.roles.RoleName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Facilities.FacilityName)
-                </td>
-                <td>
-                    <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a class="badge badge-secondary"asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                     <a class="badge badge-danger"  asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
+                <th scope="col">
+                    ID
+                </th>
+                <th scope="col">
+                    Username
+                </th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Status</th>
+                <th scope="col">Role</th>
+                <th scope="col">Facility</th>
+                <th scope="col">Action</th>
+
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.roles.RoleName)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Facilities.FacilityName)
+                    </td>
+                    <td scope="row">
+                        <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+

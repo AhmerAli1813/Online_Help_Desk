@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@{
+	var urlSegments = Context.Request.Path.Value.Trim('/').Split('/');
+}
+
+<!DOCTYPE html>
 <html>
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+	<title>OHD</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="~/vendors/images/apple-touch-icon.png">
@@ -16,7 +20,7 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<!-- CSS -->
-	
+
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/styles/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/css/dataTables.bootstrap4.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/css/responsive.bootstrap4.min.css">
@@ -28,7 +32,7 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', 'UA-119386393-1');
@@ -162,9 +166,9 @@
 						<span class="user-name">Welcome @ViewBag.Name</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-						<a asp-area="Home" asp-controller="auth" asp-action="Profile" class="dropdown-item"><i class="dw dw-user1"></i> Profile</a>
-						<a asp-area="Home" asp-controller="Auth" asp-action="ChangePasswordhri" class="dropdown-item"><i class="dw dw-settings2"></i> Setting</a>
-						<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
+						<a asp-area="Home" asp-controller="Auth" asp-action="Profile" class="dropdown-item"><i class="dw dw-user1"></i> Profile</a>
+						<a asp-area="Home" asp-controller="Auth" asp-action="ChangePassword" class="dropdown-item"><i class="dw dw-settings2"></i> Setting</a>
+						<a asp-area="Home" asp-controller="Auth" asp-action="ChangePassword" class="dropdown-item"><i class="dw dw-help"></i> Help</a>
 						<a asp-area="Home" asp-controller="Auth" asp-action="logout"><i class="dw dw-logout"></i> Log Out</a>
 					</div>
 				</div>
@@ -263,18 +267,18 @@
 		<div class="menu-block customscroll">
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
-					<li class="dropdown">
-						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon dw dw-house-1"></span><span class="mtext">Tikcets</span>
-						</a>
-						<ul class="submenu">
-							<li><a asp-area="Students" asp-controller="Tickets" asp-action="Index">Tickets</a></li>
-							<li><a asp-area="admin" asp-controller="Facilities" asp-action="Index">Facilities</a></li>
-							<li><a asp-area="admin" asp-controller="Registers" asp-action="Index">Register</a></li>
-							<li><a href="index2.html">Dashboard style 2</a></li>
-						</ul>
-					</li>
 					
+					<li>
+						<a asp-area="Studntes" asp-controller="Tickets" asp-action="Index" class="dropdown-toggle no-arrow">
+							<span class="micon  bi bi-table"></span><span class="mtext">All Facility Tickets</span>
+						</a>
+					</li>
+					<li>
+						<a asp-area="Students" asp-controller="Tickets" asp-action="MyTickets" class="dropdown-toggle no-arrow">
+							<span class="micon  bi bi-table"></span><span class="mtext">MyTickets</span>
+						</a>
+					</li>
+
 				</ul>
 			</div>
 		</div>
@@ -282,10 +286,49 @@
 	<div class="mobile-menu-overlay"></div>
 
 	<div class="main-container">
-		
-			
-            @RenderBody()
-	
+
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="title">
+								<h4>Online Help Desk</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item">
+										<a asp-action="Index">Home</a>
+
+									</li>
+									 @for (var i = 0; i < urlSegments.Length; i++)
+									  {
+										var segmentUrl = string.Join("/", urlSegments.Take(i + 1));
+										var segmentName = urlSegments[i];
+										<li class="breadcrumb-item active" aria-current="page">
+											@segmentName
+										</li>
+									  }
+								</ol>
+							</nav>
+						</div>
+						<div class="col-md-6 col-sm-12 text-right">
+							<div class="dropdown">
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									January 2018
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Export List</a>
+									<a class="dropdown-item" href="#">Policies</a>
+									<a class="dropdown-item" href="#">View Assets</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				@RenderBody()
+			</div>
+		</div>
 	</div>
 	<!-- js -->
 	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/scripts/core.js"></script>
@@ -299,6 +342,6 @@
 	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/AhmerAli1813/Online_Help_Desk/UI/wwwroot/vendors/scripts/dashboard.js"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
