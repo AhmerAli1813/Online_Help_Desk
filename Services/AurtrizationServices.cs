@@ -94,7 +94,7 @@ namespace OHD.Services
         {
             try
             {
-                var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.Username == view.username);
+                var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId== view.id);
                     var modelVm = new ChangePasswordView().ConvertModel(view, model);
                     _unitOfWork.GenericRepository<Register>().Update(modelVm);
                     _unitOfWork.Save();

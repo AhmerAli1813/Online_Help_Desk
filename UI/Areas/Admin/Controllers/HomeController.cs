@@ -23,7 +23,11 @@ namespace OHD.UI.Areas.Admin.Controllers
 			{
 				if (HttpContext.Session.GetInt32("Role") == 2000)
 				{
-					ViewBag.Name = HttpContext.Session.GetString("Name");
+					if (HttpContext.Session.GetString("Name") != null)
+					{
+						ViewBag.Name = HttpContext.Session.GetString("Name");
+					}
+					
 				}
 				else
 				{
@@ -33,7 +37,7 @@ namespace OHD.UI.Areas.Admin.Controllers
 			}
 			else
 			{
-				return RedirectToAction("Index", "Aurth", new { area = "Home" });
+				return RedirectToAction("Index", "Auth", new { area = "Home" });
 			}
 			return View();
 		}
