@@ -11,8 +11,11 @@ namespace OHD.Services
 	{
 		RegisterView Aurthrization(AurthrizationView view);
 		ProfileUpdateView GetProfileUser(int id);
+		ChangePasswordView  GetUserDataByUsername(string Usesname);
 		bool UpdateProfile(ProfileUpdateView profile);
-		bool UpdatePassword(ChangePasswordView view);
-		int GetAdminID();
+		bool UpdatePassword(ModifiyPasswordView view);
+        bool ForgetPassword(ChangePasswordView view);
+        int GetAdminID();
+		string GetAdminEmail();
     }
 }

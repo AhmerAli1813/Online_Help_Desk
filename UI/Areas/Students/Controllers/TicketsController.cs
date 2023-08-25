@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using OHD.ModelsViews;
 using OHD.Services;
+using OHD.Services.utilityClasses;
 using System.Dynamic;
 
 namespace OHD.UI.Areas.Students.Controllers
@@ -10,10 +11,12 @@ namespace OHD.UI.Areas.Students.Controllers
     public class TicketsController : Controller
     {
         private readonly IRequestServices _requestServices;
-        private HttpContext _httpContext;
+        
+        
         public TicketsController(IRequestServices requestServices)
         {
             _requestServices = requestServices;
+            
             
         }
         
@@ -40,15 +43,17 @@ namespace OHD.UI.Areas.Students.Controllers
         // POST: TicketsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateRequestView vm)
+        public async Task<IActionResult> Create(CreateRequestView vm)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _requestServices.createRequest(vm);
+                    //string AdminEmail = (string)HttpContext.Session.GetString("AdminEmail");
+                 await  _requestServices.createRequest(vm);
+                
                     TempData["Success"] = "Request Created";
-                    return RedirectToAction(nameof(Index));
+                    return  RedirectToAction(nameof(Index));
                 }
                
               

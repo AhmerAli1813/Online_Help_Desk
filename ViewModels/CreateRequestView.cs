@@ -17,7 +17,8 @@ namespace OHD.ModelsViews
         public Register? Requestor { get; set; }
         [Required]
         public int RequestorId { get; set; }
-        
+        [DisplayName("Self")]
+        public string? RequestorName { get; set; }
         public Register? AssigneeHead { get; set; }
         [Required]
         public int? AssigneeHeadId { get; set; }
@@ -44,7 +45,11 @@ namespace OHD.ModelsViews
                 AssigneeHeadId = model.AssigneeHeadId;
                 
                 RequestorId = model.RequestorId;
-                
+                if (Requestor != null)
+                {
+                    RequestorName = model.Requestor.Name;
+
+                }
                 Subject = model.Subject;
                 Descripation = model.Descripation;
                 status = model.status;
@@ -66,5 +71,6 @@ namespace OHD.ModelsViews
                 status = vm.status
             };
         }
+        
     }
 }

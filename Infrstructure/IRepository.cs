@@ -16,6 +16,12 @@ namespace OHD.Infrastructure
             string IncludeProperties = ""
             
             );
+       Task<IEnumerable<T>> GetAllAsync(
+           Expression<Func<T, bool>> filter = null,
+           Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
+           string IncludeProperties = ""
+
+           );
         T GetT(Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
             string IncludeProperties = "");

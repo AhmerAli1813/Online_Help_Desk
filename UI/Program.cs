@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using OHD.Infrastructure;
 using Microsoft.EntityFrameworkCore.Internal;
 using OHD.Services;
+using OHD.Services.utilityClasses;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddScoped<IAurtrizationServices, AurtrizationServices>();
 builder.Services.AddScoped<IRolesServices, RolesServices>();
 builder.Services.AddScoped<IFacilityServices, FacilityServices>();
 builder.Services.AddScoped<IRequestServices, RequestServices>();
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddDbContext<OHDDbContext>(option =>
 
         option.UseSqlServer(builder.Configuration.GetConnectionString("DefualtConnection"),

@@ -4,6 +4,7 @@ using OHD.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,8 +44,9 @@ namespace OHD.Infrastructure
             IRepository<T> repo = new Repository<T>(_dbContext);
             return repo;
 		}
+        
 
-		public void Save()
+        public void Save()
         {
             _dbContext.SaveChanges();   
         }

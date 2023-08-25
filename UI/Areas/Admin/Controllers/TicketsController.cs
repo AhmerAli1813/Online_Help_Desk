@@ -37,7 +37,7 @@ namespace OHD.UI.Areas.Admin.Controllers
             return Json(list);
         }
         // GET: TicketsController/Create
-        public ActionResult Edit(int id)
+        public  IActionResult Edit(int id)
         {
           var modelvmData =  _requestServices.GetRequestByIdToFacilityHead(id);
             ViewBag.AllFacility = new SelectList(_requestServices.GetALLFacility(), "FacilityId", "FacilityName");

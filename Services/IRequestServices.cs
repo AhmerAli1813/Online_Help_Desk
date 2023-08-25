@@ -17,15 +17,14 @@ namespace OHD.Services
         IEnumerable<Facility> GetALLFacility();
         IEnumerable<UserDataView> GetALLAssigerByFacilityId(int facilityID );
         IEnumerable<RequstedAssigendByFacilityView> GetAllRequestByFacility(int id);
-        void createRequest(CreateRequestView vm);
-        void UpdateAssigerRequestToAssigen(RequstedAssigendView vm, Requests models);
-        void UpdateAssigerRequestRemarks(RequstedAssigendByFacilityView vm, Requests models);
+        Task UpdateAssigerRequestToAssigen(RequstedAssigendView vm, Requests models);
+        Task UpdateAssigerRequestRemarks(RequstedAssigendByFacilityView vm, Requests models);
         Requests GetRequestById(int id);
        // RequstedAssigendView GetRequestViewById(int id);
         RequstedAssigendView GetRequestByIdToFacilityHead(int id);
         RequstedAssigendByFacilityView GetRequestByIdToFacility(int id);
         CreateRequestView GetRequestByIdToCreateUser(int id);
         bool DeleteRequsted(int id);
-
+        Task createRequest(CreateRequestView vm);
     }
 }

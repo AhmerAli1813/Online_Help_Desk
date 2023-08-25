@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Collections.Generic;
 using OHD.Services.utilityClasses;
 using OHD.Models;
+using Microsoft.AspNetCore.Authentication;
 
 namespace OHD.UI.Areas.Home.Controllers
 {
@@ -13,31 +14,39 @@ namespace OHD.UI.Areas.Home.Controllers
     public class AuthController : Controller
     {
         private IAurtrizationServices _AurthServices;
-        public int RoleId { get; set; }
-        public string Name { get; set; }
-        public string __layout { get; set; }
-
-        public AuthController(IAurtrizationServices aurthview)
+        private IEmailSender _emailSender;
+        private  int _RoleId;
+        private  string? _Name;
+        private  string? MyLayout ;
+		private int _pin = 1000;
+        private string? _username;
+        private bool? _sendEmailCheck;
+		public AuthController(IAurtrizationServices aurthview, IEmailSender emailSender)
         {
             _AurthServices = aurthview;
+            _emailSender = emailSender;
         }
 
         public IActionResult Index() => View();
         //login working start here
         [HttpPost]
-        public IActionResult Index(AurthrizationView auth)
+        public async Task<IActionResult> Index(AurthrizationView auth)
         {
             if (ModelState.IsValid) {
                 //Login proccess Here
                 var list = _AurthServices.Aurthrization(auth);
                 if (list.Id != 0)
                 {
+                   Task task = _emailSender.SendEmailAsync("Welcome to OHD", "Salam " + list.Name, list.Email);
+                    _RoleId = list.RoleId;
+                    _Name = list.Name;
                     HttpContext.Session.SetString("Name", list.Name);
                     HttpContext.Session.SetInt32("Role", list.RoleId);
                     HttpContext.Session.SetString("Email", list.Email);
                     HttpContext.Session.SetInt32("Id", list.Id);
                     HttpContext.Session.SetInt32("FacilityId", list.FacilityId);
                     HttpContext.Session.SetInt32("AdminId", _AurthServices.GetAdminID());
+                    HttpContext.Session.SetString("AdminEmail", _AurthServices.GetAdminEmail());
                     if (list.RoleId == 2000)
                     {
                         return RedirectToAction("Index", "Home", new { area = "admin" });
@@ -69,20 +78,44 @@ namespace OHD.UI.Areas.Home.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult ForgetPassword() => View();
-
+        
+  
         [HttpGet]
+        public IActionResult ForgetPassword() => View();
+	
+		[HttpPost]
+		public async Task<IActionResult> ForgetPassword(ChangePasswordView Vm)
+		{
+		 if(Vm.pin == _pin)
+            {
+                ViewBag.SendEmailCheck = true; 
+                ViewBag.pinVerified = true;
+
+            }
+            else
+            {
+                ViewBag.SendEmailCheck = true;
+				ViewBag.pinVerified = false;
+
+			}   
+			return View();
+
+		}
+
+		[HttpGet]
         public IActionResult Profile()
         {
             if (HttpContext.Session.GetInt32("Id") != null)
             {
+                _RoleId = (int)HttpContext.Session.GetInt32("Role");
+                ViewImport();
                 int Id = (int)HttpContext.Session.GetInt32("Id");
 
                 var data = _AurthServices.GetProfileUser(Id);
 
-                ViewBag.layout = __layout;
+                ViewBag.layout = MyLayout;
 
-                ViewBag.Name = Name;
+                ViewBag.Name = (string)HttpContext.Session.GetString("Name");
                 return View(data);
             }
             return RedirectToAction("Auth", "Home", new { area = "Home" });
@@ -92,7 +125,8 @@ namespace OHD.UI.Areas.Home.Controllers
         [HttpPost]
         public IActionResult Profile(ProfileUpdateView vm)
         {
-            ViewBag.layout = __layout;
+            
+            ViewBag.layout = MyLayout;
 
             if (ModelState.IsValid)
             {
@@ -114,7 +148,7 @@ namespace OHD.UI.Areas.Home.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult ChangePassword(ChangePasswordView vm)
+        public IActionResult ChangePassword(ModifiyPasswordView vm)
         {
             if (ModelState.IsValid)
             {
@@ -132,28 +166,27 @@ namespace OHD.UI.Areas.Home.Controllers
             return View(vm);
 
         }
-        private void ViewImport(HttpContext httpContext = null)
+        
+        private void ViewImport()
         {
-
-            RoleId = (int)httpContext.Session.GetInt32("Role");
-            Name = httpContext.Session.GetString("Name");
-
-            if (RoleId == 2000)
-            {//admin __layout
-                __layout = "~/Areas/Admin/Views/Shared/_layout.cshtml";
+            _RoleId = (int)HttpContext.Session.GetInt32("Role");
+            
+            if (_RoleId == 2000)
+            {//admin MyLayout
+                MyLayout = "~/Areas/Admin/Views/Shared/_layout.cshtml";
 
             }
-            else if (RoleId == 2001)
-            {//students __layout
-                __layout = "~/Areas/ITDep/Views/Shared/_layout.cshtml";
+            else if (_RoleId == 2001)
+            {//students MyLayout
+                MyLayout = "~/Areas/ITDep/Views/Shared/_layout.cshtml";
             }
-            else if (RoleId == 2003 || RoleId == 2004)
+            else if (_RoleId == 2002 || _RoleId == 2004)
             {//IT Department view
-                __layout = "~/Areas/Students/Views/Shared/_layout.cshtml";
+                MyLayout = "~/Areas/Students/Views/Shared/_layout.cshtml";
             }
             else
             {
-                __layout = "~/Areas/Home/Views/Shared/_layout.cshtml";
+                MyLayout = "~/Areas/Home/Views/Shared/_layout.cshtml";
             }
         }
 

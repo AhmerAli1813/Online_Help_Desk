@@ -3,6 +3,7 @@ using Microsoft.Win32;
 using OHD.Infrastructure;
 using OHD.Models;
 using OHD.ModelsViews;
+using OHD.Services.utilityClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,12 @@ namespace OHD.Services
 	{
 		private IUnitOfWork _unitOfWork;
 		private ILogger<AurtrizationServices> _logger;
-
-		public AurtrizationServices(IUnitOfWork unitOfWork, ILogger<AurtrizationServices> logger)
+		private IEmailSender _emailSender;
+		public AurtrizationServices(IUnitOfWork unitOfWork, ILogger<AurtrizationServices> logger, IEmailSender emailSender)
 		{
 			_unitOfWork = unitOfWork;
 			_logger = logger;
+			_emailSender = emailSender;
 		}
 
 		
@@ -29,7 +31,7 @@ namespace OHD.Services
 			try 
 			{ 
 					var model = _unitOfWork.GenericRepository<Register>().GetT(x=>x.Username==vm.Username && x.Password==vm.Password );
-				
+						
 					var aurth = new RegisterView(model);
 
 				return aurth;
@@ -45,9 +47,16 @@ namespace OHD.Services
 			
 		}
 
+        public string GetAdminEmail()
+        {
+
+            var data = _unitOfWork.GenericRepository<Register>().GetT(x => x.RoleId == 2000);
+            return data.Email;
+        }
+
         public int GetAdminID()
         {
-			var data = _unitOfWork.GenericRepository<Register>().GetT(x => x.RoleId == 2001);
+			var data = _unitOfWork.GenericRepository<Register>().GetT(x => x.RoleId == 2000);
 		return	data.RegisterId;
         }
 
@@ -59,14 +68,14 @@ namespace OHD.Services
 
 		}
 
-		public bool UpdatePassword(ChangePasswordView view)
+		public bool UpdatePassword(ModifiyPasswordView view)
 		{
 			try
 			{
 				var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == view.Id);
 				if (model.Password == view.oldPassword)
 				{
-					var modelVm = new ChangePasswordView().ConvertModel(view, model);
+					var modelVm = new ModifiyPasswordView().ConvertModel(view, model);
 					_unitOfWork.GenericRepository<Register>().Update(modelVm);
 					_unitOfWork.Save();
 					return true;
@@ -81,8 +90,28 @@ namespace OHD.Services
 
 
 		}
+        public bool ForgetPassword(ChangePasswordView view)
+        {
+            try
+            {
+                var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.Username == view.username);
+                    var modelVm = new ChangePasswordView().ConvertModel(view, model);
+                    _unitOfWork.GenericRepository<Register>().Update(modelVm);
+                    _unitOfWork.Save();
+                    return true;
+                
 
-		public bool UpdateProfile(ProfileUpdateView profile)
+            }
+            catch (NullReferenceException N)
+            {
+                Console.WriteLine(N);
+            }
+            return false;
+
+
+        }
+
+        public bool UpdateProfile(ProfileUpdateView profile)
 		{		
 			try
 			{
@@ -98,6 +127,14 @@ namespace OHD.Services
 			}
 			return false;
 
+
+		}
+
+		public ChangePasswordView GetUserDataByUsername(string Usesname)
+		{
+			var model = _unitOfWork.GenericRepository<Register>().GetT(x=>x.Username==Usesname);
+			var modelVm = new ChangePasswordView(model);
+			return modelVm;
 
 		}
 	}

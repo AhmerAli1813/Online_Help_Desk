@@ -1,12 +1,15 @@
 ﻿using Azure.Core;
+using Microsoft.AspNetCore.Http;
 using OHD.Infrastructure;
 using OHD.Models;
 using OHD.ModelsViews;
+using OHD.Services.utilityClasses;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
 namespace OHD.Services
@@ -14,12 +17,21 @@ namespace OHD.Services
     public class RequestServices : IRequestServices
     {
         private readonly IUnitOfWork _unitOfWork;
+        private IEmailSender _emailSender;
+        
 
-        public RequestServices(IUnitOfWork unitOfWork)
+        public RequestServices(IUnitOfWork unitOfWork , IEmailSender emailSender)
         {
             _unitOfWork = unitOfWork;
+            _emailSender = emailSender;
+           
         }
-
+        public UserDataView AdminData()
+        {
+           var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RoleId == 2000);
+            var vm = new UserDataView(model);
+             return vm;
+        }
         public Requests GetRequestById(int id)
         {
             
@@ -40,17 +52,21 @@ namespace OHD.Services
             return vm;
 
         }
-        public void createRequest(CreateRequestView vm)
-        {
+        public async Task   createRequest(CreateRequestView vm)
+        {   
+            
             var model = new CreateRequestView().ConvertModel(vm);
-            _unitOfWork.GenericRepository<Requests>().Add(model);
-            _unitOfWork.Save();
+           await _unitOfWork.GenericRepository<Requests>().AddAsync(model);
+           await _unitOfWork.SaveAsync();
+            string SenderEmail = AdminData().email;
+         
+            Task task = _emailSender.SendEmailAsync("complaint: " + vm.Subject, "Salam Admin \n\n " + vm.Descripation, SenderEmail);
         }
 
         public IEnumerable<CreateRequestView> GetAllCreateRequests(int id)
         {
                     List<CreateRequestView> createRequests = new List<CreateRequestView>();
-            var list = _unitOfWork.GenericRepository<Requests>().GetAll(x=>x.RequestorId ==id);
+            var list = _unitOfWork.GenericRepository<Requests>().GetAll(x=>x.RequestorId ==id,IncludeProperties: "Requestor");
           var   listVm = ConvertModelToViewModel(list);
             return listVm;
 
@@ -76,17 +92,26 @@ namespace OHD.Services
             return list.Select(x=> new CreateRequestView(x)).ToList();
         }
 
-        public void UpdateAssigerRequestToAssigen(RequstedAssigendView vm,Requests models)
+        public async Task UpdateAssigerRequestToAssigen(RequstedAssigendView vm,Requests models)
         {
             var model = new RequstedAssigendView().ConvertModel(vm, models);
+          
             _unitOfWork.GenericRepository<Requests>().Update(model);
             _unitOfWork.Save();
+            string SenderEmail = GetUserByFaciliyIdAndAssinger(vm.FacilityId,vm.AssignerId).AssignerEmail;
+            string AssignerName = GetUserByFaciliyIdAndAssinger(vm.FacilityId, vm.AssignerId).AssignerName;
+            Task task = _emailSender.SendEmailAsync("Assigner: " + model.Subject, "Salam  "+AssignerName+"<br> \r\n\n " + model.Descripation, SenderEmail);
         }
-        public void UpdateAssigerRequestRemarks(RequstedAssigendByFacilityView vm, Requests models)
+        public async Task UpdateAssigerRequestRemarks(RequstedAssigendByFacilityView vm, Requests models)
         {
             var model = new RequstedAssigendByFacilityView().ConvertModel(vm, models);
             _unitOfWork.GenericRepository<Requests>().Update(model);
             _unitOfWork.Save();
+            string SenderEmail = GetUserByFaciliyIdAndAssinger(model.FacilityId, model.AssignerId).RequestorEmail;
+            string Name = GetUserByFaciliyIdAndAssinger(model.FacilityId, model.AssignerId).RequestorName;
+            string Remark = vm.Remarks;
+            Task task = _emailSender.SendEmailAsync("Resloved: " + model.Subject, "Salam  <b>" + Name + "</b> <br> <b>Complaint:</b> " + model.Descripation+" <br>   "+Remark, SenderEmail);
+
         }
 
         public IEnumerable<Facility> GetALLFacility()
@@ -115,7 +140,6 @@ namespace OHD.Services
             var modelvm = ConvertModelToViewModel5(model);
             return modelvm;
         }
-
         private IEnumerable<RequstedAssigendByFacilityView> ConvertModelToViewModel5(IEnumerable<Requests> model)
         {
             return model.Select(x => new RequstedAssigendByFacilityView(x)).ToList();
@@ -142,6 +166,12 @@ namespace OHD.Services
         {
             var list = _unitOfWork.GenericRepository<Requests>().GetT(x => x.RequestsId == id, IncludeProperties: "Requestor,Assigner,Facility");
             var vm = new CreateRequestView(list);
+            return vm;
+        }
+        public RequstedAssigendView GetUserByFaciliyIdAndAssinger(int? facilityId,int? AssingerId)
+        {
+            var list = _unitOfWork.GenericRepository<Requests>().GetT(x => x.AssignerId == AssingerId && x.FacilityId==facilityId, IncludeProperties: "AssigneeHead,Requestor,Assigner,Facility");
+            var vm = new RequstedAssigendView(list);
             return vm;
         }
     }

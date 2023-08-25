@@ -16,19 +16,24 @@ namespace OHD.ModelsViews
 		{
 
 		}
-		public int Id { get; set; }
-		public string? oldPassword { get; set; }
+		public int id { get; set; }
+		public string? username { get; set; }
+		
 		[DataType(DataType.Password)]
 
-		public string NewPassword { get; set; }
+		public string newPassword { get; set; }
 		[DataType(DataType.Password)]
-		[Compare("NewPassword")]
-		public string? ConfrimPassword { get; set; }
+		[Compare("newPassword")]
+		public string? confrimPassword { get; set; }
+		public string? email { get; set; }
+		public int pin { get; set; }
 		public ChangePasswordView(Register model)
 		{
 			if (model != null)
 			{
-				NewPassword = model.Password;
+				id = model.RegisterId;
+				email = model.Email;
+				username = model.Username;
 			}
 
 		}
@@ -38,9 +43,9 @@ namespace OHD.ModelsViews
 
 			{
 				//only change Password
-				Password = modelvm.NewPassword,
+				Password = modelvm.newPassword,
 
-				RegisterId = modelvm.Id,
+				RegisterId = modelvm.id,
 
 				Name = model.Name,
 				Email = model.Email,

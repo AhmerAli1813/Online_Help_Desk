@@ -21,9 +21,11 @@ namespace OHD.ModelsViews
         public Register? Assigner { get; set; }
 
         public string AssignerName {get; set; }
+        public string AssignerEmail { get; set; }
         public Register? Requestor { get; set; }
         public int RequestorId { get; set; }
         public string RequestorName { get; set; }
+        public string RequestorEmail { get; set; }
         //public string? AssignerFacility { get; set; }
         public Facility Facility { get; set; }
         [Required]
@@ -51,11 +53,14 @@ namespace OHD.ModelsViews
                 AssignerId = model.AssignerId;
                 if (model.Assigner != null) {
                      AssignerName = model.Assigner.Name;
+                    AssignerEmail = model.Assigner.Email;
                 }
                 RequestorId = model.RequestorId;
                 if (model.Requestor != null)
                 {
                     RequestorName = model.Requestor.Name;
+                    RequestorEmail = model.Requestor.Email;
+                    
                 }
                 
                
