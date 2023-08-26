@@ -22,7 +22,11 @@ namespace OHD.UI.Areas.Students.Controllers
             {
                 if (HttpContext.Session.GetInt32("Role") == 2002)
                 {
-                    ViewBag.Name = HttpContext.Session.GetString("Name");
+                    if (HttpContext.Session.GetInt32("Name") != null)
+                    {
+                        ViewBag.Name = HttpContext.Session.GetString("Name");
+                    }
+                        
                 }
                 else
                 {

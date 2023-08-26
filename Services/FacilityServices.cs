@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 
 namespace OHD.Services
 {
-	
+
 	public class FacilityServices : IFacilityServices
 	{
 		private IUnitOfWork _unitOfWork;
-
 		public FacilityServices(IUnitOfWork unitOfWork)
 		{
 			_unitOfWork = unitOfWork;
@@ -37,8 +36,6 @@ namespace OHD.Services
 				Console.WriteLine(ex);
 			}
 		}
-
-
 		public IEnumerable<FacilityView> GetALLFacility()
 		{
 			List<FacilityView> vmList = new List<FacilityView>();
@@ -46,17 +43,11 @@ namespace OHD.Services
 			vmList = ConvertModelToViewModel(FacilityModel);
 			return vmList;
 		}
-
-
-
 		public FacilityView GetFacilityById(int id)
-		{
+		{ 
 			var Facilityvm = _unitOfWork.GenericRepository<Facility>().GetT(x => x.FacilityId == id);
 			var vm = new FacilityView(Facilityvm);
-
 			return vm;
-
-
 		}
 
 		public void InsertFacility(FacilityView vm)

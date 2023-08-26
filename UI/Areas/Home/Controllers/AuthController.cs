@@ -16,13 +16,13 @@ namespace OHD.UI.Areas.Home.Controllers
         private IAurtrizationServices _AurthServices;
         private IEmailSender _emailSender;
         private  int _RoleId;
-		private int _FgId;
-		private  string? _Name;
+        private int _FgId;
+        private  string? _Name;
         private  string? MyLayout ;
-		private int _pin;
+        private int _pin;
         private string? _username;
         private bool? _sendEmailCheck;
-		public AuthController(IAurtrizationServices aurthview, IEmailSender emailSender)
+        public AuthController(IAurtrizationServices aurthview, IEmailSender emailSender)
         {
             _AurthServices = aurthview;
             _emailSender = emailSender;
@@ -79,45 +79,37 @@ namespace OHD.UI.Areas.Home.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
-        
-  
         [HttpGet]
         public IActionResult ForgetPassword() => View();
-	
-		[HttpPost]
-		public async Task<IActionResult> ForgetPassword(ChangePasswordView Vm)
-		{
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(ChangePasswordView Vm)
+        {
             SetPin();
-		 if(_pin!=0 && Vm.pin == _pin || Vm.id!=0)
+         if(_pin!=0 && Vm.pin == _pin || Vm.id!=0)
             {
-                
-				ViewBag.SendEmailCheck = true;
-				ViewBag.pinVerified = true;
+                ViewBag.SendEmailCheck = true;
+                ViewBag.pinVerified = true;
                 if (Vm.id != 0)
                 {
-					try
-					{
-						var IsOk = _AurthServices.ForgetPassword(Vm);
-						if (IsOk == true)
-						{
-							TempData["Success"] = "Password is change ! Login now";
-							return RedirectToAction("Index");
-						}
-
-
-					}
-					catch (Exception ex)
-					{
-						Console.WriteLine(ex.Message);
-					}
+                    try
+                    {
+                        var IsOk = _AurthServices.ForgetPassword(Vm);
+                        if (IsOk == true)
+                        {
+                            TempData["Success"] = "Password is change ! Login now";
+                            return RedirectToAction("Index");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
                 else
                 {
-					ViewBag.id = _FgId;
-					TempData["Error"] = "Must given new password";
-				}
-				
-
+                    ViewBag.id = _FgId;
+                    TempData["Error"] = "Must given new password";
+                }
             }
             else
             {
@@ -136,31 +128,27 @@ namespace OHD.UI.Areas.Home.Controllers
                         await _emailSender.SendEmailAsync("Forget Password" ,"If you Don't remmeber password <br> Pin: <b>"+_pin+"</b> <br> Don't share Your Pin " , modelVm.email);
                         Console.WriteLine(_pin);
                         ViewBag.pinVerified = false;
-						ViewBag.SendEmailCheck = true;
-						ViewBag.email = modelVm.email;
-						HttpContext.Session.SetInt32("FgId", modelVm.id);
+                        ViewBag.SendEmailCheck = true;
+                        ViewBag.email = modelVm.email;
+                        HttpContext.Session.SetInt32("FgId", modelVm.id);
                         _FgId = modelVm.id;
-						ViewBag.id = _FgId;
+                        ViewBag.id = _FgId;
                         
 
-					}
-					
-
-
-
-				}
+                    }
+                }
                 catch(Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
 
-			}
-			ViewBag.id = _FgId;
-			return View();
+            }
+            ViewBag.id = _FgId;
+            return View();
 
-		}
+        }
 
-		private void SetPin()
+        private void SetPin()
         {
             if (HttpContext.Session.GetInt32("pin") != null)
             {
@@ -171,18 +159,18 @@ namespace OHD.UI.Areas.Home.Controllers
             {
                 _pin = 0;
             }
-			if (HttpContext.Session.GetInt32("FgId") != null)
-			{
-				_FgId = (int)HttpContext.Session.GetInt32("FgId");
+            if (HttpContext.Session.GetInt32("FgId") != null)
+            {
+                _FgId = (int)HttpContext.Session.GetInt32("FgId");
 
-			}
-			else
-			{
-				_FgId = 0;
-			}
-		}
+            }
+            else
+            {
+                _FgId = 0;
+            }
+        }
 
-		[HttpGet]
+        [HttpGet]
         public IActionResult Profile()
         {
             if (HttpContext.Session.GetInt32("Id") != null)
@@ -251,7 +239,7 @@ namespace OHD.UI.Areas.Home.Controllers
         {
             _RoleId = (int)HttpContext.Session.GetInt32("Role");
             
-			if (_RoleId == 2000)
+            if (_RoleId == 2000)
             {//admin MyLayout
                 MyLayout = "~/Areas/Admin/Views/Shared/_layout.cshtml";
 

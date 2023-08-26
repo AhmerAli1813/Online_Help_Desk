@@ -18,8 +18,6 @@ namespace OHD.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private IEmailSender _emailSender;
-        
-
         public RequestServices(IUnitOfWork unitOfWork , IEmailSender emailSender)
         {
             _unitOfWork = unitOfWork;

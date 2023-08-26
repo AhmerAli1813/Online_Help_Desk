@@ -18,9 +18,6 @@ namespace OHD.UI.Areas.ITDep.Controllers
             _requestServices = requestServices;
 
         }
-
-
-        // GET: TicketsController
         public ActionResult Index()
         {
             int id = (int)HttpContext.Session.GetInt32("FacilityId");

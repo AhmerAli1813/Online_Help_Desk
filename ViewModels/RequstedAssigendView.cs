@@ -62,8 +62,6 @@ namespace OHD.ModelsViews
                     RequestorEmail = model.Requestor.Email;
                     
                 }
-                
-               
                 if(model.Facility != null)
                 {
                     AssigneLocation = model.Facility.FacilityName;

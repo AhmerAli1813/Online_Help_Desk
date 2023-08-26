@@ -21,7 +21,11 @@ namespace OHD.UI.Areas.ITDep.Controllers
 			{
 				if (HttpContext.Session.GetInt32("Role") == 2001)
 				{
-					ViewBag.Name = HttpContext.Session.GetString("Name");
+                    if (HttpContext.Session.GetInt32("Name") != null)
+					{
+                        ViewBag.Name = HttpContext.Session.GetString("Name");
+                    }
+                        
 				}
 				else
 				{

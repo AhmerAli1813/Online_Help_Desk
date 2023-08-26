@@ -11,28 +11,19 @@ namespace OHD.UI.Areas.Students.Controllers
     public class TicketsController : Controller
     {
         private readonly IRequestServices _requestServices;
-        
-        
         public TicketsController(IRequestServices requestServices)
         {
             _requestServices = requestServices;
             
             
         }
-        
-
         // GET: TicketsController
         public ActionResult Index()
         {
-             int id = (int)HttpContext.Session.GetInt32("Id");
-            
-            
+            int id = (int)HttpContext.Session.GetInt32("Id");    
             var data = _requestServices.GetAllCreateRequests(id);
-            
             return View(data);
         }
-
-        // GET: TicketsController/Create
         public ActionResult Create()
         {
             ViewBag.Admin = (int)HttpContext.Session.GetInt32("AdminId");

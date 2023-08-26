@@ -20,22 +20,14 @@ namespace OHD.ModelsViews
         
         public string Email { get; set; }
         public string Address { get; set; }
-
 		public ProfileUpdateView(Register model)
         {
             if(model!=null)
-            {
-
-
-                Id = model.RegisterId;
+            {   Id = model.RegisterId;
                 Name = model.Name;
                 Email = model.Email;
                 Address = model.Address;
-                
-                    
-                
             }
-            
         }
         public Register ConvertModel(ProfileUpdateView modelvm ,Register model )
         {

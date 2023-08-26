@@ -19,14 +19,12 @@ namespace UI.Areas.Admin.Controllers
 		{
 			RolesServices = rolesServices;
 		}
-
 		// GET: Admin/Roles
 		public IActionResult Index()
         {
             var roles = RolesServices.GetALLRoles();
             return View(roles);
         }
-
         // GET: Admin/Roles/Details/5
         public IActionResult Details(int id)
         {
@@ -34,7 +32,6 @@ namespace UI.Areas.Admin.Controllers
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
-
             var role = RolesServices.GetRoleById(id);
             if (role == null)
             {
@@ -44,10 +41,7 @@ namespace UI.Areas.Admin.Controllers
             {
 				return View(role);
 			}
-
-            
-        }
-
+}
         // GET: Admin/Roles/Create
         public IActionResult Create()
         {
@@ -87,8 +81,6 @@ namespace UI.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit( RolesView vm)
         {
-            
-
             if (ModelState.IsValid)
             {
                 try

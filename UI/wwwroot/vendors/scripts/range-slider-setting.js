@@ -18,6 +18,7 @@ $("#range_01_1").ionRangeSlider({
 	grid: true,
 	prefix: "$"
 });
+});
 $("#range_02").ionRangeSlider({
 	type: "double",
 	grid: true,

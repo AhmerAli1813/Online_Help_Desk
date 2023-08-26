@@ -18,8 +18,6 @@ namespace OHD.UI.Areas.Admin.Controllers
             _requestServices = requestServices;
             
         }
-        
-
         // GET: TicketsController
         public ActionResult Index()
         {
