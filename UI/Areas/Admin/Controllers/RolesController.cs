@@ -20,19 +20,19 @@ namespace UI.Areas.Admin.Controllers
 			RolesServices = rolesServices;
 		}
 		// GET: Admin/Roles
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
         {
-            var roles = RolesServices.GetALLRoles();
+            var roles = await RolesServices.GetALLRoles();
             return View(roles);
         }
         // GET: Admin/Roles/Details/5
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id ==0 )
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
-            var role = RolesServices.GetRoleById(id);
+            var role = await RolesServices.GetRoleById(id);
             if (role == null)
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -51,11 +51,11 @@ namespace UI.Areas.Admin.Controllers
         // POST: Admin/Roles/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(RolesView vm)
+        public async Task<IActionResult> Create(RolesView vm)
         {
             if (ModelState.IsValid)
             {
-                RolesServices.InsertRoles(vm);
+                await RolesServices.InsertRoles(vm);
                 TempData["Success"] = "Create Successfuly";
 				return RedirectToAction(nameof(Index));
             }
@@ -69,7 +69,7 @@ namespace UI.Areas.Admin.Controllers
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
-            var role =RolesServices.GetRoleById(id);
+            var role =await RolesServices.GetRoleById(id);
             if (role == null || role.Id == 0) { return RedirectToAction("NotFound", "Home"); }
             else { return View(role); }
         }
@@ -79,13 +79,13 @@ namespace UI.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit( RolesView vm)
+        public async Task<IActionResult> Edit( RolesView vm)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    RolesServices.UpdateRoles(vm);
+                  await  RolesServices.UpdateRoles(vm);
 					TempData["Success"] = "Update Successfuly";
 				}
                 catch (DbUpdateConcurrencyException)
@@ -105,7 +105,7 @@ namespace UI.Areas.Admin.Controllers
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
 
-            var role =RolesServices.GetRoleById(id);
+            var role =await RolesServices.GetRoleById(id);
             if (role == null || role.Id==0)
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
@@ -117,13 +117,13 @@ namespace UI.Areas.Admin.Controllers
         // POST: Admin/Roles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             
-            var role =RolesServices.GetRoleById(id); ;
+            var role = await RolesServices.GetRoleById(id); ;
             if (role != null)
             {
-                RolesServices.DeleteRoles(id);
+                await RolesServices.DeleteRoles(id);
 				TempData["Success"] = "Delete Successfuly";
 			}
 

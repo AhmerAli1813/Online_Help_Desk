@@ -18,13 +18,13 @@ namespace OHD.Services
 			_unitOfWork = unitOfWork;
 		}
 
-		public void DeleteRoles(int id)
+		public async Task DeleteRoles(int id)
 		{
 			try
 			{
-				var Rolesvm = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id);
-				_unitOfWork.GenericRepository<Roles>().Delete(Rolesvm);
-				_unitOfWork.Save();
+			var Rolesvm = await _unitOfWork.GenericRepository<Roles>().GetTAsync(x => x.RoleId == id);
+			await	_unitOfWork.GenericRepository<Roles>().DeleteAsync(Rolesvm);
+			await	_unitOfWork.SaveAsync();
 
 			}
 			catch (NullReferenceException N)
@@ -38,19 +38,19 @@ namespace OHD.Services
 		}
 
 		
-		public IEnumerable<RolesView> GetALLRoles()
+		public async Task<IEnumerable<RolesView>> GetALLRoles()
 		{
 			List<RolesView> vmList = new List<RolesView>();
-			var RolesModel = _unitOfWork.GenericRepository<Roles>().GetAll();
+			var RolesModel = await _unitOfWork.GenericRepository<Roles>().GetAllAsync();
 			vmList = ConvertModelToViewModel(RolesModel);
 			return vmList;
 		}
 
 
 
-		public RolesView GetRoleById(int id)
+		public async Task<RolesView> GetRoleById(int id)
 		{
-			var Rolesvm = _unitOfWork.GenericRepository<Roles>().GetT(x => x.RoleId == id);
+			var Rolesvm = await _unitOfWork.GenericRepository<Roles>().GetTAsync(x => x.RoleId == id);
 			var vm = new RolesView(Rolesvm);
 
 			return vm;
@@ -58,13 +58,13 @@ namespace OHD.Services
 
 		}
 
-		public void InsertRoles(RolesView vm)
+		public async Task InsertRoles(RolesView vm)
 		{
 			try
 			{
 				var model = new RolesView().ConvertModel(vm);
-				_unitOfWork.GenericRepository<Roles>().Add(model);
-				_unitOfWork.Save();
+				await _unitOfWork.GenericRepository<Roles>().AddAsync(model);
+				await _unitOfWork.SaveAsync();
 
 			}
 			catch (NullReferenceException N)
@@ -77,13 +77,13 @@ namespace OHD.Services
 			}
 		}
 
-		public void UpdateRoles(RolesView vm)
+		public async Task UpdateRoles(RolesView vm)
 		{
 			try
 			{
 				var model = new RolesView().ConvertModel(vm);
-				_unitOfWork.GenericRepository<Roles>().Update(model);
-				_unitOfWork.Save();
+				await _unitOfWork.GenericRepository<Roles>().UpdateAsync(model);
+				await _unitOfWork.SaveAsync();
 
 			}
 			catch (NullReferenceException N)

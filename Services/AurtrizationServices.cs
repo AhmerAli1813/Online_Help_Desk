@@ -26,11 +26,11 @@ namespace OHD.Services
 
 		
 		//LOGGIN
-		public RegisterView Aurthrization(AurthrizationView vm)
+		public async Task<RegisterView> Aurthrization(AurthrizationView vm)
 		{
 			try 
 			{ 
-					var model = _unitOfWork.GenericRepository<Register>().GetT(x=>x.Username==vm.Username && x.Password==vm.Password );
+					var model = await _unitOfWork.GenericRepository<Register>().GetTAsync(x=>x.Username==vm.Username && x.Password==vm.Password );
 						
 					var aurth = new RegisterView(model);
 
@@ -60,24 +60,24 @@ namespace OHD.Services
 		return	data.RegisterId;
         }
 
-        public ProfileUpdateView GetProfileUser(int id)
+        public async Task<ProfileUpdateView> GetProfileUser(int id)
 		{
-			var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == id);
+			var model = await _unitOfWork.GenericRepository<Register>().GetTAsync(x => x.RegisterId == id);
 			var modelVm = new ProfileUpdateView(model);
 			return modelVm;
 
 		}
 
-		public bool UpdatePassword(ModifiyPasswordView view)
+		public async Task<bool> UpdatePassword(ModifiyPasswordView view)
 		{
 			try
 			{
-				var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == view.Id);
+				var model = await _unitOfWork.GenericRepository<Register>().GetTAsync(x => x.RegisterId == view.Id);
 				if (model.Password == view.oldPassword)
 				{
 					var modelVm = new ModifiyPasswordView().ConvertModel(view, model);
-					_unitOfWork.GenericRepository<Register>().Update(modelVm);
-					_unitOfWork.Save();
+					await _unitOfWork.GenericRepository<Register>().UpdateAsync(modelVm);
+					await _unitOfWork.SaveAsync();
 					return true;
 				}
 				
@@ -90,14 +90,14 @@ namespace OHD.Services
 
 
 		}
-        public bool ForgetPassword(ChangePasswordView view)
+        public async Task<bool> ForgetPassword(ChangePasswordView view)
         {
             try
             {
-                var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId== view.id);
+                var model = await _unitOfWork.GenericRepository<Register>().GetTAsync(x => x.RegisterId == view.id);
                     var modelVm = new ChangePasswordView().ConvertModel(view, model);
-                    _unitOfWork.GenericRepository<Register>().Update(modelVm);
-                    _unitOfWork.Save();
+                   await _unitOfWork.GenericRepository<Register>().UpdateAsync(modelVm);
+                    await _unitOfWork.SaveAsync();
                     return true;
                 
 
@@ -111,14 +111,14 @@ namespace OHD.Services
 
         }
 
-        public bool UpdateProfile(ProfileUpdateView profile)
+        public async Task<bool> UpdateProfile(ProfileUpdateView profile)
 		{		
 			try
 			{
-				var model = _unitOfWork.GenericRepository<Register>().GetT(x => x.RegisterId == profile.Id);
+				var model = await _unitOfWork.GenericRepository<Register>().GetTAsync(x => x.RegisterId == profile.Id);
 				var modelVm = new ProfileUpdateView().ConvertModel(profile , model);
-				_unitOfWork.GenericRepository<Register>().Update(modelVm);
-				_unitOfWork.Save();
+				await _unitOfWork.GenericRepository<Register>().UpdateAsync(modelVm);
+				await _unitOfWork.SaveAsync();
 				return true;
 			}
 			catch(NullReferenceException N)
@@ -130,9 +130,9 @@ namespace OHD.Services
 
 		}
 
-		public ChangePasswordView GetUserDataByUsername(string Usesname)
+		public async Task<ChangePasswordView> GetUserDataByUsername(string Usesname)
 		{
-			var model = _unitOfWork.GenericRepository<Register>().GetT(x=>x.Username==Usesname);
+			var model = await _unitOfWork.GenericRepository<Register>().GetTAsync(x=>x.Username==Usesname);
 			var modelVm = new ChangePasswordView(model);
 			return modelVm;
 

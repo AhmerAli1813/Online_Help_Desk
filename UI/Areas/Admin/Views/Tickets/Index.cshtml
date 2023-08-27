@@ -10,7 +10,7 @@
 {
     <div class="alert alert-success float-right">@TempData["Success"]</div>
 }
-<div class="pd-20 card-box mb-30">
+<div class="pd-20 card-box mb-30" style="overflow-x: auto;">
     <div class="clearfix mb-20">
         <div class="pull-left">
             <h4 class="text-blue h4">All Tickets Table</h4>
@@ -113,8 +113,8 @@
 
                     <td scope="row">
                         <a class="badge badge-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                        
                     </td>
                 </tr>
             }

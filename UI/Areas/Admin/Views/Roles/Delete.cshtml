@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Delete";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    
 }
 
 <h1>Delete</h1>
@@ -28,7 +28,8 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="badge badge-danger" /> |
-        <a asp-action="Index" class="badge badge-secondary">Back to List</a>
+        <input type="submit"  value="Delete" class="badge badge-danger btn-sm" /> 
     </form>
+    |
+    <a asp-action="Index" class="badge badge-secondary">Back to List</a>
 </div>

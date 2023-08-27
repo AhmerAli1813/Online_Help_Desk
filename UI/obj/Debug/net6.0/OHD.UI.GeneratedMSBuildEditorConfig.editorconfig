@@ -88,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Tickets/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Tickets/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -170,6 +174,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Tickets/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcVGlja2V0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Tickets/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcVGlja2V0c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Tickets/Details.cshtml]

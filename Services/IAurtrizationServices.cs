@@ -9,12 +9,12 @@ namespace OHD.Services
 {
 	public interface IAurtrizationServices
 	{
-		RegisterView Aurthrization(AurthrizationView view);
-		ProfileUpdateView GetProfileUser(int id);
-		ChangePasswordView  GetUserDataByUsername(string Usesname);
-		bool UpdateProfile(ProfileUpdateView profile);
-		bool UpdatePassword(ModifiyPasswordView view);
-        bool ForgetPassword(ChangePasswordView view);
+		Task<RegisterView> Aurthrization(AurthrizationView view);
+		Task<ProfileUpdateView> GetProfileUser(int id);
+		Task<ChangePasswordView>  GetUserDataByUsername(string Usesname);
+		Task<bool> UpdateProfile(ProfileUpdateView profile);
+		Task<bool> UpdatePassword(ModifiyPasswordView view);
+        Task<bool> ForgetPassword(ChangePasswordView view);
         int GetAdminID();
 		string GetAdminEmail();
     }

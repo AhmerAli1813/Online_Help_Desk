@@ -35,10 +35,10 @@ namespace OHD.UI.Areas.Home.Controllers
         {
             if (ModelState.IsValid) {
                 //Login proccess Here
-                var modelVm = _AurthServices.GetUserDataByUsername(auth.Username);
+                var modelVm = await _AurthServices.GetUserDataByUsername(auth.Username);
                 if (modelVm.id != 0) {
                     
-                    var list = _AurthServices.Aurthrization(auth);
+                    var list = await _AurthServices.Aurthrization(auth);
                     if (list.Id != 0)
                     {
                       await   _emailSender.SendEmailAsync("Welcome to OHD", "Salam " + list.Name, list.Email);
@@ -103,7 +103,7 @@ namespace OHD.UI.Areas.Home.Controllers
                 {
                     try
                     {
-                        var IsOk = _AurthServices.ForgetPassword(Vm);
+                        var IsOk = await _AurthServices.ForgetPassword(Vm);
                         if (IsOk == true)
                         {
                             TempData["Success"] = "Password is change ! Login now";
@@ -125,7 +125,7 @@ namespace OHD.UI.Areas.Home.Controllers
             {
                 try
                 {
-                    var modelVm = _AurthServices.GetUserDataByUsername(Vm.username);
+                    var modelVm = await _AurthServices.GetUserDataByUsername(Vm.username);
                     if(modelVm.id == 0)
                     {
                         TempData["Error"] = "Username is not valid";
@@ -181,7 +181,7 @@ namespace OHD.UI.Areas.Home.Controllers
         }
 
         [HttpGet]
-        public IActionResult Profile()
+        public async Task<IActionResult> Profile()
         {
             if (HttpContext.Session.GetInt32("Id") != null)
             {
@@ -189,7 +189,7 @@ namespace OHD.UI.Areas.Home.Controllers
                 ViewImport();
                 int Id = (int)HttpContext.Session.GetInt32("Id");
 
-                var data = _AurthServices.GetProfileUser(Id);
+                var data = await _AurthServices.GetProfileUser(Id);
 
                 ViewBag.layout = MyLayout;
 
@@ -201,14 +201,14 @@ namespace OHD.UI.Areas.Home.Controllers
 
 
         [HttpPost]
-        public IActionResult Profile(ProfileUpdateView vm)
+        public async Task<IActionResult> Profile(ProfileUpdateView vm)
         {
             ViewImport();   
             ViewBag.layout = MyLayout;
 
             if (ModelState.IsValid)
             {
-                bool c = _AurthServices.UpdateProfile(vm);
+                bool c = await _AurthServices.UpdateProfile(vm);
                 if (c == true)
                 {
                     TempData["success"] = "Profile Update successfully";
@@ -226,11 +226,11 @@ namespace OHD.UI.Areas.Home.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult ChangePassword(ModifiyPasswordView vm)
+        public async Task<IActionResult> ChangePassword(ModifiyPasswordView vm)
         {
             if (ModelState.IsValid)
             {
-                bool c = _AurthServices.UpdatePassword(vm);
+                bool c = await _AurthServices.UpdatePassword(vm);
 
                 if (c == true)
                 {

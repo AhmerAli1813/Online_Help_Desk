@@ -10,11 +10,11 @@ namespace OHD.Services
 {
 	public interface IRolesServices
 	{
-		IEnumerable<RolesView> GetALLRoles();
+		Task<IEnumerable<RolesView>> GetALLRoles();
 		
-		RolesView GetRoleById(int id);
-		void UpdateRoles(RolesView vm);
-		void DeleteRoles(int id);
-		void InsertRoles(RolesView vm);
+		Task<RolesView> GetRoleById(int id);
+		Task UpdateRoles(RolesView vm);
+		Task DeleteRoles(int id);
+		Task InsertRoles(RolesView vm);
 	}
 }
