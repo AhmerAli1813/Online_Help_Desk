@@ -35,36 +35,46 @@ namespace OHD.UI.Areas.Home.Controllers
         {
             if (ModelState.IsValid) {
                 //Login proccess Here
-                var list = _AurthServices.Aurthrization(auth);
-                if (list.Id != 0)
-                {
-                   Task task = _emailSender.SendEmailAsync("Welcome to OHD", "Salam " + list.Name, list.Email);
-                    _RoleId = list.RoleId;
-                    _Name = list.Name;
-                    HttpContext.Session.SetString("Name", list.Name);
-                    HttpContext.Session.SetInt32("Role", list.RoleId);
-                    HttpContext.Session.SetString("Email", list.Email);
-                    HttpContext.Session.SetInt32("Id", list.Id);
-                    HttpContext.Session.SetInt32("FacilityId", list.FacilityId);
-                    HttpContext.Session.SetInt32("AdminId", _AurthServices.GetAdminID());
-                    HttpContext.Session.SetString("AdminEmail", _AurthServices.GetAdminEmail());
-                    if (list.RoleId == 2000)
-                    {
-                        return RedirectToAction("Index", "Home", new { area = "admin" });
-                    }
-                    else if (list.RoleId == 2001)
-                    {
-                        return RedirectToAction("Index", "Home", new { area = "ITDep" });
-                    }
-                    else if (list.RoleId == 2002)
-                    {
-                        return RedirectToAction("Index", "Home", new { area = "Students" });
-                    }
+                var modelVm = _AurthServices.GetUserDataByUsername(auth.Username);
+                if (modelVm.id != 0) {
                     
-                } else
-                {
-                    TempData["Success"] = "username and password is not valid";
+                    var list = _AurthServices.Aurthrization(auth);
+                    if (list.Id != 0)
+                    {
+                      await   _emailSender.SendEmailAsync("Welcome to OHD", "Salam " + list.Name, list.Email);
+                        _RoleId = list.RoleId;
+                        _Name = list.Name;
+                        HttpContext.Session.SetString("Name", list.Name);
+                        HttpContext.Session.SetInt32("Role", list.RoleId);
+                        HttpContext.Session.SetString("Email", list.Email);
+                        HttpContext.Session.SetInt32("Id", list.Id);
+                        HttpContext.Session.SetInt32("FacilityId", list.FacilityId);
+                        HttpContext.Session.SetInt32("AdminId", _AurthServices.GetAdminID());
+                        HttpContext.Session.SetString("AdminEmail", _AurthServices.GetAdminEmail());
+                        if (list.RoleId == 2000)
+                        {
+                            return RedirectToAction("Index", "Home", new { area = "admin" });
+                        }
+                        else if (list.RoleId == 2001)
+                        {
+                            return RedirectToAction("Index", "Home", new { area = "ITDep" });
+                        }
+                        else if (list.RoleId == 2002)
+                        {
+                            return RedirectToAction("Index", "Home", new { area = "Students" });
+                        }
+
+                    }
+                    else
+                    {
+                        TempData["Error"] = " Password is not valid";
+                    }
                 }
+                else
+                {
+                    TempData["Error"] = " Username is not valid";
+                }
+                
             }
             return View();
 

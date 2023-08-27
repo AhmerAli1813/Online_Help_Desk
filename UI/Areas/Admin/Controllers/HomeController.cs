@@ -11,7 +11,7 @@ namespace OHD.UI.Areas.Admin.Controllers
     {
 		private readonly IAurtrizationServices _aurtrizationServices;
 		
-
+		
 		public HomeController(IAurtrizationServices aurtrizationServices)
 		{
 			_aurtrizationServices = aurtrizationServices;
