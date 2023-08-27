@@ -34,8 +34,66 @@ namespace OHD.UI.Areas.Admin.Controllers
             
             return Json(list);
         }
-        // GET: TicketsController/Create
-        public  IActionResult Edit(int id)
+		// GET: TicketsController/Create
+		public IActionResult MyTickets()
+		{
+
+			int id = (HttpContext.Session.GetInt32("Id") == null) ? 0 : (int)HttpContext.Session.GetInt32("Id");
+			var data = _requestServices.GetAllCreateRequests(id);
+			return View(data);
+		}
+		public IActionResult Create()
+		{
+			if ((int)HttpContext.Session.GetInt32("AdminId") != null){ViewBag.Admin = (int)HttpContext.Session.GetInt32("AdminId");}
+			if ((int)HttpContext.Session.GetInt32("Id") != null) { ViewBag.Requstor = (int)HttpContext.Session.GetInt32("Id"); }
+			return View();
+		}
+
+		// POST: TicketsController/Create
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> Create(CreateRequestView vm)
+		{
+			try
+			{
+				if (ModelState.IsValid)
+				{
+					//string AdminEmail = (string)HttpContext.Session.GetString("AdminEmail");
+					await _requestServices.createRequest(vm);
+
+					TempData["Success"] = "Request Created";
+					return RedirectToAction(nameof(MyTickets));
+				}
+
+
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
+			return View(vm);
+		}
+		public IActionResult MyDetails(int id)
+		{
+			if (id == 0)
+			{
+				return RedirectToAction("badRequest", "Home", new { area = "Home" });
+			}
+
+            var vm = _requestServices.GetRequestByIdToCreateUser(id);
+
+            if (vm == null)
+			{
+				return RedirectToAction("badRequest", "Home", new { area = "Home" });
+			}
+			else
+			{
+				return View(vm);
+			}
+
+		}
+	
+		public  IActionResult Edit(int id)
         {
           var modelvmData =  _requestServices.GetRequestByIdToFacilityHead(id);
             ViewBag.AllFacility = new SelectList(_requestServices.GetALLFacility(), "FacilityId", "FacilityName");
@@ -46,7 +104,7 @@ namespace OHD.UI.Areas.Admin.Controllers
         // POST: TicketsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(RequstedAssigendView vm)
+        public IActionResult Edit(RequstedAssigendView vm)
         {
             try
             {
@@ -85,6 +143,38 @@ namespace OHD.UI.Areas.Admin.Controllers
 
 
         }
+		public IActionResult Delete(int id)
+		{
+			if (id == 0)
+			{
+				return RedirectToAction("badRequest", "Home", new { area = "Home" });
+			}
 
-    }
+			var vm = _requestServices.GetRequestByIdToCreateUser(id);
+			if (vm == null)
+			{
+				return RedirectToAction("badRequest", "Home", new { area = "Home" });
+			}
+			else
+			{
+				return View(vm);
+			}
+
+		}
+		[HttpPost]
+		public IActionResult DeleteConfirmed(int id)
+		{
+			bool check = _requestServices.DeleteRequsted(id);
+			if (check == true)
+			{
+				TempData["Success"] = "Request Delete";
+
+			}
+			else
+			{
+				TempData["Error"] = "Request not Delete";
+			}
+			return RedirectToAction(nameof(MyTickets));
+		}
+	}
 }

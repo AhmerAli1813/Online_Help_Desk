@@ -84,6 +84,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Tickets/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Tickets/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -94,6 +98,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Tickets/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Tickets/MyDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xNeURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/Admin/Views/Tickets/MyTickets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xNeVRpY2tldHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/Admin/Views/_ViewImports.cshtml]
@@ -156,6 +168,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Tickets/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcVGlja2V0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Tickets/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcVGlja2V0c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -166,6 +182,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Tickets/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcVGlja2V0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Tickets/MyDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcVGlja2V0c1xNeURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/Tickets/MyTickets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSVREZXBcVmlld3NcVGlja2V0c1xNeVRpY2tldHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/Online_Help_Desk/UI/Areas/ITDep/Views/_ViewImports.cshtml]

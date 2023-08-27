@@ -20,14 +20,15 @@ namespace OHD.UI.Areas.Students.Controllers
         // GET: TicketsController
         public ActionResult Index()
         {
-            int id = (int)HttpContext.Session.GetInt32("Id");    
+         
+            int id = (HttpContext.Session.GetInt32("Id")==null)?  0: (int)HttpContext.Session.GetInt32("Id");    
             var data = _requestServices.GetAllCreateRequests(id);
             return View(data);
         }
         public ActionResult Create()
         {
-            ViewBag.Admin = (int)HttpContext.Session.GetInt32("AdminId");
-            ViewBag.Requstor = (int)HttpContext.Session.GetInt32("Id");
+			ViewBag.Admin =  (int)HttpContext.Session.GetInt32("AdminId");
+			ViewBag.Requstor =  (int)HttpContext.Session.GetInt32("Id");
             return View();
         }
 
@@ -62,7 +63,8 @@ namespace OHD.UI.Areas.Students.Controllers
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
             }
 
-            var vm = _requestServices.GetRequestByIdToFacility(id);
+            var vm = _requestServices.GetRequestByIdToCreateUser(id);
+
             if (vm == null)
             {
                 return RedirectToAction("badRequest", "Home", new { area = "Home" });
