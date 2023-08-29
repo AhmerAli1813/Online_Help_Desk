@@ -17,7 +17,7 @@ Services Layers Consists of exposable APIs, and are responsible for the communic
 # UI Main-Project
 The user interface (UI) is nothing more than the front-end program that communicates with ApIs (Services)
 
-#Aim of Project
+# Aim of Project
  
 This project is aimed at developing an Online Help Desk for the facilities in 
 the campus. This is an Internet based application that can be accessed 
