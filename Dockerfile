@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /app
 
 # Copy and restore project files
-COPY UI/OHD.UI.csproj
+COPY UI/OHD.UI.csproj .    # Added a dot at the end, specifying current directory for copying the project file
 RUN dotnet restore
 
 # Copy the entire project and build
