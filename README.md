@@ -1,23 +1,113 @@
-# Online_Help_Desk
-The project titled "Online help desk" (OHD) is using MS SQL Server, C# with 
-onion Architecture.
-# Onion-Architecture
-Onion Architecture is based on the inversion of control principle. 
-Onion Architecture is comprised of multiple concentric layers interfacing
-with each other towards the core that represents the domain. 
-The architecture does not depend on the data layer as in classic multi-tier architectures but on the actual domain models.
-# Domain-Entity-Layer
-Domain Entity Layer deepest  level of the Onion Architecture Containing all Application Domain Entities
-# Repository-Pattern
-Repository Layer (Infrastructure)
-The repository layer is between the Services and the model object. All Database migration and application data context object communication occurs here. It consists of a read & writes data access pattern for the database
-# Service APIs
-Services Layers
-Services Layers Consists of exposable APIs, and are responsible for the communication between the Repository Layers and the main project. These layers also contain an entity business logic and the interface is maintained stand-for from the implementation loose coupling and separation.
-# UI Main-Project
-The user interface (UI) is nothing more than the front-end program that communicates with ApIs (Services)
+# Online Help Desk System Documentation
 
-# Aim of Project
+## Table of Contents
+
+1. Introduction
+2. System Architecture
+3. Onion Architecture Overview
+4. Layers of Onion Architecture
+   - 4.1 Presentation Layer
+   - 4.2 Application Layer
+   - 4.3 Domain Layer
+   - 4.4 Infrastructure Layer
+5. Implementation
+6. Aim and Objective
+7. Overview
+8. Architectural Strategies
+9. Administrator
+10. Students
+11. Faclity-head
+12. Database Structure
+13. Conclusion
+14. References
+
+---
+
+## 1. Introduction
+
+The Online Help Desk System is a web-based application designed to provide efficient customer support and issue resolution. This documentation outlines the system architecture and its implementation using the Onion Architecture pattern in ASP.NET Core. The Onion Architecture promotes separation of concerns and modular design to enhance maintainability, scalability, and testability of software applications.
+
+## 2. System Architecture
+
+The system follows the Onion Architecture, a variant of layered architecture, which emphasizes a clear separation of concerns and dependency flow. It consists of concentric layers, each having distinct responsibilities, and dependencies always point inwards. This minimizes coupling between layers and allows easy testing and modifications.
+
+## 3. Onion Architecture Overview
+
+The Onion Architecture consists of four primary layers:
+
+1. **Presentation Layer**: This is the outermost layer that handles user interface interactions. It includes web controllers, views, and other UI-related components.
+
+2. **Service Layer**: This layer contains application-specific logic and acts as an intermediary between the presentation and domain layers. It coordinates actions, performs validations, and handles data transformation.
+
+3. **Domain Layer**: The domain layer represents the core business logic and entities. It encapsulates the business rules, validation logic, and domain objects.
+
+4. **Infrastructure Layer**: This layer deals with external concerns such as data storage, database access, and external services. It contains implementations of repositories, data access, and other infrastructure-related components.
+
+## 4. Layers of Onion Architecture
+
+### 4.1 Presentation Layer
+
+- Responsible for handling HTTP requests and generating responses.
+- Contains controllers, view models, and UI-related logic.
+- References the Application Layer.
+- Has minimal business logic and delegates most tasks to the Application Layer.
+
+### 4.2 Services Layer
+
+- Orchestrates the application's use cases and workflows.
+- Contains application services that handle user actions and interactions.
+- Performs data validation, transformation, and coordination between different parts of the system.
+- References both the Domain and Infrastructure Layers.
+
+### 4.3 Domain Layer
+
+- Represents the core business logic and entities.
+- Contains domain models, business rules, and validation logic.
+- Independent of other layers and has no external dependencies.
+
+### 4.4 Infrastructure Layer
+
+- Handles external concerns and technical details.
+- Implements data access, repositories, caching, and other infrastructure services.
+- Can integrate with databases, third-party APIs, and other external services.
+- References the Domain Layer but is not referenced by any other layer.
+
+## 5. Implementation
+
+To implement the Online Help Desk System using Onion Architecture in ASP.NET Core, follow these steps:
+
+1. **Create Solution and Projects**:
+   - Create a new ASP.NET Core solution.
+   - Add separate projects for each layer: Presentation, Application, Domain, and Infrastructure.
+
+2. **Define Domain Models**:
+   - In the Domain Layer, define the core domain models representing the entities and business logic of the system.
+
+3. **Implement Application Services**:
+   - In the Application Layer, implement application services that handle use cases and interact with domain models.
+   - Application services coordinate actions, enforce business rules, and transform data.
+
+4. **Implement Infrastructure Services**:
+   - In the Infrastructure Layer, implement data access services, repositories, and external integrations.
+   - Use Dependency Injection to inject infrastructure services into the Application Layer.
+
+5. **Develop Controllers and Views**:
+   - In the Presentation Layer, create controllers to handle HTTP requests and render views.
+   - Controllers should use application services to perform actions and retrieve data.
+
+6. **Dependency Injection Configuration**:
+   - Configure Dependency Injection in the Startup class to inject dependencies through the layers.
+
+7. **Testing**:
+   - Write unit tests for each layer, focusing on testing individual components in isolation.
+   - Use mocking frameworks to isolate dependencies and create controlled test scenarios.
+
+8. **Deployment**:
+   - Deploy the application to a web server, ensuring that the necessary infrastructure components (database, third-party services) are properly configured.
+
+
+This documentation provides an overview of implementing the Online Help Desk System using the Onion Architecture pattern in ASP.NET Core. Remember that the architecture's effectiveness lies in its adherence to separation of concerns and maintaining a clear dependency flow between layers.
+## 9. Aim of Project
  
 This project is aimed at developing an Online Help Desk for the facilities in 
 the campus. This is an Internet based application that can be accessed 
@@ -36,7 +126,7 @@ particular faculty head, the students can make queries to any department
 faculty head, faculty-head, faculty head will responsible for answering all 
 the queries sent by students or admin etc.
 
-# Overview:
+## 10. Overview:
 • This is an Intrnal based application that can be accessed throughout the campus.
 • This system can be used to automate the workflow of service requests for the various facilities 
 in the campus.
@@ -46,7 +136,7 @@ labs, computer center, hostels faculty club etc.
 for any of the supported facilities.
 •  We covers Three Department Admin , IT Department , ClassRoom
 
-# Architectural Strategies:
+# 11. Architectural Strategies:
 The following tools have been used to develop the system:
 ❖ MS SQL: is the database where all information/data related to requests records and 
 logs are stored.
@@ -54,7 +144,7 @@ logs are stored.
 through a user-friendly interface. Additionally SQL server application was used as a 
 local server to host C# file to generate them.
 ❖ Server: is the place that hosts all project code.
-# Administrator:
+#12. Administrator:
 i. Login to the first page.
 ii. Create new faculty account.
 iii. View all student details.
@@ -68,7 +158,7 @@ x. Add new notice for students.
 xi. Add new notice for faculty.
 xii. Logout.
 
-# Students:
+## 13. Students:
 i. Register Him/Her.
 ii. Login to the first page.
 iii. Change the password after login into the system.
@@ -80,7 +170,7 @@ past.
 viii. Edit and delete query created by him/her.
 xi. Logout.
 
-# Facility-Heads:
+## 14. Facility-Heads:
 i. Login to the first page.
 ii. Change the password after login into the page..
 iii. Edit details of his/her profile..
@@ -95,8 +185,8 @@ x. Add new notice for students.
 xi. View all notice..
 xii. Logout.
 
-# Database Structure
-#Data Table Properties:
+## 15. Database Structure
+** Data Table Properties:
 The System database is normalized and designed with the needed table that store 
 the needed information inside columns. Also the need for developing the system 
 capabilities and functionalities has been taken in to account.
@@ -107,3 +197,24 @@ capabilities and functionalities has been taken in to account.
 Delete and on Update
 4. For each table an index and its type is assigned when necessary.
 5. For each column a default value is set when necessary.
+
+## 16. Conclusion
+
+The Online Help Desk System implemented using Onion Architecture in ASP.NET Core follows a modular and maintainable design. The separation of concerns in different layers enhances testability and scalability. The architecture provides a clear structure for building complex applications while maintaining flexibility and adaptability.
+The Online Help Desk Project is the small step to reduce the communication 
+distance between the staff and the students.
+As the growing use of computers and other electronic devices would mean the 
+growing demand on rapid and quick technical support, this Help Desk Support 
+System is carefully designed to fit with the rapid technical support. It not only 
+helps reducing the time of recording and tracking inquires and problems 
+traditionally, but also improves quality and accuracy of data produced by the 
+system which can lead to more facilitation of decision making process in time.
+OHD is designed to accommodate future upgrading and development without 
+the need for building a new system to fit with the growing needs and demands 
+of the system. Having this system hosted online means the ability of both 
+technicians and administrator to track and respond to demands of students at 
+any time beyond the boundaries and walls of college which add one more 
+advantage to replacing the paper-based style
+## 17. References
+---Ahmer ALi
+---
