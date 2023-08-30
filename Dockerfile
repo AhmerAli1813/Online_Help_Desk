@@ -19,4 +19,4 @@ COPY --from=build /app/out ./
 EXPOSE 80
 
 # Set the entry point for the container
-ENTRYPOINT ["dotnet", "OHD.UI.dll"]
+ENTRYPOINT ["dotnet", "UI/OHD.UI.dll"]
