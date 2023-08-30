@@ -1,0 +1,17 @@
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\bin\Release\net6.0\OHD.Infrastructure.deps.json
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\bin\Release\net6.0\OHD.Infrastructure.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\bin\Release\net6.0\OHD.Infrastructure.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\bin\Release\net6.0\OHD.DataAccessLayer.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\bin\Release\net6.0\OHD.Models.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\bin\Release\net6.0\OHD.DataAccessLayer.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\bin\Release\net6.0\OHD.Models.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\OHD.Infrastructure.csproj.AssemblyReference.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\OHD.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\OHD.Infrastructure.AssemblyInfoInputs.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\OHD.Infrastructure.AssemblyInfo.cs
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\OHD.Infrastructure.csproj.CoreCompileInputs.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\OHD.Infrastructure.csproj.CopyComplete
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\OHD.Infrastructure.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\refint\OHD.Infrastructure.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\OHD.Infrastructure.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Infrstructure\obj\Release\net6.0\ref\OHD.Infrastructure.dll

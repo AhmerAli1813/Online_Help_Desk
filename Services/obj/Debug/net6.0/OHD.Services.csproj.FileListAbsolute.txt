@@ -19,3 +19,24 @@ F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.pdb
 F:\project\Online_Help_Desk\Services\obj\Debug\net6.0\ref\OHD.Services.dll
 F:\project\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Infrastructure.dll
 F:\project\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Infrastructure.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Services.deps.json
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Services.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Services.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.DataAccessLayer.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Infrastructure.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Models.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.ModelsViews.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Infrastructure.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.ModelsViews.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.DataAccessLayer.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\bin\Debug\net6.0\OHD.Models.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.csproj.AssemblyReference.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.GeneratedMSBuildEditorConfig.editorconfig
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.AssemblyInfoInputs.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.AssemblyInfo.cs
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.csproj.CoreCompileInputs.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.csproj.CopyComplete
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\refint\OHD.Services.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\OHD.Services.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\Services\obj\Debug\net6.0\ref\OHD.Services.dll

@@ -3264,11 +3264,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
+      "projectUniqueName": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
       "projectName": "OHD.Infrastructure",
-      "projectPath": "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
+      "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
-      "outputPath": "F:\\project\\Online_Help_Desk\\Infrstructure\\obj\\",
+      "outputPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3285,8 +3285,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
-              "projectPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj"
+            "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
+              "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj"
             }
           }
         }

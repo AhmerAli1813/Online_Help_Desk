@@ -1,0 +1,17 @@
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\bin\Release\net6.0\OHD.DataAccessLayer.deps.json
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\bin\Release\net6.0\OHD.DataAccessLayer.runtimeconfig.json
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\bin\Release\net6.0\OHD.DataAccessLayer.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\bin\Release\net6.0\OHD.DataAccessLayer.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\bin\Release\net6.0\OHD.Models.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\bin\Release\net6.0\OHD.Models.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.csproj.AssemblyReference.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.AssemblyInfoInputs.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.AssemblyInfo.cs
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.csproj.CoreCompileInputs.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.csproj.CopyComplete
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\refint\OHD.DataAccessLayer.dll
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.pdb
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\OHD.DataAccessLayer.genruntimeconfig.cache
+F:\Users\Ahmer Ali\Source\Repos\Online_Help_Desk\DataAccessLayer\obj\Release\net6.0\ref\OHD.DataAccessLayer.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\project\\Online_Help_Desk\\Services\\OHD.Services.csproj": {}
+    "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Services\\OHD.Services.csproj": {}
   },
   "projects": {
-    "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
+    "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj",
+        "projectUniqueName": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj",
         "projectName": "OHD.DataAccessLayer",
-        "projectPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj",
+        "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\obj\\",
+        "outputPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
-                "projectPath": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj"
+              "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
+                "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj": {
+    "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
+        "projectUniqueName": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
         "projectName": "OHD.Infrastructure",
-        "projectPath": "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
+        "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Online_Help_Desk\\Infrstructure\\obj\\",
+        "outputPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -109,8 +109,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
-                "projectPath": "F:\\project\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj"
+              "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj": {
+                "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\DataAccessLayer\\OHD.DataAccessLayer.csproj"
               }
             }
           }
@@ -150,14 +150,14 @@
         }
       }
     },
-    "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
+    "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj",
+        "projectUniqueName": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj",
         "projectName": "OHD.Models",
-        "projectPath": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj",
+        "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj",
         "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Online_Help_Desk\\Models\\obj\\",
+        "outputPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -205,14 +205,14 @@
         }
       }
     },
-    "F:\\project\\Online_Help_Desk\\Services\\OHD.Services.csproj": {
+    "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Services\\OHD.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Online_Help_Desk\\Services\\OHD.Services.csproj",
+        "projectUniqueName": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Services\\OHD.Services.csproj",
         "projectName": "OHD.Services",
-        "projectPath": "F:\\project\\Online_Help_Desk\\Services\\OHD.Services.csproj",
+        "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Services\\OHD.Services.csproj",
         "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Online_Help_Desk\\Services\\obj\\",
+        "outputPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -229,11 +229,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj": {
-                "projectPath": "F:\\project\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj"
+              "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj": {
+                "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Infrstructure\\OHD.Infrastructure.csproj"
               },
-              "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj": {
-                "projectPath": "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj"
+              "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj": {
+                "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj"
               }
             }
           }
@@ -277,14 +277,14 @@
         }
       }
     },
-    "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj": {
+    "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj",
+        "projectUniqueName": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj",
         "projectName": "OHD.ModelsViews",
-        "projectPath": "F:\\project\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj",
+        "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\ViewModels\\OHD.ModelsViews.csproj",
         "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Online_Help_Desk\\ViewModels\\obj\\",
+        "outputPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -301,8 +301,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
-                "projectPath": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj"
+              "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
+                "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj"
               }
             }
           }

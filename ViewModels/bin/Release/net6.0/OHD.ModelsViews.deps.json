@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "OHD.ModelsViews/1.0.0": {
+        "dependencies": {
+          "OHD.Models": "1.0.0"
+        },
+        "runtime": {
+          "OHD.ModelsViews.dll": {}
+        }
+      },
+      "OHD.Models/1.0.0": {
+        "runtime": {
+          "OHD.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OHD.ModelsViews/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OHD.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

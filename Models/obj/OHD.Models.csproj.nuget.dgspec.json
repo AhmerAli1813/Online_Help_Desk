@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj": {}
+    "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj": {}
   },
   "projects": {
-    "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
+    "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj",
+        "projectUniqueName": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj",
         "projectName": "OHD.Models",
-        "projectPath": "F:\\project\\Online_Help_Desk\\Models\\OHD.Models.csproj",
+        "projectPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\OHD.Models.csproj",
         "packagesPath": "C:\\Users\\Ahmer Ali\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Online_Help_Desk\\Models\\obj\\",
+        "outputPath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmer Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
