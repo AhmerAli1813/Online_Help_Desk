@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nR9v588rxHOxJ6gvVPfYcngVC7+6R04Oz8ALY3dyOjz6RYyAfJ8hm4lqG8LkCG4vFOSiWhrvaxZsgGWtFkSiZA==",
+  "dgSpecHash": "thyJe7mhpa9MhE+4WqgU8WFDgb506JPsIAWCsBQ5phaMnroXZaGXgf6+w8se+4wNR9rPm3maxikzkvTm18iqHw==",
   "success": true,
   "projectFilePath": "F:\\Users\\Ahmer Ali\\Source\\Repos\\Online_Help_Desk\\UI\\OHD.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Ahmer Ali\\.nuget\\packages\\dockerfile\\1.0.0\\dockerfile.1.0.0.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Ahmer Ali\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

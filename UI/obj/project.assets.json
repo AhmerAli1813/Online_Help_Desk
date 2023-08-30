@@ -46,6 +46,15 @@
           }
         }
       },
+      "Dockerfile/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Dockerfile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dockerfile.dll": {}
+        }
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -4285,6 +4294,18 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Dockerfile/1.0.0": {
+      "sha512": "wXUWijvWdLH1BOnKr/75yhcCGNKlj1UHKbWvz1uoGTawvJ9J+Aflhk7qv3hkCrleKdNGIBaVIdl63S1lRZM1cw==",
+      "type": "package",
+      "path": "dockerfile/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dockerfile.1.0.0.nupkg.sha512",
+        "dockerfile.nuspec",
+        "lib/netstandard2.0/Dockerfile.dll"
       ]
     },
     "Humanizer/2.14.1": {
@@ -11743,6 +11764,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Dockerfile >= 1.0.0",
       "Microsoft.AspNetCore.Hosting >= 2.2.7",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16",
@@ -11797,6 +11819,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Dockerfile": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "Microsoft.AspNetCore.Hosting": {
             "target": "Package",
             "version": "[2.2.7, )"

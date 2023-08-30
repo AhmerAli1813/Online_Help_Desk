@@ -321,6 +321,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Dockerfile": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
               "version": "[2.2.7, )"
