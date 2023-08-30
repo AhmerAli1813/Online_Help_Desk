@@ -136,7 +136,7 @@ labs, computer center, hostels faculty club etc.
 for any of the supported facilities.
 •  We covers Three Department Admin , IT Department , ClassRoom
 
-# 11. Architectural Strategies:
+## 11. Architectural Strategies:
 The following tools have been used to develop the system:
 ❖ MS SQL: is the database where all information/data related to requests records and 
 logs are stored.
@@ -144,7 +144,7 @@ logs are stored.
 through a user-friendly interface. Additionally SQL server application was used as a 
 local server to host C# file to generate them.
 ❖ Server: is the place that hosts all project code.
-#12. Administrator:
+## 12. Administrator:
 i. Login to the first page.
 ii. Create new faculty account.
 iii. View all student details.
