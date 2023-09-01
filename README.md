@@ -1,5 +1,5 @@
 # Online Help Desk System Documentation
-
+![alt text](https://github.com/AhmerAli1813/Online_Help_Desk/blob/master/UI/wwwroot/Project%20Images/DashBoard%20Admin.png?raw=true)
 ## Table of Contents
 
 1. Introduction
@@ -32,7 +32,7 @@ The Online Help Desk System is a web-based application designed to provide effic
 The system follows the Onion Architecture, a variant of layered architecture, which emphasizes a clear separation of concerns and dependency flow. It consists of concentric layers, each having distinct responsibilities, and dependencies always point inwards. This minimizes coupling between layers and allows easy testing and modifications.
 
 ## 3. Onion Architecture Overview
-
+![alt text](https://github.com/AhmerAli1813/Online_Help_Desk/blob/master/UI/wwwroot/Project%20Images/Onion%20Architecture%20in%20Aspdotnet%20Core%206%20Web%20API.png?raw=true)
 The Onion Architecture consists of four primary layers:
 
 1. **Presentation Layer**: This is the outermost layer that handles user interface interactions. It includes web controllers, views, and other UI-related components.
