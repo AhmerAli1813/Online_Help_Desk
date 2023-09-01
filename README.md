@@ -145,45 +145,45 @@ through a user-friendly interface. Additionally SQL server application was used 
 local server to host C# file to generate them.
 ❖ Server: is the place that hosts all project code.
 ## 12. Administrator:
-i. Login to the first page.
-ii. Create new faculty account.
-iii. View all student details.
-iv. View all faculty details.
-v. Check request sent by the user.
-vi. Forward request to the faculty as per requirement.
-vii. View all queries.
-viii. View new queries.
-ix. Reply/delete queries.
-x. Add new notice for students.
-xi. Add new notice for faculty.
-xii. Logout.
+- i. Login to the first page.
+- ii. Create new faculty account.
+- iii. View all student details.
+- iv. View all faculty details.
+- v. Check request sent by the user.
+- vi. Forward request to the faculty as per requirement.
+- vii. View all queries.
+- viii. View new queries.
+- ix. Reply/delete queries.
+- x. Add new notice for students.
+- xi. Add new notice for faculty.
+- xii. Logout.
 
 ## 13. Students:
-i. Register Him/Her.
-ii. Login to the first page.
-iii. Change the password after login into the system.
-iv. Edit user details.
-v. Create queries in the system.
-vi. View the status of the query.
-vii. View the list of queries created by him/her over the 
+- i. Register Him/Her.
+- ii. Login to the first page.
+- iii. Change the password after login into the system.
+- iv. Edit user details.
+- v. Create queries in the system.
+- vi. View the status of the query.
+- vii. View the list of queries created by him/her over the 
 past.
-viii. Edit and delete query created by him/her.
-xi. Logout.
+- viii. Edit and delete query created by him/her.
+- xi. Logout.
 
 ## 14. Facility-Heads:
-i. Login to the first page.
-ii. Change the password after login into the page..
-iii. Edit details of his/her profile..
-iv. View all queries.
-v. View new queries..
-vi. See the queries created by the users and assigned by the 
+- i. Login to the first page.
+- ii. Change the password after login into the page..
+- iii. Edit details of his/her profile..
+- iv. View all queries.
+- v. View new queries..
+- vi. See the queries created by the users and assigned by the 
 Admin.
-vii. Work on the queries assigned to them.
-viii. Reply/Remarks the query..
-ix. View replied queries..
-x. Add new notice for students.
-xi. View all notice..
-xii. Logout.
+- vii. Work on the queries assigned to them.
+- viii. Reply/Remarks the query..
+- ix. View replied queries..
+- x. Add new notice for students.
+- xi. View all notice..
+- xii. Logout.
 
 ## 15. Database Structure
 ** Data Table Properties:
