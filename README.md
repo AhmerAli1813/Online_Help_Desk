@@ -20,7 +20,8 @@
 12. Database Structure
 13. Conclusion
 14. References
-
+15. Achievement
+16. Download and Install 
 ---
 
 ## 1. Introduction
@@ -216,5 +217,21 @@ technicians and administrator to track and respond to demands of students at
 any time beyond the boundaries and walls of college which add one more 
 advantage to replacing the paper-based style
 ## 17. References
----Ahmer ALi
----
+-- Aptech SFC Team Memmbers
+-- Ahmer-Ali ( Backent-Developer & Team-leader)
+-- M. Muslim ( Backent-Developer & Team-Creation)
+-- Samuel ( Backent-Developer & Team-BLL)
+-- M. Ahad ( Frontent-Developer & Team-Tester )
+-- Taniya  ( API-Developer & Team-Documentation)
+## 18. Achievement
+-- Getting  Stars And project of Month August 2023 
+-- Assigement Marks 80 
+-- Test Project Marks 85 
+![alt text](https://github.com/AhmerAli1813/Online_Help_Desk/blob/master/UI/wwwroot/Project%20Images/Project%20Of%20Month.png?raw=true)
+## 19. Download And Install
+      
+   - i. Copy Clone File From Github Click Code Button And Copy cloning  
+   - ii. Open Package Console Select OHD.DataAccessLayer project Hit Command (Update-Database)
+   - iii. Open SQL Database Add Some Dumpy Data on Facility , Role &  Register Tabels Create  Admin Profile 
+   - iv. Login And Test Application
+   - ![alt text](https://github.com/AhmerAli1813/Online_Help_Desk/blob/master/UI/wwwroot/Project%20Images/Download&Install.png?raw=true)
