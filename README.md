@@ -20,8 +20,8 @@
 12. Database Structure
 13. Conclusion
 14. References
-15. Achievement
-16. Download and Install 
+15. Download and Install 
+16. Achievement
 ---
 
 ## 1. Introduction
@@ -33,6 +33,7 @@ The Online Help Desk System is a web-based application designed to provide effic
 The system follows the Onion Architecture, a variant of layered architecture, which emphasizes a clear separation of concerns and dependency flow. It consists of concentric layers, each having distinct responsibilities, and dependencies always point inwards. This minimizes coupling between layers and allows easy testing and modifications.
 
 ## 3. Onion Architecture Overview
+
 ![alt text](https://github.com/AhmerAli1813/Online_Help_Desk/blob/master/UI/wwwroot/Project%20Images/Onion%20Architecture%20in%20Aspdotnet%20Core%206%20Web%20API.png?raw=true)
 The Onion Architecture consists of four primary layers:
 
@@ -108,7 +109,8 @@ To implement the Online Help Desk System using Onion Architecture in ASP.NET Cor
 
 
 This documentation provides an overview of implementing the Online Help Desk System using the Onion Architecture pattern in ASP.NET Core. Remember that the architecture's effectiveness lies in its adherence to separation of concerns and maintaining a clear dependency flow between layers.
-## 9. Aim of Project
+
+## 6. Aim of Project
  
 This project is aimed at developing an Online Help Desk for the facilities in 
 the campus. This is an Internet based application that can be accessed 
@@ -127,7 +129,8 @@ particular faculty head, the students can make queries to any department
 faculty head, faculty-head, faculty head will responsible for answering all 
 the queries sent by students or admin etc.
 
-## 10. Overview:
+## 7. Overview:
+
 • This is an Intrnal based application that can be accessed throughout the campus.
 • This system can be used to automate the workflow of service requests for the various facilities 
 in the campus.
@@ -137,7 +140,7 @@ labs, computer center, hostels faculty club etc.
 for any of the supported facilities.
 •  We covers Three Department Admin , IT Department , ClassRoom
 
-## 11. Architectural Strategies:
+## 8. Architectural Strategies:
 The following tools have been used to develop the system:
 ❖ MS SQL: is the database where all information/data related to requests records and 
 logs are stored.
@@ -145,7 +148,9 @@ logs are stored.
 through a user-friendly interface. Additionally SQL server application was used as a 
 local server to host C# file to generate them.
 ❖ Server: is the place that hosts all project code.
-## 12. Administrator:
+
+## 9. Administrator:
+
 - i. Login to the first page.
 - ii. Create new faculty account.
 - iii. View all student details.
@@ -159,7 +164,8 @@ local server to host C# file to generate them.
 - xi. Add new notice for faculty.
 - xii. Logout.
 
-## 13. Students:
+## 10. Students:
+
 - i. Register Him/Her.
 - ii. Login to the first page.
 - iii. Change the password after login into the system.
@@ -171,7 +177,8 @@ past.
 - viii. Edit and delete query created by him/her.
 - xi. Logout.
 
-## 14. Facility-Heads:
+## 11. Facility-Heads:
+
 - i. Login to the first page.
 - ii. Change the password after login into the page..
 - iii. Edit details of his/her profile..
@@ -186,7 +193,7 @@ Admin.
 - xi. View all notice..
 - xii. Logout.
 
-## 15. Database Structure
+## 12. Database Structure
 ** Data Table Properties:
 The System database is normalized and designed with the needed table that store 
 the needed information inside columns. Also the need for developing the system 
@@ -199,7 +206,7 @@ Delete and on Update
 4. For each table an index and its type is assigned when necessary.
 5. For each column a default value is set when necessary.
 
-## 16. Conclusion
+## 13. Conclusion
 
 The Online Help Desk System implemented using Onion Architecture in ASP.NET Core follows a modular and maintainable design. The separation of concerns in different layers enhances testability and scalability. The architecture provides a clear structure for building complex applications while maintaining flexibility and adaptability.
 The Online Help Desk Project is the small step to reduce the communication 
@@ -216,7 +223,9 @@ of the system. Having this system hosted online means the ability of both
 technicians and administrator to track and respond to demands of students at 
 any time beyond the boundaries and walls of college which add one more 
 advantage to replacing the paper-based style
-## 17. References
+
+## 14. References
+
 - Aptech SFC Team Memmbers
 - Prject-Head (Sir Javid Iqbal Awaan) 
 - Ahmer-Ali ( Backent-Developer & Team-leader)
@@ -224,16 +233,18 @@ advantage to replacing the paper-based style
 - Samuel ( Backent-Developer & Team-BLL)
 - M. Ahad ( Frontent-Developer & Team-Tester )
 - Taniya  ( API-Developer & Team-Documentation)
-  
-## 18. Achievement
-- Getting  Stars And project of Month August 2023 
-- Assigement Marks 80 
-- Test Project Marks 85 
-![alt text](https://github.com/AhmerAli1813/Online_Help_Desk/blob/master/UI/wwwroot/Project%20Images/Project%20Of%20Month.png?raw=true)
-## 19. Download And Install
-      
+
+## 15. Download And Install
+
 - i. Copy Clone File From Github Click Code Button And Copy cloning  
 - ii. Open Package Console Select OHD.DataAccessLayer project Hit Command (Update-Database)
 - iii. Open SQL Database Add Some Dumpy Data on Facility , Role &  Register Tabels Create  Admin Profile 
 - iv. Login And Test Application
+- ![alt text](https://github.com/AhmerAli1813/Online_Help_Desk/blob/master/UI/wwwroot/Project%20Images/Download%26Install.png?raw=true)
+  
+## 16. Achievement
+
+- Getting  Stars And project of Month August 2023 
+- Assigement Marks 80 
+- Test Project Marks 85 
 - ![alt text](https://github.com/AhmerAli1813/Online_Help_Desk/blob/master/UI/wwwroot/Project%20Images/Project%20Of%20Month.jpg?raw=true)
