@@ -1,0 +1,41 @@
+﻿@model CreateRequestView
+
+@{
+    ViewData["Title"] = "New Ticket";
+    
+}
+
+<h1>Create</h1>
+
+<h4>CreateRequestView</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input asp-for="AssigneeHeadId" type="hidden" value="@ViewBag.Admin" class="form-control" />
+            <input asp-for="RequestorId" type="hidden" value="@ViewBag.Requstor" class="form-control" />
+             <div class="form-group">
+                <label asp-for="Subject" class="control-label"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripation" class="control-label"></label>
+                <input asp-for="Descripation" class="form-control" />
+                <span asp-validation-for="Descripation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="MyTickets">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

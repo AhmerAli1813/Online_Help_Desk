@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Data\**" />
+    <Compile Remove="Areas\Admin\Models\**" />
+    <Compile Remove="Areas\Admin\Views\Roles\**" />
+    <Compile Remove="Areas\ITDep\Views\Shared\**" />
+    <Content Remove="Areas\Admin\Data\**" />
+    <Content Remove="Areas\Admin\Models\**" />
+    <Content Remove="Areas\Admin\Views\Roles\**" />
+    <Content Remove="Areas\ITDep\Views\Shared\**" />
+    <EmbeddedResource Remove="Areas\Admin\Data\**" />
+    <EmbeddedResource Remove="Areas\Admin\Models\**" />
+    <EmbeddedResource Remove="Areas\Admin\Views\Roles\**" />
+    <EmbeddedResource Remove="Areas\ITDep\Views\Shared\**" />
+    <None Remove="Areas\Admin\Data\**" />
+    <None Remove="Areas\Admin\Models\**" />
+    <None Remove="Areas\Admin\Views\Roles\**" />
+    <None Remove="Areas\ITDep\Views\Shared\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Controllers\RegistersController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RolesController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Areas\Home\Views\Account\Register.cshtml" />
+    <Content Remove="wwwroot\js\main.js" />
+    <Content Remove="wwwroot\src\scripts\site.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\main.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\src\scripts\site.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Registers\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Registers\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Registers\Details.cshtml" />
+    <None Include="Areas\Admin\Views\Registers\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Registers\Index.cshtml" />
+    <None Include="Areas\Home\Views\Account\Register.cshtml" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\src\scripts\site.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dockerfile" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\OHD.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Services\OHD.Services.csproj" />
+    <ProjectReference Include="..\ViewModels\OHD.ModelsViews.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Areas\Students\Views\Tickets\Details.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\Error.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_Layout.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_ValidationScriptsPartial.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

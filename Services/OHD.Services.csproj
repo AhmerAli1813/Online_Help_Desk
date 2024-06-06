@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AurtrizationServices.cs" />
+    <Compile Remove="IAurtrizationServices.cs" />
+    <Compile Remove="IRegisterServices.cs" />
+    <Compile Remove="IRolesServices.cs" />
+    <Compile Remove="RegisterServices.cs" />
+    <Compile Remove="RolesServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="RequestServices.cs~RFbcd6626.TMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrstructure\OHD.Infrastructure.csproj" />
+    <ProjectReference Include="..\ViewModels\OHD.ModelsViews.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5" />
+  </ItemGroup>
+</Project>

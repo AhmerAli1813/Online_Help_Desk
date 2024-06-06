@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FacilityView>
+
+@{
+    ViewData["Title"] = "Index";
+    string table = "Facility";
+}
+
+
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success float-right">@TempData["Success"]</div>
+}
+
+<div class="pd-20 card-box mb-30" style="overflow-x: auto;">
+	<div class="clearfix mb-20">
+		<div class="pull-left">
+			<h4 class="text-blue h4">Facilities Table</h4>
+            <p>Here all available <code>@table</code></p>
+		</div>
+        <div class="pull-right">
+            <a asp-action="CreateUpdate" class="btn btn-primary btn-sm"><i class=" fa fa-plus-circle"></i> Create</a>
+            
+        </div>
+	</div>
+	<table class="table">
+		<thead>
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Facility)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th scope="col">Action</th>
+            </tr>
+		</thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Facility)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        <a class="badge badge-primary" asp-action="CreateUpdate" asp-route-id="@item.Id">Edit</a> |
+                        <a class="badge badge-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+	</table>
+	
+</div>
+

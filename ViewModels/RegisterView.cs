@@ -1,0 +1,79 @@
+﻿using OHD.DataAccessLayer;
+using OHD.DataAccessLayer.EntityModel;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace OHD.ModelsViews
+{
+    public class RegisterView
+    {
+        public RegisterView()
+        {
+        }
+
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public string Password { get; set; }
+     //   public gender Gender { get; set; }
+       // public status Status { get; set; }
+        public DateTime ROD { get; set; } 
+     //   public Roles roles { get; set; }
+        [Required]
+        public int RoleId { get; set; }
+        
+        public Facility Facilities { get; set; }
+        [Required]
+        public int FacilityId { get; set; }
+        
+
+        public RegisterView( ApplicationUser model)
+        {
+            if(model!=null)
+            {
+
+
+              // // Id = model.RegisterId;
+               // Name = model.Name;
+            //    Username = model.Username;
+                Email = model.Email;
+                Address = model.Address;
+                Password = model.Password;
+                //Gender = model.Gender;
+                //Status = model.Status;
+               // roles = model.Role;
+                RoleId = model.RoleId;
+                Facilities = model.Facility;
+                FacilityId = model.FacilityId;
+            }
+            
+        }
+        public Register ConvertModel(RegisterView model)
+        {
+            return new Register()
+            {
+
+                RegisterId = model.Id,
+                Name = model.Name,
+                Username = model.Username,
+                Email = model.Email,
+                Address = model.Address,
+                Password = model.Password,
+                Gender = model.Gender,
+                Status = model.Status,
+                Role = model.roles,
+                RoleId = model.RoleId,
+                FacilityId = model.FacilityId
+            };
+
+        }
+
+    }
+}
